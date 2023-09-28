@@ -1,0 +1,96 @@
+// @import "utils/stylesheet";
+// @import "./node_modules/normalize.css/normalize";
+
+// @import "mixins/media";
+@import "utils/variables";
+@import "utils/swiper-bundle.min";
+
+*,
+*::before,
+*::after {
+    border: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "SuisseIntl";
+}
+
+body {
+    margin: 0;
+    color: #131313;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+figure {
+    margin: 0;
+}
+
+button {
+    padding: 0;
+    background-color: transparent;
+}
+
+ul,
+ol {
+
+    li {
+        list-style: none;
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+
+._container {
+    max-width: 1324px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 42px;
+    padding-right: 42px;
+    @media(max-width: 1024px) {
+        padding-left: 42px;
+        padding-right: 42px;
+    }
+    @media(max-width: 767px) {
+        padding-left: 34px;
+        padding-right: 34px;
+    }
+    @media (max-width: 360px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}

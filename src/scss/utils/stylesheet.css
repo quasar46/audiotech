@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "SuisseIntl";
+  src: url("../fonts/SuisseIntl-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SuisseIntl";
+  src: url("../fonts/SuisseIntl-Regular.woff2") format("woff2");
+}
