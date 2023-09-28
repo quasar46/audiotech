@@ -74,11 +74,17 @@ main {
         padding-left: 34px;
         padding-right: 34px;
     }
-    @media (max-width: 380px) {
+    @media(max-width: 380px) {
         padding-left: 30px;
         padding-right: 30px;
     }
-
+    &--abs {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+    }
 }
 
 img {
