@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     burgerBtn.classList.toggle('active');
   })
 
-  const minViewPort = (min = 380) => {
+  const minViewPort = (min = 360) => {
     if (window.innerWidth <= min) {
       const viewport = document.querySelector('[name="viewport"]');
       if (viewport) viewport.setAttribute("content", `width=${min}, user-scalable=no`);
