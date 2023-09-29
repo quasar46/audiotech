@@ -24,4 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
       clickable: true,
     },
   });
+
+  const btnShowSubMenu = document.querySelector("#showMainSubmenu");
+  const wrapMainSubMenu = document.querySelector(".main-submenu");
+  btnShowSubMenu.addEventListener("mouseover", () => {
+    wrapMainSubMenu.classList.add("active");
+  });
+  wrapMainSubMenu.addEventListener("mouseleave", () => {
+    wrapMainSubMenu.classList.remove("active");
+  });
 });
