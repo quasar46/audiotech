@@ -36,9 +36,11 @@
 }
 
 .header-bottom {
+    position: relative;
     display: flex;
     align-items: center;
     min-height: 60px;
+    border-bottom: 1px solid #E8EBED;
 
 }
 
@@ -69,6 +71,9 @@
     align-items: center;
     gap: 10px;
     margin-left: 20px;
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 
 .header-bottom__btn {
@@ -87,6 +92,7 @@
 
 .header-basket {
     display: flex;
+    margin-left: auto;
     &__count {
         position: absolute;
         width: 18px;
