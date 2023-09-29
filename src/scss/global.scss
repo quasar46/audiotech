@@ -29,6 +29,15 @@ a {
     color: inherit;
 }
 
+section {
+    margin-top: 85px;
+    margin-bottom: 85px;
+    @media (max-width: 380px) {
+        margin-top: 55px;
+        margin-bottom: 55px;
+    }
+}
+
 
 figure {
     margin: 0;

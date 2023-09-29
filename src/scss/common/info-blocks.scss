@@ -1,0 +1,48 @@
+.info-blocks__wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 380px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.info-block__item {
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 30px 30px 127px;
+    justify-content: flex-end;
+    position: relative;
+    background-size: cover;
+    .btn {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+    }
+    @media (max-width: 768px) {
+        padding: 30px;
+        min-height: 270px;
+        justify-content: flex-start;
+    }
+    @media (max-width: 380px) {
+        min-height: 240px;
+    }
+}
+
+.info-block__name {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 133.333%;
+    margin-bottom: 10px;
+}
+
+.info-block__descr {
+font-size: 13px;
+font-weight: 400;
+line-height: 153.846%;
+}
