@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainNav = document.querySelector(".main-nav");
   burgerBtn.addEventListener("click", function () {
     burgerBtn.classList.toggle("active");
-    mainNav.classList.toggle('active');
+    mainNav.classList.toggle("active");
   });
 
   const minViewPort = (min = 360) => {
@@ -25,6 +25,28 @@ document.addEventListener("DOMContentLoaded", function () {
       el: ".swiper-pagination",
       clickable: true,
     },
+  
+  });
+
+  const swiperProductsActual = new Swiper(".actual-slider", {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+      },
+      360: {
+        slidesPerView: 'auto',
+      }
+    }
   });
 
   const showSubMenu = function () {

@@ -1,8 +1,74 @@
+.swiper {
+    position: relative;
+    padding-bottom: 70px;
+    .swiper-pagination {
+        @media (max-width: 380px) {
+            display: none;
+        }
+    }
+    .swiper-button-next {
+        right: 0;
+        top: auto;
+        bottom: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #F5F7FA;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            width: 24px;
+        }
+        &:after {
+            display: none;
+        }
+        @media (max-width: 380px) {
+            display: none;
+        }
+    }
+    .swiper-button-prev {
+        left: 0;
+        top: auto;
+        bottom: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #F5F7FA;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            width: 24px;
+        }
+        &:after {
+            display: none;
+        }
+        @media (max-width: 380px) {
+            display: none;
+        }
+    }
+    .swiper-pagination-bullet {
+        background-color: #E8EBED;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: #DB1F26;
+    }
+    .swiper-slide {
+        @media (max-width: 1024px) {
+            width: 220px;
+        }
+    }
+    @media (max-width: 380px) {
+        padding-bottom: 0;
+    }
+}
+
 .swiper-nav {
     position: absolute;
     top: 60px;
     right: 42px;
-    @media (max-width: 768px) {
+    @media(max-width: 768px) {
         display: none;
     }
 }
@@ -33,7 +99,7 @@
     height: 10px;
     background-color: #fff;
     opacity: 1;
-    
+
 }
 
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -54,12 +120,12 @@
         padding-right: 42px;
         width: 200px;
         margin-left: auto;
-        @media (max-width: 768px) {
+        @media(max-width: 768px) {
             bottom: 42px;
             justify-content: center;
             width: 100%;
         }
-        @media (max-width: 380px) {
+        @media(max-width: 380px) {
             bottom: 20px;
         }
     }

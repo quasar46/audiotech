@@ -1,0 +1,57 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    a {
+        transition: all 0.3s ease;
+        &:hover {
+            color: #DB1F26;
+        }
+    }
+}
+
+.card__pic {
+    height: 235px;
+    margin-bottom: 10px;
+    @media(max-width: 1024px) {
+        height: 175px;
+    }
+}
+
+
+.card__category {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 153.846%;
+    margin-bottom: 5px;
+    color: #737373;
+}
+
+.card__name {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 133.333%;
+    margin-bottom: 10px;
+}
+
+.card__price--actual {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: -0.15px;
+}
+
+
+.card__price--old {
+    color: #737373;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 153.846%;
+    text-decoration-line: line-through;
+}
+
+
+.card__footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

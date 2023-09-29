@@ -13,6 +13,13 @@
             background-color: #C60C30;
         }
     }
+    &--grey {
+        background-color: #F5F7FA;
+        &:hover {
+            background-color: #DB1F26;
+            color: #fff;
+        }
+    }
     &--icn {
         gap: 10px;
     }

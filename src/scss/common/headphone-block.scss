@@ -1,0 +1,63 @@
+.headphone-block {
+    ._container {
+        @media (max-width: 380px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.headphone-block__title {
+    margin-bottom: 20px;
+}
+
+.headphone-block__wrap {
+    background-color: #F5F7FA;
+    padding-top: 60px;
+    min-height: 450px;
+    background-image: url("../img/white-headphones.png");
+    background-position: top right 185px;
+    background-repeat: no-repeat;
+    padding-left: 105px;
+    @media (max-width: 1024px) {
+        min-height: 480px;
+        padding-left: 80px;
+        background-position: top right 80px;
+    }
+    @media (max-width: 768px) {
+        background-position: top right -60px;
+    }
+    @media (max-width: 380px) {
+        padding-top: 290px;
+        padding-left: 0;
+        background-position: top -30px center;
+        background-size: 240px auto;
+        padding-bottom: 40px;
+    }
+}
+
+.headphone-block__box {
+    max-width: 400px;
+    width: 100%;
+    @media (max-width: 1024px) {
+        max-width: 300px;
+    }
+    @media (max-width: 380px) {
+        max-width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .btn {
+        @media( max-width: 380px) {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
+
+.headphone-block__descr {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 160%;
+    margin-bottom: 30px;
+}
