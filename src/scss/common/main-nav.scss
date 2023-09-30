@@ -21,7 +21,7 @@
         }
     }
     .btn {
-        @media (min-width: 769px) {
+        @media(min-width: 769px) {
             display: none;
         }
         display: flex;
@@ -32,7 +32,7 @@
             margin-bottom: 0;
         }
     }
-    @media (max-width: 380px) {
+    @media(max-width: 380px) {
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 40px;
@@ -45,8 +45,11 @@
     gap: 20px;
     padding: 0;
     margin: 0;
-    .main-nav__item {
+    & > .main-nav__item {
         min-height: 60px;
+    }
+    .main-nav__item {
+
         justify-content: center;
         img {
             width: 24px;
@@ -69,7 +72,7 @@
         gap: 30px;
         margin-bottom: 60px;
     }
-    @media (max-width: 380px) {
+    @media(max-width: 380px) {
         gap: 20px;
         margin-bottom: 30px;
     }
@@ -89,7 +92,7 @@
         font-size: 36px;
         line-height: 122.2%;
     }
-    @media (max-width: 380px) {
+    @media(max-width: 380px) {
         font-size: 24px;
     }
 }
@@ -105,6 +108,9 @@
     left: -30px;
     top: 100%;
     transition: all 0.3s ease;
+    @media (min-width: 1025px) {
+        box-shadow: 0px 4px 10px 0px rgba(19, 19, 19, 0.10);
+    }
     &--mode {
         left: auto;
         right: 0;
@@ -112,6 +118,7 @@
     &--mob {
         @media(min-width: 1025px) {
             display: none;
+            
         }
     }
     @media(max-width: 1024px) {
@@ -165,7 +172,7 @@
     @media(max-width: 1024px) {
         gap: 20px;
     }
-    @media (max-width: 380px) {
+    @media(max-width: 380px) {
         gap: 15px;
     }
 }
@@ -186,17 +193,17 @@
     position: relative;
     font-size: 15px;
     font-weight: 400;
-    line-height: 160%;  
+    line-height: 160%;
     &:first-child {
         margin-right: calc(62px - 15px);
-        @media (max-width: 380px) {
+        @media(max-width: 380px) {
             margin-right: -3px;
         }
     }
 }
 
 .main-nav-search {
-    @media (min-width: 769px) {
+    @media(min-width: 769px) {
         display: none;
     }
     position: relative;

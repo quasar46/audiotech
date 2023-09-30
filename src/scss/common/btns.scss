@@ -26,6 +26,10 @@
     &--white {
         background-color: #fff;
         color: #131313;
+        &:hover {
+            background-color: #DB1F26;
+            color: #fff;
+        }
     }
     &--m {
         height: 40px;

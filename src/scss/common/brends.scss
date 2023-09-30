@@ -1,0 +1,26 @@
+.brends__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    @media(max-width: 380px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.brends__item {
+    height: 235px;
+    background-color: #F5F7FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media(max-width: 1024px) {
+        height: 175px;
+    }
+
+}
+
+.brends__title {
+    max-width: 620px;
+
+}

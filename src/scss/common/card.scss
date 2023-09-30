@@ -1,11 +1,15 @@
 .card {
     display: flex;
     flex-direction: column;
+    height: 100%;
     a {
         transition: all 0.3s ease;
         &:hover {
             color: #DB1F26;
         }
+    }
+    div:last-child {
+        margin-bottom: 0;
     }
 }
 
@@ -54,4 +58,5 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 20px;
 }
