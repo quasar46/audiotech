@@ -88,4 +88,7 @@
         padding: 0;
         background-color: transparent;
     }
+    @media (min-width: 769px) {
+        display: none;
+    }
 }
