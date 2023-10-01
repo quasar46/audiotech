@@ -1,0 +1,40 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination__list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    & > * {
+        width: 40px;
+        height: 40px;
+        background-color: #F5F7FA;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 153.846%;
+        transition: all .3s ease;
+        &:hover {
+            background-color: #DB1F26;
+            color: #fff;
+            svg {
+                path {
+                    transition: all .3s ease;
+                    stroke: #fff;
+                }
+            }
+        }
+    }
+}
+
+.pagination__page {
+    &.active {
+        background-color: #DB1F26;
+        color: #fff;
+    }
+}

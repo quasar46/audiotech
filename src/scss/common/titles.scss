@@ -2,16 +2,28 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin: 0;
+    margin: 0 0 30px;
     font-size: 36px;
     font-weight: 500;
     line-height: 122.222%;
     letter-spacing: -0.36px;
-    margin-bottom: 30px;
     @media(max-width: 380px) {
         font-size: 24px;
         line-height: 125%;
         letter-spacing: -0.24px;
         margin-bottom: 20px;
+    }
+}
+
+.title-page {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 112.5%;
+    letter-spacing: -0.96px;
+    margin: 0;
+    margin-bottom: 40px;
+    @media (max-width: 767px) {
+        font-size: 28px;
+        margin-bottom: 30px;
     }
 }

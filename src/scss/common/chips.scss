@@ -1,0 +1,16 @@
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.chips__item {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 160%;
+    line-height: 40px;
+    padding: 0 20px;
+    border-radius: 10px;
+    border: 1px solid #E8EBED;
+}

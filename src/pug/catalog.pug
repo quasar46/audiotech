@@ -1,0 +1,265 @@
+extends templates/layout
+
+block main 
+    main 
+        .breadcrumbs 
+            ._container
+                .breadcrumbs__list
+                    li.breadcrumbs__item
+                        a(href="") Главная
+                    li.breadcrumbs__item •
+                    li.breadcrumbs__item Слуховые аппараты
+        section.catalog
+            ._container
+                h1.title-page Слуховые аппараты
+                .chips
+                    .chips__item Для легкой потери слуха
+                    .chips__item Для средней потери слуха
+                    .chips__item Для тяжелой потери слуха
+                    .chips__item Ampliphon
+                    .chips__item Oticon
+                    .chips__item Signia
+                    .chips__item Аналоговые
+                    .chips__item Цифровые
+                    .chips__item Заушные
+                    .chips__item Заушные с выносным ресивером
+                    .chips__item Внутриушные
+                    .chips__item Внутриканальные
+                .catalog__wrap 
+                    .catalog__filter-mobile
+                        h3.filter__title Фильтры
+                        button#showFilter 
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M21 6C21 6.55228 20.5523 7 20 7L10.8284 7C10.6807 7.4179 10.4407 7.80192 10.1213 8.12132C9.55871 8.68393 8.79565 9 8 9C7.20435 9 6.44129 8.68393 5.87868 8.12132C5.55928 7.80192 5.31933 7.4179 5.17157 7H4C3.44772 7 3 6.55228 3 6C3 5.44772 3.44772 5 4 5H5.17157C5.31933 4.5821 5.55928 4.19808 5.87868 3.87868C6.44129 3.31607 7.20435 3 8 3C8.79565 3 9.55871 3.31607 10.1213 3.87868C10.4407 4.19808 10.6807 4.5821 10.8284 5H20C20.5523 5 21 5.44772 21 6ZM21 12C21 12.5523 20.5523 13 20 13H18.8284C18.6807 13.4179 18.4407 13.8019 18.1213 14.1213C17.5587 14.6839 16.7957 15 16 15C15.2043 15 14.4413 14.6839 13.8787 14.1213C13.5593 13.8019 13.3193 13.4179 13.1716 13L4 13C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11L13.1716 11C13.3193 10.5821 13.5593 10.1981 13.8787 9.87868C14.4413 9.31607 15.2043 9 16 9C16.7957 9 17.5587 9.31607 18.1213 9.87868C18.4407 10.1981 18.6807 10.5821 18.8284 11H20C20.5523 11 21 11.4477 21 12ZM21 18C21 18.5523 20.5523 19 20 19H10.8284C10.6807 19.4179 10.4407 19.8019 10.1213 20.1213C9.55871 20.6839 8.79565 21 8 21C7.20435 21 6.44129 20.6839 5.87868 20.1213C5.55928 19.8019 5.31933 19.4179 5.17157 19H4C3.44772 19 3 18.5523 3 18C3 17.4477 3.44772 17 4 17H5.17157C5.31933 16.5821 5.55928 16.1981 5.87868 15.8787C6.44129 15.3161 7.20435 15 8 15C8.79565 15 9.55871 15.3161 10.1213 15.8787C10.4407 16.1981 10.6807 16.5821 10.8284 17H20C20.5523 17 21 17.4477 21 18ZM17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11C15.7348 11 15.4804 11.1054 15.2929 11.2929C15.1054 11.4804 15 11.7348 15 12C15 12.2652 15.1054 12.5196 15.2929 12.7071C15.4804 12.8946 15.7348 13 16 13C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12ZM9 6C9 5.73478 8.89464 5.48043 8.70711 5.29289C8.51957 5.10536 8.26522 5 8 5C7.73478 5 7.48043 5.10536 7.29289 5.29289C7.10536 5.48043 7 5.73478 7 6C7 6.26522 7.10536 6.51957 7.29289 6.70711C7.48043 6.89464 7.73478 7 8 7C8.26522 7 8.51957 6.89464 8.70711 6.70711C8.89464 6.51957 9 6.26522 9 6ZM9 18C9 17.7348 8.89464 17.4804 8.70711 17.2929C8.51957 17.1054 8.26522 17 8 17C7.73478 17 7.48043 17.1054 7.29289 17.2929C7.10536 17.4804 7 17.7348 7 18C7 18.2652 7.10536 18.5196 7.29289 18.7071C7.48043 18.8946 7.73478 19 8 19C8.26522 19 8.51957 18.8946 8.70711 18.7071C8.89464 18.5196 9 18.2652 9 18Z" fill="#131313"/></svg>
+
+                    .catalog__filter.filter 
+                        h3.filter__title Фильтры
+                        .filter__box.filter-box
+                            h4.filter__name Бренд
+                            ul.filter-box__list 
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Ampliphon
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Oticon
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Signia
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Rexton
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Medel
+                            a.filter__all Показать все
+                        .filter__box.filter-box
+                            h4.filter__name Тип корпуса
+                            ul.filter-box__list
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Заушный
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Заушный с выносным ресивером
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Внутриушной   
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Внутриканальный
+                        .filter__box.filter-box
+                            h4.filter__name Степень потери слуха
+                            ul.filter-box__list
+                                li 
+                                    input(type="radio" id="")
+                                    label(for="") 1 степень
+                                li 
+                                    input(type="radio" id="")
+                                    label(for="") 2 степень
+                                li 
+                                    input(type="radio" id="")
+                                    label(for="") 3 степень   
+                                li 
+                                    input(type="radio" id="")
+                                    label(for="") 4 степень
+                        .filter__box.filter-box
+                            h4.filter__name Тип батарейки
+                            ul.filter-box__list
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") 10
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") 13
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") 312   
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") 675
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Литий-ионный
+                        .filter__box.filter-box
+                            h4.filter__name Особенности
+                            ul.filter-box__list
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Компактные и невидимые
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Простые и эффективные
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Подзаряжаемые решения   
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") С возможностью подключения
+                        .filter__box.filter-box
+                            h4.filter__name Акустические ситуации
+                            ul.filter-box__list
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Отдых
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Улица
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Разговор в компании
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Разговор в тишине
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Совещание
+                            a.filter__all Показать все
+                        .filter__box.filter-box
+                            h4.filter__name Bluetooth
+                            ul.filter-box__list
+                                li 
+                                    input(type="radio" id="")
+                                    label(for="") Да
+                                li 
+                                    input(type="radio" id="")
+                                    label(for="") Нет
+                        .filter__box.filter-box
+                            h4.filter__name Скидка
+                            ul.filter-box__list
+                                li 
+                                    input(type="checkbox" id="")
+                                    label(for="") Товары со скидкой
+
+                        button.btn.btn--grey.btn--m.btn--icn 
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#131313"/></svg>
+                            | Очистить все
+                    .catalog__box
+                        .catalog__sort 
+                            a.active(href="") Популярные
+                            a(href="") Дешевле
+                            a(href="") Дороже
+                            a(href="") Со скидкой
+                        .catalog__inner
+                            .catalog__items
+                                .card 
+                                    a(href="").card__pic
+                                        img(src="img/cards/pic1.jpg" alt="")
+                                    a(href="").card__category Слуховой аппарат
+                                    a(href="").card__name Audeo M30-R
+                                    .card__footer 
+                                        .card__price.card__price--actual 65 300 ₽
+                                        .card__price.card__price--old 81 250 ₽
+                                .card 
+                                    a(href="").card__pic
+                                        img(src="img/cards/pic1.jpg" alt="")
+                                    a(href="").card__category Слуховой аппарат
+                                    a(href="").card__name Audeo M30-R
+                                    .card__footer 
+                                        .card__price.card__price--actual 65 300 ₽
+                                        .card__price.card__price--old 81 250 ₽
+                                .card 
+                                    a(href="").card__pic
+                                        img(src="img/cards/pic1.jpg" alt="")
+                                    a(href="").card__category Слуховой аппарат
+                                    a(href="").card__name Audeo M30-R
+                                    .card__footer 
+                                        .card__price.card__price--actual 65 300 ₽
+                                        .card__price.card__price--old 81 250 ₽
+                                .card 
+                                    a(href="").card__pic
+                                        img(src="img/cards/pic1.jpg" alt="")
+                                    a(href="").card__category Слуховой аппарат
+                                    a(href="").card__name Audeo M30-R
+                                    .card__footer 
+                                        .card__price.card__price--actual 65 300 ₽
+                                        .card__price.card__price--old 81 250 ₽
+                                .card 
+                                    a(href="").card__pic
+                                        img(src="img/cards/pic1.jpg" alt="")
+                                    a(href="").card__category Слуховой аппарат
+                                    a(href="").card__name Audeo M30-R
+                                    .card__footer 
+                                        .card__price.card__price--actual 65 300 ₽
+                                        .card__price.card__price--old 81 250 ₽
+                                .card 
+                                    a(href="").card__pic
+                                        img(src="img/cards/pic1.jpg" alt="")
+                                    a(href="").card__category Слуховой аппарат
+                                    a(href="").card__name Audeo M30-R
+                                    .card__footer 
+                                        .card__price.card__price--actual 65 300 ₽
+                                        .card__price.card__price--old 81 250 ₽
+                                .card 
+                                    a(href="").card__pic
+                                        img(src="img/cards/pic1.jpg" alt="")
+                                    a(href="").card__category Слуховой аппарат
+                                    a(href="").card__name Audeo M30-R
+                                    .card__footer 
+                                        .card__price.card__price--actual 65 300 ₽
+                                        .card__price.card__price--old 81 250 ₽
+                                .card 
+                                    a(href="").card__pic
+                                        img(src="img/cards/pic1.jpg" alt="")
+                                    a(href="").card__category Слуховой аппарат
+                                    a(href="").card__name Audeo M30-R
+                                    .card__footer 
+                                        .card__price.card__price--actual 65 300 ₽
+                                        .card__price.card__price--old 81 250 ₽
+                                .card 
+                                    a(href="").card__pic
+                                        img(src="img/cards/pic1.jpg" alt="")
+                                    a(href="").card__category Слуховой аппарат
+                                    a(href="").card__name Audeo M30-R
+                                    .card__footer 
+                                        .card__price.card__price--actual 65 300 ₽
+                                        .card__price.card__price--old 81 250 ₽
+                                .card 
+                                    a(href="").card__pic
+                                        img(src="img/cards/pic1.jpg" alt="")
+                                    a(href="").card__category Слуховой аппарат
+                                    a(href="").card__name Audeo M30-R
+                                    .card__footer 
+                                        .card__price.card__price--actual 65 300 ₽
+                                        .card__price.card__price--old 81 250 ₽
+                            .catalog__pagination.pagination 
+                                .pagination__list 
+                                    a(href="").pagination__prev 
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 5L4 12M4 12L11 19M4 12H20" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    a(href="").pagination__page.active 1
+                                    a(href="").pagination__page 2
+                                    a(href="").pagination__page ...
+                                    a(href="").pagination__page 19
+                                    a(href="").pagination__next
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 5L20 12M20 12L13 19M20 12H4" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                button.btn.btn--grey.btn--m Показать ещё &nbsp;
+                                    span#cur-page 15
+                                    | &nbsp;из&nbsp; 
+                                    span#total-pages 100
+
+                        .catalog__text.text-block 
+                            h3.text-block__title Текстовый блок
+                            p.text-block__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet volutpat sapien. Sed eu ipsum a diam placerat vulputate. Maecenas laoreet ultrices nisi id sagittis. Sed metus leo, tempor non semper eu, posuere vitae quam. Sed vitae sem lorem. Aliquam vestibulum elementum purus et iaculis. Nunc at maximus magna. Praesent iaculis sem eu mauris ultricies dictum. Pellentesque finibus, ante sed tincidunt feugiat, dui sem malesuada sem, nec elementum libero lectus sagittis nunc. Morbi et fermentum lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque tempor feugiat velit nec elementum.
+
+        include include/offers
+
+

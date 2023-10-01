@@ -18,6 +18,12 @@
         &:hover {
             background-color: #DB1F26;
             color: #fff;
+            svg {
+                path {
+                    fill: #fff;
+                    transition: all .3s ease;
+                }
+            }
         }
     }
     &--icn {
