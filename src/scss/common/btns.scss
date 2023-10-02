@@ -6,6 +6,7 @@
     white-space: nowrap;
     cursor: pointer;
     transition: all 0.3s ease;
+ 
     &--red {
         background-color: #DB1F26;
         color: #fff;
@@ -57,4 +58,9 @@
     position: absolute;
     top: 18px;
     right: 34px;
+    cursor: pointer;
+    @media (max-width: 380px) {
+        right: 20px;
+        top: 20px;
+    }
 }
