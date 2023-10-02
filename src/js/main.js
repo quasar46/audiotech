@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
       el: ".swiper-pagination",
       clickable: true,
     },
-  
   });
 
   const swiperProductsActual = new Swiper(".actual-slider", {
@@ -44,9 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 4,
       },
       360: {
-        slidesPerView: 'auto',
-      }
-    }
+        slidesPerView: "auto",
+      },
+    },
   });
 
   const showSubMenu = function () {
@@ -64,3 +63,25 @@ document.addEventListener("DOMContentLoaded", function () {
     showSubMenu();
   }
 });
+
+const btnsCloseWindow = document.querySelectorAll('.close-window');
+
+btnsCloseWindow.forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    scrollLock.enablePageScroll();
+    btn.closest('div').classList.remove('active');
+  });
+})
+
+const showFilter = function () {
+  const btnShowFilter = document.querySelector('#showFilter');
+  const filterWindow = document.querySelector(".filter");
+  btnShowFilter.addEventListener("click", function () {
+    console.log(this);
+    filterWindow.classList.add("active");
+    scrollLock.disablePageScroll();
+  });
+};
+
+showFilter();

@@ -27,6 +27,16 @@
             color: #DB1F26;
         }
     }
+    &--mob {
+        display: none;
+    }
+    @media (max-width: 380px) {
+        display: none;
+        &--mob {
+            display: block;
+        }
+    }
+  
 }
 
 .catalog__items {

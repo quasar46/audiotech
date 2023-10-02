@@ -32,123 +32,126 @@ block main
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M21 6C21 6.55228 20.5523 7 20 7L10.8284 7C10.6807 7.4179 10.4407 7.80192 10.1213 8.12132C9.55871 8.68393 8.79565 9 8 9C7.20435 9 6.44129 8.68393 5.87868 8.12132C5.55928 7.80192 5.31933 7.4179 5.17157 7H4C3.44772 7 3 6.55228 3 6C3 5.44772 3.44772 5 4 5H5.17157C5.31933 4.5821 5.55928 4.19808 5.87868 3.87868C6.44129 3.31607 7.20435 3 8 3C8.79565 3 9.55871 3.31607 10.1213 3.87868C10.4407 4.19808 10.6807 4.5821 10.8284 5H20C20.5523 5 21 5.44772 21 6ZM21 12C21 12.5523 20.5523 13 20 13H18.8284C18.6807 13.4179 18.4407 13.8019 18.1213 14.1213C17.5587 14.6839 16.7957 15 16 15C15.2043 15 14.4413 14.6839 13.8787 14.1213C13.5593 13.8019 13.3193 13.4179 13.1716 13L4 13C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11L13.1716 11C13.3193 10.5821 13.5593 10.1981 13.8787 9.87868C14.4413 9.31607 15.2043 9 16 9C16.7957 9 17.5587 9.31607 18.1213 9.87868C18.4407 10.1981 18.6807 10.5821 18.8284 11H20C20.5523 11 21 11.4477 21 12ZM21 18C21 18.5523 20.5523 19 20 19H10.8284C10.6807 19.4179 10.4407 19.8019 10.1213 20.1213C9.55871 20.6839 8.79565 21 8 21C7.20435 21 6.44129 20.6839 5.87868 20.1213C5.55928 19.8019 5.31933 19.4179 5.17157 19H4C3.44772 19 3 18.5523 3 18C3 17.4477 3.44772 17 4 17H5.17157C5.31933 16.5821 5.55928 16.1981 5.87868 15.8787C6.44129 15.3161 7.20435 15 8 15C8.79565 15 9.55871 15.3161 10.1213 15.8787C10.4407 16.1981 10.6807 16.5821 10.8284 17H20C20.5523 17 21 17.4477 21 18ZM17 12C17 11.7348 16.8946 11.4804 16.7071 11.2929C16.5196 11.1054 16.2652 11 16 11C15.7348 11 15.4804 11.1054 15.2929 11.2929C15.1054 11.4804 15 11.7348 15 12C15 12.2652 15.1054 12.5196 15.2929 12.7071C15.4804 12.8946 15.7348 13 16 13C16.2652 13 16.5196 12.8946 16.7071 12.7071C16.8946 12.5196 17 12.2652 17 12ZM9 6C9 5.73478 8.89464 5.48043 8.70711 5.29289C8.51957 5.10536 8.26522 5 8 5C7.73478 5 7.48043 5.10536 7.29289 5.29289C7.10536 5.48043 7 5.73478 7 6C7 6.26522 7.10536 6.51957 7.29289 6.70711C7.48043 6.89464 7.73478 7 8 7C8.26522 7 8.51957 6.89464 8.70711 6.70711C8.89464 6.51957 9 6.26522 9 6ZM9 18C9 17.7348 8.89464 17.4804 8.70711 17.2929C8.51957 17.1054 8.26522 17 8 17C7.73478 17 7.48043 17.1054 7.29289 17.2929C7.10536 17.4804 7 17.7348 7 18C7 18.2652 7.10536 18.5196 7.29289 18.7071C7.48043 18.8946 7.73478 19 8 19C8.26522 19 8.51957 18.8946 8.70711 18.7071C8.89464 18.5196 9 18.2652 9 18Z" fill="#131313"/></svg>
 
                     .catalog__filter.filter 
+                        button.close-window 
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#131313"/></svg>
+
                         h3.filter__title Фильтры
                         .filter__box.filter-box
                             h4.filter__name Бренд
                             ul.filter-box__list 
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Ampliphon
+                                    input(type="checkbox" id="brend1")
+                                    label(for="brend1") Ampliphon
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Oticon
+                                    input(type="checkbox" id="brend2")
+                                    label(for="brend2") Oticon
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Signia
+                                    input(type="checkbox" id="brend3")
+                                    label(for="brend3") Signia
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Rexton
+                                    input(type="checkbox" id="brend4")
+                                    label(for="brend4") Rexton
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Medel
+                                    input(type="checkbox" id="brend5")
+                                    label(for="brend5") Medel
                             a.filter__all Показать все
                         .filter__box.filter-box
                             h4.filter__name Тип корпуса
                             ul.filter-box__list
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Заушный
+                                    input(type="checkbox" id="type1")
+                                    label(for="type1") Заушный
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Заушный с выносным ресивером
+                                    input(type="checkbox" id="type2")
+                                    label(for="type2") Заушный с выносным ресивером
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Внутриушной   
+                                    input(type="checkbox" id="type3")
+                                    label(for="type3") Внутриушной   
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Внутриканальный
+                                    input(type="checkbox" id="type4")
+                                    label(for="type4") Внутриканальный
                         .filter__box.filter-box
                             h4.filter__name Степень потери слуха
                             ul.filter-box__list
                                 li 
-                                    input(type="radio" id="")
-                                    label(for="") 1 степень
+                                    input(type="radio" id="degree1" name="degree")
+                                    label(for="degree1") 1 степень
                                 li 
-                                    input(type="radio" id="")
-                                    label(for="") 2 степень
+                                    input(type="radio" id="degree2" name="degree")
+                                    label(for="degree2") 2 степень
                                 li 
-                                    input(type="radio" id="")
-                                    label(for="") 3 степень   
+                                    input(type="radio" id="degree3" name="degree")
+                                    label(for="degree3") 3 степень   
                                 li 
-                                    input(type="radio" id="")
-                                    label(for="") 4 степень
+                                    input(type="radio" id="degree4" name="degree")
+                                    label(for="degree4") 4 степень
                         .filter__box.filter-box
                             h4.filter__name Тип батарейки
                             ul.filter-box__list
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") 10
+                                    input(type="checkbox" id="type5")
+                                    label(for="type5") 10
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") 13
+                                    input(type="checkbox" id="type6")
+                                    label(for="type6") 13
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") 312   
+                                    input(type="checkbox" id="type7")
+                                    label(for="type7") 312   
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") 675
+                                    input(type="checkbox" id="type8")
+                                    label(for="type8") 675
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Литий-ионный
+                                    input(type="checkbox" id="type9")
+                                    label(for="type9") Литий-ионный
                         .filter__box.filter-box
                             h4.filter__name Особенности
                             ul.filter-box__list
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Компактные и невидимые
+                                    input(type="checkbox" id="char1")
+                                    label(for="char1") Компактные и невидимые
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Простые и эффективные
+                                    input(type="checkbox" id="char2")
+                                    label(for="char2") Простые и эффективные
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Подзаряжаемые решения   
+                                    input(type="checkbox" id="char3")
+                                    label(for="char3") Подзаряжаемые решения   
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") С возможностью подключения
+                                    input(type="checkbox" id="char4")
+                                    label(for="char4") С возможностью подключения
                         .filter__box.filter-box
                             h4.filter__name Акустические ситуации
                             ul.filter-box__list
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Отдых
+                                    input(type="checkbox" id="acustic1")
+                                    label(for="acustic1") Отдых
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Улица
+                                    input(type="checkbox" id="acustic2")
+                                    label(for="acustic2") Улица
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Разговор в компании
+                                    input(type="checkbox" id="acustic3")
+                                    label(for="acustic3") Разговор в компании
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Разговор в тишине
+                                    input(type="checkbox" id="acustic4")
+                                    label(for="acustic4") Разговор в тишине
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Совещание
+                                    input(type="checkbox" id="acustic5")
+                                    label(for="acustic5") Совещание
                             a.filter__all Показать все
-                        .filter__box.filter-box
+                        .filter__box.filter-box 
                             h4.filter__name Bluetooth
                             ul.filter-box__list
                                 li 
-                                    input(type="radio" id="")
-                                    label(for="") Да
+                                    input(type="radio" id="bl1" name="bl")
+                                    label(for="bl1") Да
                                 li 
-                                    input(type="radio" id="")
-                                    label(for="") Нет
+                                    input(type="radio" id="bl2" name="bl")
+                                    label(for="bl2") Нет
                         .filter__box.filter-box
                             h4.filter__name Скидка
                             ul.filter-box__list
                                 li 
-                                    input(type="checkbox" id="")
-                                    label(for="") Товары со скидкой
+                                    input(type="checkbox" id="sale")
+                                    label(for="sale") Товары со скидкой
 
                         button.btn.btn--grey.btn--m.btn--icn 
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#131313"/></svg>
@@ -159,6 +162,11 @@ block main
                             a(href="") Дешевле
                             a(href="") Дороже
                             a(href="") Со скидкой
+                        select.catalog__sort.catalog__sort--mob
+                            option(value="") Популярные
+                            option(value="") Дешевле
+                            option(value="") Дороже
+                            option(value="") Со скидкой
                         .catalog__inner
                             .catalog__items
                                 .card 
