@@ -41,11 +41,13 @@ a {
     height: 100%;
     background-color: #fff;
     background-color: #131313;
-    opacity: 0.5;
+    opacity: 0;
     z-index: 10;
-    display: none;
+    pointer-events: none;
+    transition: all .3s ease;
     &.active {
-        display: block;
+        opacity: 0.5;
+        pointer-events: auto;
     }
 }
 
@@ -106,7 +108,7 @@ main {
         padding-left: 42px;
         padding-right: 42px;
     }
-    @media(max-width: 767px) {
+    @media(max-width: 768px) {
         padding-left: 34px;
         padding-right: 34px;
     }

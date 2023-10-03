@@ -6,7 +6,7 @@
     white-space: nowrap;
     cursor: pointer;
     transition: all 0.3s ease;
- 
+
     &--red {
         background-color: #DB1F26;
         color: #fff;
@@ -22,13 +22,17 @@
             svg {
                 path {
                     fill: #fff;
-                    transition: all .3s ease;
+                    transition: all 0.3s ease;
                 }
             }
         }
     }
     &--icn {
         gap: 10px;
+        svg {
+            flex: 1 0 auto;
+            max-width: 24px;
+        }
     }
     &--white {
         background-color: #fff;
@@ -46,7 +50,7 @@
         line-height: 20px;
     }
     &--l {
-        height: 54px;
+        min-height: 54px;
         padding-left: 30px;
         padding-right: 30px;
         font-size: 15px;
@@ -59,8 +63,19 @@
     top: 18px;
     right: 34px;
     cursor: pointer;
-    @media (max-width: 380px) {
+    @media(max-width: 380px) {
         right: 20px;
         top: 20px;
+    }
+    &--modal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background-color: #F5F7FA;
+        top: 20px;
+        right: 20px;
     }
 }

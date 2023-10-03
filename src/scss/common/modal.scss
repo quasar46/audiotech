@@ -2,18 +2,21 @@
     position: fixed;
     flex-direction: column;
     width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    // bottom: 37px;
+    display: flex;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     padding: 40px 60px;
     background-color: #fff;
     z-index: 20;
-    display: none;
-    // height: 100%;
-    overflow: auto;
+    opacity: 0;
+    pointer-events: none;
     &.active {
-        display: flex;
+        opacity: 1;
+        overflow-y: auto;
+        pointer-events: auto;
     }
     .btn {
         width: 100%;

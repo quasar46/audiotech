@@ -17,13 +17,27 @@ document.addEventListener("DOMContentLoaded", function () {
   minViewPort();
 
   const swiper = new Swiper(".main-slider", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    slidesPerGroup: 1,
+    // effect: 'fade',
+    loop: true,
+    loopFillGroupWithBlank: false,
+    speed: 750,
+    autoplay: {
+      delay: 7000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
     pagination: {
       el: ".swiper-pagination",
-      clickable: true,
+      // dynamicBullets: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + ' swiper-pagination-bullet--svg-animation"><svg width="20" height="20" viewBox="0 0 28 28"><circle class="svg__circle" cx="14" cy="14" r="12" fill="transparent" stroke-width="4"></circle><circle class="svg__circle-second" cx="14" cy="14" r="5.5" fill="red" stroke-width=""></circle></svg></span>';
+      },
     },
   });
 
@@ -48,6 +62,25 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  const swiperThumbs = new Swiper(".swiper-thumbs", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    direction: 'vertical',
+  });
+
+  const swiperProduct = new Swiper(".swiper-product", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiperThumbs,
+    },
+  });
+
   const showSubMenu = function () {
     const btnShowSubMenu = document.querySelector("#showMainSubmenu");
     const wrapMainSubMenu = document.querySelector(".main-submenu");
@@ -63,19 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
     showSubMenu();
   }
 
-  const btnsCloseWindow = document.querySelectorAll(".close-window");
-
-  btnsCloseWindow.forEach((btn) => {
-    btn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      scrollLock.enablePageScroll();
-      btn.closest("div").classList.remove("active");
-      if (overlay.classList.contains("active")) {
-        overlay.classList.remove("active");
-      }
-    });
-  });
-
   const showFilter = function () {
     const btnShowFilter = document.querySelector("#showFilter");
     const filterWindow = document.querySelector(".filter");
@@ -90,41 +110,48 @@ document.addEventListener("DOMContentLoaded", function () {
   showFilter();
 
   const overlay = document.querySelector("#overlay");
-  const btnsShowReg = document.querySelectorAll(".showModalReg");
-  const btnsShowCall = document.querySelectorAll(".showModalCall");
-  const modalReg = document.querySelector("#modalReg");
-  const modalAccept = document.querySelector('#modalAccept');
-  const modalCall = document.querySelector("#modalCall");
 
   btnSubmitReg = document.querySelector('.modal__reg .btn');
 
-  btnSubmitReg.addEventListener('click', function(e) {
+  btnSubmitReg.addEventListener('click', function (e) {
     e.preventDefault();
     modalReg.classList.remove('active');
     modalAccept.classList.add('active');
   })
 
-  btnsShowReg.forEach((btn) => {
-    btn.addEventListener("click", function (e) {
-      e.stopPropagation();
+  document.addEventListener('click', function (e) {
+    if (e.target.dataset.target === 'modal-reg') {
+      e.preventDefault();
       scrollLock.disablePageScroll();
-      overlay.classList.add("active");
-      modalReg.classList.add("active");
-    });
-  });
-
-  btnsShowCall.forEach((btn) => {
-    btn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      scrollLock.disablePageScroll();
-      overlay.classList.add("active");
-      modalCall.classList.add("active");
-    });
+      document.querySelector('#modalReg').classList.add('active');
+      overlay.classList.add('active');
+    } else if (e.target.dataset.target === 'modal-call') {
+      e.preventDefault();
+      scrollLock.enablePageScroll();
+      document.querySelector('#modalCall').classList.add('active');
+      overlay.classList.add('active');
+    } else if (e.target.dataset.close === 'modal') {
+      e.preventDefault();
+      scrollLock.enablePageScroll();
+      e.target.closest('.modal').classList.remove('active');
+      overlay.classList.remove('active');
+    }
   });
 
   customSelect("select");
 
-
   new AirDatepicker('#input');
+
+  Fancybox.bind("[data-fancybox]", {
+    Thumbs: {
+      type: "classic",
+    },
+    Toolbar: {
+      display: {
+        left: [],
+        right: ["close"],
+      },
+    },
+  });
 
 });

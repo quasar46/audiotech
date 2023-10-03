@@ -1,0 +1,91 @@
+@mixin prefix($property, $value, $prefixes: webkit moz ms o) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+}
+
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation: $animations;
+    -ms-animation: $animations;
+    animation: $animations;
+}
+
+@include keyframes(progress) {
+    0% {
+        stroke-dashoffset: -75;
+        opacity: 1;
+    }
+    95% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        stroke-dashoffset: 0;
+    }
+}
+
+
+.swiper-pagination-bullet {
+    background-color: transparent;
+
+    &--svg-animation {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+
+        svg {
+            @include prefix(transform, rotate(-90deg));
+        }
+
+        .svg__circle-inner {
+            stroke: #DB1F26;
+            @include prefix(transition, all 0.7s ease);
+        }
+    }
+
+    .svg__circle-second {
+        fill: #fff;
+    }
+
+    &-active {
+        .svg__circle {
+            stroke: #DB1F26;
+            stroke-dasharray: 75;
+            stroke-dashoffset: 0;
+            @include animation(progress 7s ease-in-out 1 forwards);
+        }
+        .svg__circle-second {
+            fill: #DB1F26;
+        }
+        .svg__circle-inner {
+            fill: #DB1F26
+        }
+    }
+}
