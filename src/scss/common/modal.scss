@@ -1,13 +1,10 @@
 .modal {
-    position: fixed;
+    position: relative;
     flex-direction: column;
     width: 100%;
     display: flex;
     margin: auto;
     top: 30px;
-    left: 0;
-    right: 0;
-    // bottom: 0;
     padding: 40px 60px;
     background-color: #fff;
     z-index: 20;
@@ -29,6 +26,19 @@
 
         padding: 20px;
     }
+}
+
+.modal-wrap {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: transparent;
+    z-index: 10;
+    overflow: auto;
 }
 
 .modal__text {

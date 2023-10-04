@@ -11,6 +11,10 @@
     div:last-child {
         margin-bottom: 0;
     }
+    & > .btn {
+        align-self: flex-start;
+        margin-top: auto;
+    }
 }
 
 .card__pic {

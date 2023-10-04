@@ -154,4 +154,10 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  new ItcTabs('.tabs');
+
+  // add in favorite
+  document.querySelector('.btn-favorite').addEventListener('click', function (e) {
+    e.target.classList.toggle('active');
+  })
 });

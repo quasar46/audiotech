@@ -29,3 +29,32 @@
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
     }
 }
+
+.fancybox__container .f-button[title="Close"] {
+    width: 54px;
+    height: 54px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 20px;
+    right: 20px;
+    background-image: url("../img/icns/md-x.svg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px auto;
+    svg {
+        display: none;
+    }
+    @media (max-width: 380px) {
+        width: 40px;
+        height: 40px;
+        right: 10px;
+        top: 10px;
+    }
+}
+
+.fancybox__container .f-button[title="Close"]:hover:not([disabled]) {
+    background-color: #fff;
+}

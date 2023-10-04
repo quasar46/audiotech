@@ -10,18 +10,18 @@
     &--red {
         background-color: #DB1F26;
         color: #fff;
-        &:hover {
+        &:not(.active):hover {
             background-color: #C60C30;
         }
     }
     &--grey {
         background-color: #F5F7FA;
-        &:hover {
+        &:not(.active):hover {
             background-color: #DB1F26;
             color: #fff;
             svg {
                 path {
-                    fill: #fff;
+                    // fill: #F5F7FA;
                     transition: all 0.3s ease;
                 }
             }
@@ -37,7 +37,7 @@
     &--white {
         background-color: #fff;
         color: #131313;
-        &:hover {
+        &:not(.active):hover {
             background-color: #DB1F26;
             color: #fff;
         }
@@ -55,6 +55,14 @@
         padding-right: 30px;
         font-size: 15px;
         line-height: 24px;
+    }
+    &.active, &:active {
+        svg {
+            path {
+                fill: #DB1F26;
+                stroke: #DB1F26;
+            }
+        }
     }
 }
 
