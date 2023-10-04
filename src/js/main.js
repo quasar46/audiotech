@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
           if (value <= 0) {
             value = 0;
-            document.querySelector('.counter__btn--minus').classList.add('disabled');
+            target.closest('.counter').querySelector('.counter__btn--minus').classList.add('disabled');
           } else {
             target.closest('.counter').querySelector('.counter__btn--minus').classList.remove('disabled');
           }

@@ -94,3 +94,33 @@
         right: 20px;
     }
 }
+
+.btns-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.btn-icn {
+    &--mob {
+        @media (min-width: 380px) {
+            display: none;
+        }
+    }
+
+}
+
+.btn-icn__favorite {
+    @media (max-width: 380px) {
+        display: none;
+    }
+}
+
+.btns-wrap {
+    .btn-icn__favorite {
+        @media (max-width: 380px) {
+            display: flex;
+        }
+    }
+}

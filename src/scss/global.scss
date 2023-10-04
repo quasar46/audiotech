@@ -44,7 +44,7 @@ a {
     opacity: 0;
     z-index: 10;
     pointer-events: none;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     &.active {
         opacity: 0.5;
         pointer-events: auto;
@@ -54,7 +54,7 @@ a {
 section {
     margin-top: 85px;
     margin-bottom: 85px;
-    @media (max-width: 380px) {
+    @media(max-width: 380px) {
         margin-top: 55px;
         margin-bottom: 55px;
     }
@@ -82,7 +82,7 @@ input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
-  -webkit-appearance:none;
+    -webkit-appearance: none;
 }
 
 .wrapper {
@@ -122,6 +122,20 @@ main {
         left: 0;
         right: 0;
         height: 100%;
+    }
+}
+
+.__inner {
+    display: grid;
+    grid-template-columns: auto 400px;
+    grid-gap: 20px;
+    align-items: flex-start;
+    @media(max-width: 1024px) {
+        grid-template-columns: auto 300px;
+    }
+    @media (max-width: 768px) {
+        grid-template-columns: 100%;
+        grid-gap: 60px;
     }
 }
 
