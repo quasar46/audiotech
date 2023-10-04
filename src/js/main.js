@@ -1,4 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+  window.onscroll = function () {
+    myFunction()
+  };
+  const header = document.querySelector("header");
+  const sticky = header.offsetTop;
+  const headerHeight = header.clientHeight;
+  function myFunction() {
+    if (window.scrollY > sticky) {
+      header.classList.add("sticky");
+      document.querySelector('.sticky + main').style.paddingTop = headerHeight + 'px';
+    } else {
+      header.classList.remove("sticky");
+      document.querySelector('main').style.paddingTop = '0px';
+    }
+  }
+
+
   const burgerBtn = document.querySelector(".burger");
   const mainNav = document.querySelector(".main-nav");
   burgerBtn.addEventListener("click", function () {
@@ -16,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   minViewPort();
 
-  const swiper = new Swiper(".main-slider", {
+  const mainSlider = new Swiper(".main-slider", {
     slidesPerView: 1,
     spaceBetween: 0,
     slidesPerGroup: 1,
@@ -33,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
       prevEl: ".swiper-button-prev",
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".main-slider .swiper-pagination",
       // dynamicBullets: true,
       renderBullet: function (index, className) {
         return '<span class="' + className + ' swiper-pagination-bullet--svg-animation"><svg width="20" height="20" viewBox="0 0 28 28"><circle class="svg__circle" cx="14" cy="14" r="12" fill="transparent" stroke-width="4"></circle><circle class="svg__circle-second" cx="14" cy="14" r="5.5" fill="red" stroke-width=""></circle></svg></span>';
@@ -45,11 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 4,
     spaceBetween: 20,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".actual-slider .swiper-button-next",
+      prevEl: ".actual-slider .swiper-button-prev",
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".actual-slider .swiper-pagination",
       clickable: true,
     },
     breakpoints: {
@@ -73,8 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const swiperProduct = new Swiper(".swiper-product", {
     spaceBetween: 10,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-product .swiper-button-next",
+      prevEl: ".swiper-product .swiper-button-prev",
     },
     thumbs: {
       swiper: swiperThumbs,
@@ -154,10 +172,47 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  new ItcTabs('.tabs');
+  if (document.querySelectorAll('.tabs').length > 0) {
+    new ItcTabs('.tabs');
+  }
 
   // add in favorite
-  document.querySelector('.btn-favorite').addEventListener('click', function (e) {
-    e.target.classList.toggle('active');
+  if (document.querySelectorAll('.btn-favorite').length > 0) {
+    document.querySelector('.btn-favorite').addEventListener('click', function (e) {
+      e.target.classList.toggle('active');
+    })
+  }
+
+  const counters = document.querySelectorAll('[data-counter]');
+  if (counters) {
+    counters.forEach(counter => {
+      counter.addEventListener('click', e => {
+        const target = e.target;
+        if (target.closest('.counter__btn')) {
+          let value = parseInt(target.closest('.counter').querySelector('input').value);
+          if (target.closest('.counter__btn--plus')) {
+            value++;
+          } else {
+            --value;
+          }
+          if (value <= 0) {
+            value = 0;
+            document.querySelector('.counter__btn--minus').classList.add('disabled');
+          } else {
+            target.closest('.counter').querySelector('.counter__btn--minus').classList.remove('disabled');
+          }
+          target.closest('.counter').querySelector('input').value = value;
+        }
+      })
+    })
+  }
+
+  document.addEventListener('click', e => {
+    target = e.target;
+    if (target.classList.contains('addInBasket')) {
+      target.remove();
+      document.querySelector('.counter').classList.add('show');
+    }
   })
+
 });

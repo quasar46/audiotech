@@ -1,5 +1,7 @@
 .header {
     position: relative;
+    background-color: #fff;
+    z-index: 100;
 }
 
 .header-top {
@@ -95,6 +97,7 @@
         & > .main-nav__submenu {
             z-index: 10;
             opacity: 1;
+            pointer-events: auto;
         }
     }
 }

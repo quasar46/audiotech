@@ -5,22 +5,22 @@
         ul.modal__wrap 
             li.modal__item 
                 label.modal__label(for="") Ваше имя
-                input(type="text" placeholder="Николаев Дмитрий Александрович" class="modal__input") 
+                input(type="text" placeholder="Николаев Дмитрий Александрович" class="modal__input" require) 
             li.modal__item.modal__item--half
                 label.modal__label(for="") Телефон
-                input(value="" class="tel" placeholder="+7 (___) ___-__-__" class="modal__input") 
+                input(value="" class="tel" placeholder="+7 (___) ___-__-__" class="modal__input" require) 
             li.modal__item.modal__item--half
                 label.modal__label(for="") Электронная почта
-                input(type="mail" placeholder="mail@domain.ru" class="modal__input") 
+                input(type="mail" placeholder="mail@domain.ru" class="modal__input" require) 
             li.modal__item 
                 label.modal__label(for="") Центр слуха
-                select#mySelect
+                select#mySelect(require)
                     option(value="") Центр слуха Астана
                     option(value="") Центр слуха Астана2
                     option(value="") Центр слуха Астана3
             li.modal__item.modal__item--half
                 label.modal__label(for="") Приём
-                select#mySelect
+                select#mySelect(require)
                     option(value="") Первичный прием
                     option(value="") Первичный прием1
                     option(value="") Первичный прием2
@@ -53,7 +53,7 @@
                 label.modal__label(for="") Комментарий к записи
                 textarea.modal__textarea(placeholder="Сообщение") 
         .modal__check 
-            input(type="checkbox" id="agr1")
+            input(type="checkbox" id="agr1" require)
             label(for="agr1") Даю согласие на обработку 
                 a(href="") персональных данных
         button.btn.btn--red.btn--l.btn--icn(type="submit")

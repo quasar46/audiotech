@@ -210,3 +210,18 @@
         width: 100%;
     }
 }
+
+.swiper-slide__video {
+    &::before {
+        content:"";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("../img/icns/play.svg");
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        z-index: 100;
+    }
+}

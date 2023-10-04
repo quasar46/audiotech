@@ -25,6 +25,7 @@
     display: grid;
     grid-template-columns: auto 400px;
     grid-gap: 125px;
+    align-items: flex-start;
     @media(max-width: 1024px) {
         grid-template-columns: auto 300px;
         grid-gap: 100px;

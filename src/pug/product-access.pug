@@ -1,0 +1,216 @@
+extends templates/layout
+
+block main 
+    main 
+        .breadcrumbs 
+            ._container
+                .breadcrumbs__list
+                    li.breadcrumbs__item
+                        a(href="") Главная
+                    li.breadcrumbs__item •
+                    li.breadcrumbs__item 
+                        a(href="") Аксессуары
+                    li.breadcrumbs__item •
+                    li.breadcrumbs__item Батарейки
+        section.product 
+            ._container 
+                h1.title-page.product__title 
+                    span.title-page__text Батарейки ZeniPower.MF воздушно-цинковые для слуховых аппаратов №13
+                    button.btn.btn--grey.btn--m.btn--icn.btn-favorite.product__btn-favorite
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.80625 6.2064C4.70639 5.30653 5.92707 4.80102 7.19985 4.80102C8.47264 4.80102 9.69332 5.30653 10.5935 6.2064L11.9999 7.6116L13.4063 6.2064C13.849 5.74795 14.3787 5.38227 14.9643 5.13071C15.5499 4.87915 16.1798 4.74673 16.8171 4.74119C17.4545 4.73566 18.0865 4.8571 18.6764 5.09845C19.2663 5.3398 19.8023 5.69621 20.253 6.1469C20.7036 6.59758 21.0601 7.13351 21.3014 7.72342C21.5427 8.31332 21.6642 8.94538 21.6587 9.58272C21.6531 10.2201 21.5207 10.8499 21.2691 11.4355C21.0176 12.0212 20.6519 12.5508 20.1935 12.9936L11.9999 21.1884L3.80625 12.9936C2.90639 12.0935 2.40088 10.8728 2.40088 9.6C2.40088 8.32721 2.90639 7.10653 3.80625 6.2064Z" stroke-width="2px" stroke="#131313" fill="#F5F7FA"/></svg>
+
+                        | Добавить в избранное
+                    span.product__article Артикул: 4382-F402
+
+                .product__wrap
+                    .product__main 
+                        .product__slider 
+                            .swiper-thumbs 
+                                .swiper-wrapper 
+                                    .swiper-slide 
+                                        img(src="img/thumbs/pic1.png" alt="")
+                                    .swiper-slide
+                                        img(src="img/thumbs/pic1.png" alt="")
+                            .swiper-product__wrap
+                                .swiper-product(thumbsSlider) 
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            a(href="img/products/pic1.jpg" data-fancybox="gallery") 
+                                                img(src="img/products/pic1.jpg" alt="")
+                                                .product__zom 
+                                                    img(src="img/icns/md-zoom.svg" alt="")
+                                        .swiper-slide
+                                            a(href="img/products/pic1.jpg" data-fancybox="gallery") 
+                                                img(src="img/products/pic1.jpg" alt="")
+                                                .product__zom 
+                                                    img(src="img/icns/md-zoom.svg" alt="")
+                                .product__footer
+                                    button.btn.btn--grey.btn--m.btn--icn.product__btn-favorite.product__btn-favorite--mob
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.39816 4.39574C6.06517 4.126 6.77925 3.98746 7.49984 3.98746C8.22044 3.98746 8.93452 4.126 9.60152 4.39574C10.2686 4.66549 10.8762 5.06149 11.3892 5.56229L11.9998 6.15851L12.6105 5.56229C13.6461 4.55126 15.0456 3.98747 16.4998 3.98747C17.9541 3.98747 19.3536 4.55126 20.3892 5.56229C21.4255 6.57412 22.0124 7.9517 22.0124 9.39337C22.0124 10.835 21.4255 12.2126 20.3892 13.2245L12.7072 20.7244C12.3138 21.1085 11.6859 21.1085 11.2925 20.7244L3.61054 13.2245C3.09754 12.7236 2.68927 12.1277 2.41027 11.4701C2.13125 10.8125 1.9873 10.1067 1.9873 9.39337C1.9873 8.68004 2.13125 7.97429 2.41027 7.31663C2.68927 6.65903 3.09753 6.06313 3.61054 5.56228C4.12348 5.06149 4.73112 4.66549 5.39816 4.39574ZM11.9998 18.5849L5.02515 11.7755C4.70242 11.4604 4.44773 11.0877 4.27443 10.6792C4.10116 10.2708 4.0123 9.83394 4.0123 9.39337C4.0123 8.9528 4.10116 8.51595 4.27443 8.10754C4.44773 7.69908 4.70241 7.32633 5.02515 7.01125C5.34793 6.69611 5.73246 6.44487 6.15735 6.27304C6.58228 6.1012 7.03853 6.01246 7.49984 6.01246C7.96116 6.01246 8.41741 6.1012 8.84234 6.27304C9.26723 6.44487 9.65174 6.6961 9.97453 7.01124L11.2925 8.29802C11.6859 8.68205 12.3138 8.68205 12.7072 8.29802L14.0252 7.01124C14.6774 6.37442 15.5672 6.01247 16.4998 6.01247C17.4325 6.01247 18.3223 6.37442 18.9745 7.01124C19.626 7.64726 19.9874 8.50464 19.9874 9.39337C19.9874 10.2821 19.626 11.1395 18.9745 11.7755L11.9998 18.5849Z" fill="#131313"/></svg>
+                                        | Добавить в избранное
+
+                    .product__descr.product-descr 
+                        .product-descr__price
+                            .product-descr__new-price 400 ₽
+                        .producr-descr__btns 
+                            button.btn.btn--red.btn--icn.btn--l.addInBasket
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                | Добавить в корзину
+                            .counter(data-counter) 
+                                .counter__btn.counter__btn--minus
+                                    img(src="img/icns/md-minus.svg", alt="увеличить количество товара")
+                                .counter__input     
+                                    input(type="text" disabled value="1") 
+                                .counter__btn.counter__btn--plus
+                                    img(src="img/icns/md-plus.svg", alt="уменьшить количество товара")
+
+                        .product-descr__text 
+                            ul.product-descr__list 
+                                li.product-descr__item Производитель ZeniPower.MF
+                                li.product-descr__item Воздушно-цинковые
+                                li.product-descr__item Срок работы 12 месяцев
+
+        section 
+            ._container 
+                .tabs
+                    .tabs__nav 
+                        button.tabs__btn.active Описание
+                        button.tabs__btn Характеристики
+                    .tabs__content 
+                        .tabs__pane.show 
+                            .tabs__pane-wrap
+                                .tabs__pane-box
+                                    h2.section-title Описание 
+                                    p.tabs__par Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean. Viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat. Semper auctor neque vitae tempus quam pellentesque nec. Aenean euismod elementum nisi quis eleifend quam. Pretium quam vulputate dignissim suspendisse in est ante. Dignissim suspendisse in est ante. Aenean et tortor at risus. Pellentesque adipiscing commodo elit at imperdiet. Purus gravida quis blandit turpis. Eu volutpat odio facilisis mauris. Praesent elementum facilisis leo vel fringilla est ullamcorper eget nulla.
+                                    a.tabs__par-show Показать все
+                                .tabs__pane-box 
+                                    h2.section-title Ситуации
+                                    ul.tabs__pane-list 
+                                        li.tabs__pane-item
+                                            .tabs__pane-item__pic
+                                                img(src="img/icns/md-relax.svg" alt="")
+                                            | Отдых 
+                                        li.tabs__pane-item
+                                            .tabs__pane-item__pic
+                                                img(src="img/icns/md-transport.svg" alt="")
+                                            | Транспорт 
+                                        li.tabs__pane-item
+                                            .tabs__pane-item__pic
+                                                img(src="img/icns/md-music.svg" alt="")
+                                            | Музыка 
+                                        li.tabs__pane-item
+                                            .tabs__pane-item__pic
+                                                img(src="img/icns/md-tv.svg" alt="")
+                                            | Просмотр ТВ 
+                        .tabs__pane 
+                            .tabs__pane-wrap 
+                                .tabs__pane-box
+                                    h2.section-title Характеристики
+                                    ul.tabs__list 
+                                        li Own Voice Processing (OVP) (премиум уровень);
+                                        li 3D Классификатор (стандартный уровень);
+                                        li Обработка сигнала (каналы) / Усиление/ВУЗД (вручную) – 24/12;
+                                        li Акустические программы – 6;
+                                        li HD Spatial;
+                                        li Расширенный динамический диапазон;
+                                        li eWindScreen;
+                                        li Менеджер речи и шума (шаги) – 3;
+                                        li SoundSmoothing (шаги) – 1;
+                                        li Система подавления обратной связи;
+                                        li Автоматическая направленность;
+                                        li Узкая направленность;
+                                        li TwinPhone;
+                                        li Частотная компрессия;
+                                        li Прямой стриминг с iPhone (для Android необходим Streamline Mic);
+                                    h2.section-title Аудиограмма
+                                    img(src="img/audiogram.png" alt="")
+                                .tabs__pane-box 
+                                    h2.section-title Спецификации
+                                    ul.tabs__pane-list  
+                                        li.tabs__pane-item
+                                            a(href="" download).tabs__pane-link
+                                                .tabs__pane-item__pic.tabs__pane-item__pic--mode
+                                                    img(src="img/icns/md-download.svg" alt="")
+                                                div 
+                                                    | Технические характеристики Pure 312 7Nх
+                                                    span (PDF, 87 kb)
+                                        li.tabs__pane-item
+                                            a(href="" download).tabs__pane-link
+                                                .tabs__pane-item__pic.tabs__pane-item__pic--mode
+                                                    img(src="img/icns/md-download.svg" alt="")
+                                                div  
+                                                    | Брошюра по уходу за слуховым аппаратом
+                                                    span (PDF, 913 kb)
+
+
+
+        section.slider-block
+            ._container 
+                h2.section-title 
+                    span Похожие аксессуары
+                    button.btn.btn--grey.btn--m Смотреть все
+                .slider-block__wrap.actual-slider.swiper
+                    .swiper-wrapper
+                        .swiper-slide
+                            .card 
+                                a(href="").card__pic
+                                    img(src="img/accessories/pic1.jpg" alt="")
+                                a(href="").card__category Беспроводные устройства
+                                a(href="").card__name Гарнитура StreamLine Mic
+                                .card__footer 
+                                    .card__price.card__price--actual 36 000 ₽
+                                    .card__price.card__price--old 43 500 ₽
+                                button.btn.btn--red.btn--icn.btn--m 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                    | В корзину
+                        .swiper-slide
+                            .card 
+                                a(href="").card__pic
+                                    img(src="img/accessories/pic2.jpg" alt="")
+                                a(href="").card__category Батарейки для слуховых аппаратов
+                                a(href="").card__name Батарейки для слухового аппарата. Тип 10
+                                .card__footer 
+                                    .card__price.card__price--actual 60 ₽
+                                button.btn.btn--red.btn--icn.btn--m 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                    | В корзину
+                        .swiper-slide
+                            .card 
+                                a(href="").card__pic
+                                    img(src="img/accessories/pic3.jpg" alt="")
+                                a(href="").card__category Зарядное устройство
+                                a(href="").card__name ReSound LiNX Quattro
+                                .card__footer 
+                                    .card__price.card__price--actual 15 000 ₽
+                                    .card__price.card__price--old 18 200 ₽
+                                button.btn.btn--red.btn--icn.btn--m 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                    | В корзину
+                        .swiper-slide
+                            .card 
+                                a(href="").card__pic
+                                    img(src="img/accessories/pic4.jpg" alt="")
+                                a(href="").card__category Беспроводные устройства
+                                a(href="").card__name Пульт Phonak PilotOne
+                                .card__footer 
+                                    .card__price.card__price--actual 13 800 ₽
+                                button.btn.btn--red.btn--icn.btn--m 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                    | В корзину
+                        .swiper-slide
+                            .card 
+                                a(href="").card__pic
+                                    img(src="img/accessories/pic1.jpg" alt="")
+                                a(href="").card__category Беспроводные устройства
+                                a(href="").card__name Пульт Phonak PilotOne
+                                .card__footer 
+                                    .card__price.card__price--actual 115 400 ₽
+                                    .card__price.card__price--old 138 000 ₽
+                                button.btn.btn--red.btn--icn.btn--m 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                    | В корзину     
+                    .swiper-pagination 
+                    .swiper-button-prev
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 5L4 12M4 12L11 19M4 12H20" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    .swiper-button-next
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 5L20 12M20 12L13 19M20 12H4" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>

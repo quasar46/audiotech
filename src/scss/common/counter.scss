@@ -1,0 +1,39 @@
+.counter {
+    height: 54px;
+    align-items: center;
+    border: 1px solid #E8EBED;
+    border-radius: 100px;
+    overflow: hidden;
+    padding: 0 20px;
+    justify-content: space-between;
+    display: none;
+    &.show {
+        display: flex;
+    }
+}
+
+.counter__btn {
+    width: 24px;
+    height: 24px;
+}
+
+.counter__input {
+    input {
+        width: 100%;
+        background-color: #fff;
+        color: var(--primary-black, #131313);
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 160%;
+        letter-spacing: -0.15px;
+    }
+}
+
+.counter__btn {
+    cursor: pointer;
+    &--minus.disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+}

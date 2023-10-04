@@ -33,6 +33,13 @@
             flex: 1 0 auto;
             max-width: 24px;
         }
+        &:hover {
+            svg {
+                path {
+                    fill: white;
+                }
+            }
+        }
     }
     &--white {
         background-color: #fff;
