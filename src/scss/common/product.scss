@@ -10,6 +10,7 @@
     font-size: 15px;
     font-weight: 400;
     line-height: 160%;
+    margin-top: 10px;
 }
 
 .product__slider {
@@ -26,6 +27,7 @@
     grid-template-columns: auto 400px;
     grid-gap: 125px;
     align-items: flex-start;
+    margin-bottom: 60px;
     @media(max-width: 1024px) {
         grid-template-columns: auto 300px;
         grid-gap: 100px;
@@ -33,6 +35,10 @@
     @media(max-width: 768px) {
         grid-template-columns: 100%;
         grid-gap: 40px;
+    }
+    @media (max-width: 380px) {
+        grid-gap: 30px;
+        margin-bottom: 40px;
     }
 }
 .product__zom {
@@ -87,6 +93,7 @@
         @media(max-width: 768px) {
             display: flex;
             justify-content: center;
+            margin-left: auto;
         }
         @media(max-width: 380px) {
             width: 100%;

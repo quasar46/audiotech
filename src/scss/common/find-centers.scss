@@ -1,3 +1,18 @@
+.find-centers {
+    ._container {
+        @media(max-width: 380px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .btn {
+        @media (max-width: 380px) {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
+
 .find-centers__wrap {
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -10,6 +25,10 @@
         display: flex;
         flex-direction: column;
     }
+}
+
+.find-centers__title {
+    margin-bottom: 20px;
 }
 
 .find-centers__box {
@@ -33,7 +52,7 @@
             @media(max-width: 1024px) {
                 height: calc(100% - 130px);
             }
-            @media (max-width: 380px) {
+            @media(max-width: 380px) {
                 height: calc(100% - 60px);
             }
         }
@@ -53,17 +72,17 @@
             @media(max-width: 768px) {
                 width: calc(100% - 160px);
             }
-            @media (max-width: 380px) {
+            @media(max-width: 380px) {
                 width: calc(100% - 60px);
             }
         }
-        @media (max-width: 1024px) {
+        @media(max-width: 1024px) {
             padding: 65px 55px;
         }
-        @media (max-width: 768px) {
+        @media(max-width: 768px) {
             padding: 65px 60px;
         }
-        @media (max-width: 380px) {
+        @media(max-width: 380px) {
             padding: 30px 10px;
         }
     }
@@ -91,7 +110,7 @@
 
 .find-centers__number {
     font-size: 60px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 93.333%;
     letter-spacing: -1.2px;
 }

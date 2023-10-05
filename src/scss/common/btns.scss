@@ -2,7 +2,7 @@
     border-radius: 100px;
     display: flex;
     align-items: center;
-    font-weight: 500;
+    font-weight: 600;
     white-space: nowrap;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -99,6 +99,17 @@
     }
 }
 
+.close-filter {
+    position: fixed;
+    top: 18px;
+    right: 34px;
+    cursor: pointer;
+    @media (max-width: 380px) {
+        top: 13px;
+        right: 30px;
+    }
+}
+
 .btns-wrap {
     display: flex;
     justify-content: space-between;
@@ -128,4 +139,8 @@
             display: flex;
         }
     }
+}
+
+button {
+    outline: none;
 }

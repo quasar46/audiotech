@@ -3,11 +3,13 @@
     min-height: 140px;
     display: flex;
     align-items: center;
+    margin-bottom: 60px;
     @media (max-width: 768px) {
         padding: 40px 0;
     }
     @media (max-width: 380px) {
         padding: 30px 0;
+        margin-bottom: 40px;
     }
 }
 

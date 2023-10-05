@@ -5,23 +5,34 @@
     // background-size: auto 100%;
     // background-repeat: no-repeat;
     // background-position: left top;
-    background-image: url("../img/human-block/ellipses.svg"), url("../img/human-block/ellipse.svg");
-    background-size: 710px 450px, 205px 290px;
-    background-position: left bottom, bottom right;
-    background-repeat: no-repeat;
+
 
     @media(max-width: 1024px) {
         background-image: url("../img/human-block/ellipses.svg");
-        background-position: left -159px bottom;
+        background-position: left -159px top;
     }
     @media(max-width: 768px) {
-        background-position: left -348px bottom;
+        background-position: left -348px top;
     }
-    @media(max-width: 380px) {
-        // padding-top: 290px;
-        // padding-bottom: 40px;
-        background-size: 407px 250px;
-        background-position: left -50px top;
+
+    &--doc1 {
+        background-image: url("../img/human-block/pic1.png"), url("../img/human-block/ellipses.svg"), url("../img/human-block/ellipse.svg");
+        background-size: contain, 710px 450px, 205px 290px;
+        background-position: left top, left bottom, bottom right;
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        @media(max-width: 1024px) {
+            background-position: left -176px top, left -141px top;
+            background-size: contain, 710px 450px, 0;
+        }
+        @media(max-width: 768px) {
+            background-position: left -371px top, left -364px top;
+            background-size: cover, 710px 450px, 205px 290px;
+        }
+        @media(max-width: 380px) {
+            background-image: url("../img/human-block/h-block-m.png");
+            background-position: left top;  
+            background-size: auto 260px;
+        }
     }
 }
 
@@ -32,7 +43,10 @@
     margin: auto;
     max-width: 1440px;
     width: 100%;
-    @media (max-width: 380px) {
+    @media(max-width: 1024px) {
+        min-height: 480px;
+    }
+    @media(max-width: 380px) {
         padding-top: 290px;
         padding-bottom: 40px;
     }

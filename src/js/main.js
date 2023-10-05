@@ -35,22 +35,30 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 
 
+
+
+
   const burgerBtn = document.querySelector(".burger");
   const mainNav = document.querySelector(".main-nav");
   burgerBtn.addEventListener("click", function () {
+    if (burgerBtn.classList.contains('active')) {
+      document.body.style = "overflow: ";
+    } else {
+      document.body.style = "overflow: hidden";
+    }
     burgerBtn.classList.toggle("active");
     mainNav.classList.toggle("active");
   });
 
-  const minViewPort = (min = 360) => {
-    if (window.innerWidth <= min) {
-      const viewport = document.querySelector('[name="viewport"]');
-      if (viewport)
-        viewport.setAttribute("content", `width=${min}, user-scalable=no`);
-    }
-  };
+  // const minViewPort = (min = 360) => {
+  //   if (window.innerWidth <= min) {
+  //     const viewport = document.querySelector('[name="viewport"]');
+  //     if (viewport)
+  //       viewport.setAttribute("content", `width=${min}, user-scalable=no`);
+  //   }
+  // };
 
-  minViewPort();
+  // minViewPort();
 
   const mainSlider = new Swiper(".main-slider", {
     slidesPerView: 1,
@@ -65,8 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
       disableOnInteraction: false,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".main-slider .swiper-button-next",
+      prevEl: ".main-slider .swiper-button-prev",
     },
     pagination: {
       el: ".main-slider .swiper-pagination",
@@ -86,6 +94,50 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     pagination: {
       el: ".actual-slider .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+      },
+      360: {
+        slidesPerView: "auto",
+      },
+    },
+  });
+
+  const swiperProductsAccess = new Swiper(".access-slider", {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    // loop: true,
+    navigation: {
+      nextEl: ".access-slider .swiper-button-next",
+      prevEl: ".access-slider .swiper-button-prev",
+    },
+    pagination: {
+      el: ".access-slider .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+      },
+      360: {
+        slidesPerView: "auto",
+      },
+    },
+  });
+
+  const swiperBlog = new Swiper(".blog-slider", {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    // loop: true,
+    navigation: {
+      nextEl: ".blog-slider .swiper-button-next",
+      prevEl: ".blog-slider .swiper-button-prev",
+    },
+    pagination: {
+      el: ".blog-slider .swiper-pagination",
       clickable: true,
     },
     breakpoints: {
@@ -138,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (btnShowFilter !== null) {
       btnShowFilter.addEventListener("click", function () {
         filterWindow.classList.add("active");
-        scrollLock.disablePageScroll();
+        document.body.style = "overflow: hidden";
       });
     }
   };
@@ -258,17 +310,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     tip.style.left = x + "px";                 // перемещаем подсказку
     tip.style.top = y + "px";                  // в нужное место
-}
+  }
 
   function hideTip() {
     tip.hidden = true;
-  } 
-  
+  }
 
-  document.querySelector('.basket__items').addEventListener('click', e => {
-    const target = e.target;
-    if (target.closest('.basket__remove-item')) {
-      target.closest('.basket__item').remove();
-    }
-  })
+  if (document.querySelectorAll('.basket__items').length > 0) {
+    document.querySelector('.basket__items').addEventListener('click', e => {
+      const target = e.target;
+      if (target.closest('.basket__remove-item')) {
+        target.closest('.basket__item').remove();
+      }
+    })
+  }
+
+  if (document.querySelectorAll('.filter').length > 0) {
+    document.querySelector('.filter').addEventListener('click', e => {
+      const target = e.target;
+      if (target.closest('.close-filter')) {
+        target.closest('.filter').classList.remove('active');
+        document.body.style = "overflow: ";
+      }
+    })
+  }
+
 });

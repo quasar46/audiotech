@@ -3,6 +3,9 @@
     padding-top: 60px;
     padding-bottom: 20px;
     color: #fff;
+    @media(max-width: 380px) {
+        padding-top: 40px;
+    }
 }
 
 .footer__box {
@@ -66,7 +69,7 @@
 
 .footer__title {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 24px;
     letter-spacing: 0;
 }
@@ -93,6 +96,18 @@
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     overflow: hidden;
+    svg {
+        path {
+            transition: all .3s ease;
+        }
+    }
+    &:hover {
+        svg {
+            path {
+                fill: red;
+            }
+        }
+    }
 }
 
 .footer-form {
@@ -166,6 +181,10 @@
     font-weight: 400;
     line-height: 20px;
     color: #999;
+    margin-top: -10px;
+    @media(max-width: 380px) {
+        margin-top: 0;
+    }
 }
 
 .footer-form__subtext {
@@ -187,4 +206,13 @@
             top: 0;
         }
     }
+}
+
+.footer__copy {
+    br {
+        @media(min-width: 380px) {
+            display: none;
+        }
+    }
+
 }

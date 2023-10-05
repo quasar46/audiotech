@@ -2,11 +2,10 @@
     display: grid;
     grid-template-columns: 190px 273px 1fr 1fr;
     grid-gap: 0 20px;
-    padding: 20px 0;
-    border-bottom: 1px solid #E8EBED;
-    &:first-child {
-        border-top: 1px solid #E8EBED;
-    }
+    padding-top: 20px;
+    border-top: 1px solid #E8EBED;
+    min-height: 170px;
+    margin-bottom: 20px;
     @media(max-width: 1024px) {
         grid-template-columns: 140px 180px 1fr 1fr;
     }
@@ -16,12 +15,17 @@
     @media(max-width: 380px) {
         grid-template-columns: 140px 140px;
         grid-gap: 20px;
+        min-height: 308px;
+        padding-top: 15px;
     }
     .basket__col:nth-child(2) {
         .basket__head--mob {
             opacity: 0;
             visibility: hidden;
         }
+    }
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 
@@ -45,6 +49,7 @@
     }
     &--mob {
         display: block;
+        padding-bottom: 10px;
         @media(min-width: 380px) {
             display: none;
         }
@@ -79,10 +84,14 @@
 .basket__item-name {
     margin: 0 0 20px;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 133.333%;
 }
 
 .basket__item-price {
     margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: -0.15px;
 }

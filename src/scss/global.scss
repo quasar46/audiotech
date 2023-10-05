@@ -137,6 +137,9 @@ main {
         grid-template-columns: 100%;
         grid-gap: 60px;
     }
+    @media (max-width: 380px) {
+        grid-gap: 40px;
+    }
 }
 
 img {

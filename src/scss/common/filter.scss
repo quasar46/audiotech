@@ -10,7 +10,7 @@
         top: 0;
         left: 0;
         background-color: #fff;
-        z-index: 10;
+        z-index: 100;
         padding: 16px 0;
         height: 100%;
         overflow: auto;
@@ -32,14 +32,14 @@
 
 .filter__title {
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 127.273%;
     margin: 0 0 30px;
 }
 
 .filter__name {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 133.333%;
     margin: 0 0 20px;
 }
@@ -69,26 +69,20 @@
     flex-direction: column;
     margin: 0;
     padding: 0;
+    padding-left: 34px;
     gap: 10px;
     input {
         position: absolute;
         z-index: -1;
         overflow: hidden;
         opacity: 0;
-        &:checked + label {
-            &::before {
-                border-color: #DB1F26;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-color: #DB1F26;
-            }
-        }
+
         &[type="checkbox"] {
             & + label {
                 &::before {
                     content: "";
                     position: absolute;
-                    left: 0;
+                    left: -34px;
                     width: 24px;
                     height: 24px;
                     border: 1px solid #ccc;
@@ -104,7 +98,7 @@
                 &::before {
                     content: "";
                     position: absolute;
-                    left: 0;
+                    left: -34px;
                     width: 24px;
                     height: 24px;
                     border-radius: 50%;
@@ -115,14 +109,22 @@
                 background-image: url("../img/icns/rad-active.svg");
             }
         }
-
+        &:checked + label {
+            &::before {
+                border-color: #DB1F26;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-color: #DB1F26;
+            }
+        }
     }
     label {
         position: relative;
-        padding-left: 34px;
+        
         font-size: 15px;
         font-weight: 400;
         line-height: 160%;
+
     }
 
 }
@@ -136,5 +138,17 @@
     margin-top: 20px;
     @media(max-width: 768px) {
         display: none;
+    }
+}
+
+.filter-box__item {
+    &::after {
+        content: attr(data-count);
+        position: relative;
+        color: #737373;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 153.846%;
+        top: -5px;
     }
 }

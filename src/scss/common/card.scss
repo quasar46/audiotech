@@ -31,6 +31,10 @@
     }
 }
 
+.card__pic:hover + .card__category + .card__name {
+    color: red;
+}
+
 
 .card__category {
     font-size: 13px;
@@ -42,14 +46,14 @@
 
 .card__name {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 133.333%;
     margin-bottom: 10px;
 }
 
 .card__price--actual {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 160%;
     letter-spacing: -0.15px;
 }

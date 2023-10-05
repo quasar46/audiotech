@@ -183,6 +183,7 @@
         visibility: hidden;
         &:checked + label {
             &::before {
+                border-color: #DB1F26;
                 background-color: #DB1F26;
                 background-image: url("../img/icns/md-check.svg");
                 background-repeat: no-repeat;

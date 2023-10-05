@@ -4,6 +4,10 @@
     .btn {
         margin-top: auto;
     }
+    @media (max-width: 380px) {
+        padding: 40px 0;
+    }
+    
 }
 
 .offers__wrap {
@@ -27,6 +31,20 @@
     img {
         width: 80px;
         margin-bottom: 30px;
+        @media (max-width: 380px) {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+    }
+    &:last-child {
+        .offers__name {
+            br {
+                @media (max-width: 380px) {
+                    display: none;
+                }
+            }
+        }
     }
     @media (max-width: 768px) {
         width: calc(50% - 20px);
@@ -58,7 +76,7 @@
 .offers__name {
     text-align: center;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 133.333%;
     margin-bottom: 10px;
 }
