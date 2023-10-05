@@ -10,12 +10,18 @@
     @media(max-width: 1024px) {
         grid-template-columns: 140px 180px 1fr 1fr;
     }
-    @media (max-width: 768px) {
+    @media(max-width: 768px) {
         grid-template-columns: 140px 220px 1fr 1fr;
     }
     @media(max-width: 380px) {
         grid-template-columns: 140px 140px;
         grid-gap: 20px;
+    }
+    .basket__col:nth-child(2) {
+        .basket__head--mob {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 }
 
@@ -31,11 +37,17 @@
     @media(max-width: 1024px) {
         grid-template-columns: 140px 180px 1fr 1fr;
     }
-    @media (max-width: 768px) {
+    @media(max-width: 768px) {
         grid-template-columns: 140px 220px 1fr 1fr;
     }
     @media(max-width: 380px) {
         display: none;
+    }
+    &--mob {
+        display: block;
+        @media(min-width: 380px) {
+            display: none;
+        }
     }
 }
 

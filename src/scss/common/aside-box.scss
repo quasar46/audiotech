@@ -10,6 +10,9 @@
             align-self: flex-start;
             width: auto;
         }
+        @media (max-width: 380px) {
+            width: 100%;
+        }
     }
     @media (max-width: 1024px) {
         padding: 30px;
@@ -29,7 +32,11 @@
     border-bottom: 1px solid #E8EBED;
     &:last-child {
         margin-bottom: 30px;
+        padding-bottom: 0;
         border-bottom: none;
+        @media (max-width: 380px) {
+            margin-bottom: 20px;
+        }
     }
 }
 

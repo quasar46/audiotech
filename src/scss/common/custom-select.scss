@@ -1,6 +1,9 @@
 .custom-select-container {
     position: relative;
     box-sizing: border-box;
+    @media (min-width: 380px) {
+        display: none;
+    }
 }
 .custom-select-container * {
     box-sizing: border-box;

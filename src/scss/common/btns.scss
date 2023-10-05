@@ -6,7 +6,10 @@
     white-space: nowrap;
     cursor: pointer;
     transition: all 0.3s ease;
-
+    svg {
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
     &--red {
         background-color: #DB1F26;
         color: #fff;
@@ -22,6 +25,7 @@
             svg {
                 path {
                     // fill: #F5F7FA;
+                    fill: white;
                     transition: all 0.3s ease;
                 }
             }
@@ -34,11 +38,11 @@
             max-width: 24px;
         }
         &:hover {
-            svg {
-                path {
-                    fill: white;
-                }
-            }
+            // svg {
+            //     path {
+            //         fill: white;
+            //     }
+            // }
         }
     }
     &--white {
@@ -103,6 +107,7 @@
 }
 
 .btn-icn {
+    cursor: pointer;
     &--mob {
         @media (min-width: 380px) {
             display: none;

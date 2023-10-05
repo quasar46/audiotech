@@ -16,6 +16,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal => {
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.modal')) {
+        modal.classList.remove('active');
+        overlay.classList.remove('active');
+        scrollLock.enablePageScroll();
+      }
+    })
+    document.addEventListener('keydown', function (e) {
+      if (e.keyCode == 27) {
+        modal.classList.remove('active');
+        overlay.classList.remove('active');
+        scrollLock.enablePageScroll();
+      }
+    });
+  })
+
 
   const burgerBtn = document.querySelector(".burger");
   const mainNav = document.querySelector(".main-nav");
@@ -215,4 +233,42 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   })
 
+
+  // tooltip
+  let tip = document.createElement('div');
+  tip.className = 'tooltip';
+  tip.hidden = true;
+  document.body.append(tip);
+
+  document.addEventListener("mouseover", showTip);
+  document.addEventListener("mouseout", hideTip);
+
+  function showTip(event) {
+    let tar = event.target;
+    if (!tar.closest('.product-descr__inf')) return;
+
+    tip.innerHTML = tar.closest('.product-descr__inf').dataset.tooltip;
+    tip.hidden = false;
+
+    let tarRect = tar.getBoundingClientRect(); // координаты HTML-элемента
+    let x, y;                                  // координаты подсказки
+
+    x = tarRect.x;                             // подсказка над
+    y = tarRect.y - tip.offsetHeight - 5;      // HTML-элементом
+
+    tip.style.left = x + "px";                 // перемещаем подсказку
+    tip.style.top = y + "px";                  // в нужное место
+}
+
+  function hideTip() {
+    tip.hidden = true;
+  } 
+  
+
+  document.querySelector('.basket__items').addEventListener('click', e => {
+    const target = e.target;
+    if (target.closest('.basket__remove-item')) {
+      target.closest('.basket__item').remove();
+    }
+  })
 });
