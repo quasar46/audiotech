@@ -15,6 +15,12 @@
             }
         }
     }
+    .swiper-navigation,
+    .swiper-pagination {
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
 }
 
 .slider-block__wrap {

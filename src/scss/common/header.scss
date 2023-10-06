@@ -139,7 +139,7 @@
 
 .header-bottom__mobile {
     display: none;
-    div {
+    * {
         display: flex;
     }
     @media(max-width: 768px) {

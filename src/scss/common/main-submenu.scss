@@ -36,7 +36,7 @@
 .main-submenu__title {
     margin-bottom: 15px;
     font-size: 15px;    
-    font-weight: 600;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.15px;
 }
@@ -54,6 +54,10 @@
     transition: all .3s ease;
     &:hover {
         color: #DB1F26;
+    }
+    @media (max-width: 1024px) {
+        font-size: 18px;
+        line-height: 133.333%;
     }
 }
 

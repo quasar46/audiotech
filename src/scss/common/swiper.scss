@@ -61,7 +61,7 @@
             width: 220px;
         }
     }
-    @media(max-width: 380px) {
+    @media(max-width: 768px) {
         padding-bottom: 0;
     }
 }
@@ -126,6 +126,7 @@
             bottom: 30px;
             justify-content: center;
             width: 100%;
+            padding-right: 0;
         }
         @media(max-width: 380px) {
             bottom: 20px;
@@ -242,4 +243,10 @@
 
 .blog-slider {
     padding-bottom: 0;
+}
+
+.slider-block {
+    .pb0 {
+        padding-bottom: 0;
+    }
 }

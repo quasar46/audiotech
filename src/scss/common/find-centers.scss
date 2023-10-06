@@ -5,6 +5,7 @@
             padding-right: 0;
         }
     }
+
     .btn {
         @media (max-width: 380px) {
             width: 100%;
@@ -18,9 +19,11 @@
     grid-template-columns: repeat(2, 50%);
     min-height: 450px;
     color: #fff;
+
     @media(max-width: 1024px) {
         min-height: 480px;
     }
+
     @media(max-width: 768px) {
         display: flex;
         flex-direction: column;
@@ -39,6 +42,7 @@
         grid-template-columns: repeat(2, 50%);
         padding: 50px 80px;
         position: relative;
+
         &::before {
             content: "";
             position: absolute;
@@ -49,13 +53,16 @@
             left: 50%;
             top: 50%;
             transform: translateY(-50%);
+
             @media(max-width: 1024px) {
                 height: calc(100% - 130px);
             }
+
             @media(max-width: 380px) {
                 height: calc(100% - 60px);
             }
         }
+
         &::after {
             content: "";
             position: absolute;
@@ -66,53 +73,68 @@
             left: 50%;
             top: 50%;
             transform: translateX(-50%);
+
             @media(max-width: 1024px) {
                 width: calc(100% - 150px);
             }
+
             @media(max-width: 768px) {
                 width: calc(100% - 160px);
             }
+
             @media(max-width: 380px) {
                 width: calc(100% - 60px);
             }
         }
+
         @media(max-width: 1024px) {
             padding: 65px 55px;
         }
+
         @media(max-width: 768px) {
             padding: 65px 60px;
         }
+
         @media(max-width: 380px) {
             padding: 30px 10px;
         }
     }
+
     &:nth-child(2) {
         background-color: #981E32;
         padding: 60px 105px 20px 115px;
+
         @media(max-width: 1024px) {
             padding-left: 90px;
         }
+
         @media(max-width: 768px) {
             padding-left: 80px;
             padding-right: 80px;
         }
+
         @media(max-width: 380px) {
             padding: 30px;
         }
     }
+
     @media(max-width: 768px) {
         min-height: 450px;
     }
+
     @media(max-width: 380px) {
-        min-height: 372px;
+        min-height: 380px;
     }
 }
 
 .find-centers__number {
     font-size: 60px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 93.333%;
     letter-spacing: -1.2px;
+    @media (max-width: 380px) {
+        font-size: 48px;
+    }
 }
 
 .find-centers__text {
@@ -135,4 +157,8 @@
     gap: 10px;
     padding-top: 20px;
     padding-left: 20px;
+
+    @media (max-width: 380px) {
+        padding-right: 30px;
+    }
 }

@@ -1,5 +1,28 @@
 .main-nav {
     margin: 0 auto;
+
+    &.active {
+        @media(max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .btn {
+        @media(min-width: 769px) {
+            display: none;
+        }
+
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
     @media(max-width: 1024px) {
         display: none;
         position: absolute;
@@ -11,30 +34,18 @@
         padding: 33px 42px 100px;
         border-top: 1px solid #E8EBED;
         transition: all 0.3s ease;
+        overflow: auto;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
     }
+
     @media(max-width: 768px) {
         padding: 18px 34px 80px;
+        padding-left: 34px;
+        padding-right: 34px;
+        flex-direction: column;
     }
-    &.active {
-        @media(max-width: 1024px) {
-            display: block;
-        }
-    }
-    .btn {
-        @media(min-width: 769px) {
-            display: none;
-        }
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 20px;
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
+
     @media(max-width: 380px) {
-        padding-left: 30px;
-        padding-right: 30px;
         padding-bottom: 40px;
     }
 }
@@ -45,18 +56,23 @@
     gap: 20px;
     padding: 0;
     margin: 0;
-    & > .main-nav__item {
+
+    &>.main-nav__item {
         min-height: 60px;
     }
+
     .main-nav__item {
 
         justify-content: center;
+
         img {
             width: 24px;
+
             @media(min-width: 1025px) {
                 display: none;
             }
         }
+
         @media(max-width: 1024px) {
             width: 100%;
             min-height: auto;
@@ -66,32 +82,69 @@
             flex-direction: row;
         }
     }
+
     @media(max-width: 1024px) {
         flex-direction: column;
         align-items: flex-start;
         gap: 30px;
         margin-bottom: 60px;
     }
+
     @media(max-width: 380px) {
         gap: 20px;
         margin-bottom: 30px;
+    }
+
+    &+.btn {
+        @media (max-width: 768px) {
+            margin-top: auto;
+        }
     }
 }
 
 .main-nav__link {
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.01em;
     cursor: pointer;
+
     &:hover {
         color: #DB1F26;
         transition: all 0.3s ease;
     }
+
     @media(max-width: 1024px) {
+
         font-size: 36px;
         line-height: 122.2%;
+        width: 100%;
+
+        &--arrow {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                background-image: url(../img/icns/md-cheveron-right.svg);
+                width: 24px;
+                height: 24px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            &.active {
+                &::before {
+                    transform: translateY(-50%) rotate(90deg);
+                }
+            }
+        }
+
     }
+
     @media(max-width: 380px) {
         font-size: 24px;
     }
@@ -105,15 +158,44 @@
     transition: all 0.3s ease;
     pointer-events: none;
     padding-top: 2px;
+
+    &.active {
+        display: block;
+    }
+
     &--mode {
         left: auto;
         right: 0;
     }
-    &--mob {
-        @media(min-width: 1025px) {
-            display: none;
-            
+
+    // &--mob {
+    //     @media(min-width: 1025px) {
+    //         display: none;
+
+    //     }
+    // }
+    &--full-screen {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        top: 0;
+
+        .main-nav__submenu {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
         }
+
+    }
+
+    @media (max-width: 1024px) {
+        z-index: 100;
+        pointer-events: auto;
+        display: none;
+    }
+
+    @media (min-width: 1025px) {
+        box-shadow: 0px 4px 10px 0px rgba(19, 19, 19, 0.10);
     }
 }
 
@@ -124,17 +206,14 @@
     background-color: #fff;
     width: 250px;
     padding: 20px 30px;
-    
-    @media (min-width: 1025px) {
-        box-shadow: 0px 4px 10px 0px rgba(19, 19, 19, 0.10);
-    }
-   
- 
+
+
     @media(max-width: 1024px) {
         width: 100%;
         padding: 0;
         transition: none;
     }
+
     .main-nav__item {
         .main-nav__item {
             @media(max-width: 1024px) {
@@ -142,6 +221,7 @@
             }
         }
     }
+
 }
 
 .main-nav__item {
@@ -149,21 +229,102 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    &:hover {
-        & > .main-nav__submenu-wrap {
-            z-index: 10;
-            opacity: 1;
-            pointer-events: auto;
-            @media(max-width: 1024px) {
-                position: static;
+
+    .main-nav__submenu {
+        .main-nav__submenu {
+            padding-top: 0;
+            padding-bottom: 0;
+
+            @media (max-width: 1024px) {
+                padding-left: 20px;
+                padding-top: 20px;
+                display: none;
+            }
+
+            @media (max-width: 380px) {
+                padding-top: 15px;
+                padding-left: 16px;
+            }
+
+            &.show {
+                display: block;
             }
         }
-        img {
-            transform: rotate(90deg);
+    }
+
+    &>.main-nav__submenu-wrap {
+        @media (max-width: 1024px) {
+            position: relative;
+            opacity: 1;
+            width: 100%;
+            padding-top: 30px;
+
+            ._container {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .main-submenu__box {
+                flex-direction: column;
+            }
+
+            .main-submenu__list {
+                max-width: 100%;
+            }
+
+            .main-submenu__title {
+                position: relative;
+                margin-bottom: 0;
+                font-size: 18px;
+                font-weight: 400;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    background-image: url("../img/icns/md-cheveron-right.svg");
+                    width: 24px;
+                    height: 24px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+
+                &.active {
+                    &::before {
+                        transform: translateY(-50%) rotate(90deg);
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 380px) {
+            padding-top: 20px;
         }
     }
+
+    @media (min-width: 1025px) {
+        &:hover {
+            &>.main-nav__submenu-wrap {
+                z-index: 10;
+                opacity: 1;
+                pointer-events: auto;
+
+                @media(max-width: 1024px) {
+                    position: static;
+                }
+            }
+
+            img {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
     @media(max-width: 1024px) {
         flex-wrap: wrap;
+        gap: 0;
     }
 }
 
@@ -173,24 +334,28 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+
     .main-nav__link {
         @media(max-width: 1024px) {
             font-size: 18px;
             font-weight: 400;
         }
     }
+
     @media(max-width: 1024px) {
         gap: 20px;
     }
+
     @media(max-width: 380px) {
         gap: 15px;
     }
 }
 
 .main-nav-actions {
-    @media(min-width: 1025px) {
+    @media(min-width: 769px) {
         display: none;
     }
+
     display: flex;
     align-items: center;
     gap: 15px;
@@ -204,8 +369,10 @@
     font-size: 15px;
     font-weight: 400;
     line-height: 160%;
+
     &:first-child {
         margin-right: calc(62px - 15px);
+
         @media(max-width: 380px) {
             margin-right: -3px;
         }
@@ -216,8 +383,10 @@
     @media(min-width: 769px) {
         display: none;
     }
+
     position: relative;
     margin-bottom: 60px;
+
     input {
         padding-left: 49px;
         padding-right: 20px;
@@ -229,10 +398,12 @@
         font-size: 15px;
         font-weight: 400;
         line-height: 160%;
+
         &:focus {
             outline: none;
         }
     }
+
     &::before {
         content: "";
         position: absolute;
@@ -245,5 +416,9 @@
         left: 20px;
         top: 50%;
         transform: translateY(-50%);
+    }
+
+    @media (max-width: 380px) {
+        margin-bottom: 30px;
     }
 }

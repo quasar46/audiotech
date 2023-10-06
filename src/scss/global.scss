@@ -58,6 +58,12 @@ section {
         margin-top: 55px;
         margin-bottom: 55px;
     }
+    &:last-child {
+        margin-bottom: 100px;
+        @media (max-width: 380px) {
+            margin-bottom: 65px;
+        }
+    }
 }
 
 

@@ -2,47 +2,52 @@ extends templates/layout
 
 block main 
     main 
-        .main-slider 
+        .main-slider
+            .parallax-bg(style="background-image: url(img/main-slider/slide1-b.jpg)")
             .swiper-wrapper 
                 .swiper-slide
-                    picture 
-                        source(srcset="img/main-slider/slide1-b.jpg" media="(min-width: 1024px)")
-                        source(srcset="img/main-slider/slide1-m.jpg" media="(min-width: 360px)")
-                        img.main-slider__pic(src="img/main-slider/slide1-b.jpg" alt="")
+                    picture.main-slider__pic 
+                        img(src="img/main-slider/produkt1.png" alt="")
                     ._container
                         .main-slider__box
-                            div.main-slider__subtitle Слуховые аппараты
+                            .main-slider__subtitle Слуховые аппараты
                             h2.main-slider__title Расширенная гарантия на слуховые аппараты ReSound Enya
+                            a(href="catalog.html").btn.btn--red.btn--l.btn--icn.btn__main-slider  
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 11H5M19 11C19.5304 11 20.0391 11.2107 20.4142 11.5858C20.7893 11.9609 21 12.4696 21 13V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V13C3 12.4696 3.21071 11.9609 3.58579 11.5858C3.96086 11.2107 4.46957 11 5 11M19 11V9C19 8.46957 18.7893 7.96086 18.4142 7.58579C18.0391 7.21071 17.5304 7 17 7M5 11V9C5 8.46957 5.21071 7.96086 5.58579 7.58579C5.96086 7.21071 6.46957 7 7 7M17 7V5C17 4.46957 16.7893 3.96086 16.4142 3.58579C16.0391 3.21071 15.5304 3 15 3H9C8.46957 3 7.96086 3.21071 7.58579 3.58579C7.21071 3.96086 7 4.46957 7 5V7M17 7H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                | Посмотреть каталог
 
                 .swiper-slide
-                    picture 
-                        source(srcset="img/main-slider/slide1-b.jpg" media="(min-width: 1024px)")
-                        source(srcset="img/main-slider/slide1-m.jpg" media="(min-width: 360px)")
-                        img.main-slider__pic(src="img/main-slider/slide1-b.jpg" alt="")
+                    picture.main-slider__pic 
+                        img(src="img/main-slider/produkt1.png" alt="")
                     ._container
                         .main-slider__box
-                            div.main-slider__subtitle Слуховые аппараты
+                            .main-slider__subtitle Слуховые аппараты
                             h2.main-slider__title Расширенная гарантия на слуховые аппараты ReSound Enya
+                            a(href="catalog.html").btn.btn--red.btn--l.btn--icn.btn__main-slider  
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 11H5M19 11C19.5304 11 20.0391 11.2107 20.4142 11.5858C20.7893 11.9609 21 12.4696 21 13V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V13C3 12.4696 3.21071 11.9609 3.58579 11.5858C3.96086 11.2107 4.46957 11 5 11M19 11V9C19 8.46957 18.7893 7.96086 18.4142 7.58579C18.0391 7.21071 17.5304 7 17 7M5 11V9C5 8.46957 5.21071 7.96086 5.58579 7.58579C5.96086 7.21071 6.46957 7 7 7M17 7V5C17 4.46957 16.7893 3.96086 16.4142 3.58579C16.0391 3.21071 15.5304 3 15 3H9C8.46957 3 7.96086 3.21071 7.58579 3.58579C7.21071 3.96086 7 4.46957 7 5V7M17 7H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                | Посмотреть каталог
+
+                .swiper-slide 
+                    picture.main-slider__pic 
+                        img(src="img/main-slider/produkt1.png" alt="")
+                    ._container
+                        .main-slider__box
+                            .main-slider__subtitle Слуховые аппараты
+                            h2.main-slider__title Расширенная гарантия на слуховые аппараты ReSound Enya
+                            a(href="catalog.html").btn.btn--red.btn--l.btn--icn.btn__main-slider  
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 11H5M19 11C19.5304 11 20.0391 11.2107 20.4142 11.5858C20.7893 11.9609 21 12.4696 21 13V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V13C3 12.4696 3.21071 11.9609 3.58579 11.5858C3.96086 11.2107 4.46957 11 5 11M19 11V9C19 8.46957 18.7893 7.96086 18.4142 7.58579C18.0391 7.21071 17.5304 7 17 7M5 11V9C5 8.46957 5.21071 7.96086 5.58579 7.58579C5.96086 7.21071 6.46957 7 7 7M17 7V5C17 4.46957 16.7893 3.96086 16.4142 3.58579C16.0391 3.21071 15.5304 3 15 3H9C8.46957 3 7.96086 3.21071 7.58579 3.58579C7.21071 3.96086 7 4.46957 7 5V7M17 7H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                | Посмотреть каталог
 
                 .swiper-slide
-                    picture 
-                        source(srcset="img/main-slider/slide1-b.jpg" media="(min-width: 1024px)")
-                        source(srcset="img/main-slider/slide1-m.jpg" media="(min-width: 360px)")
-                        img.main-slider__pic(src="img/main-slider/slide1-b.jpg" alt="")
+                    picture.main-slider__pic 
+                        img(src="img/main-slider/produkt1.png" alt="")
                     ._container
                         .main-slider__box
-                            div.main-slider__subtitle Слуховые аппараты
+                            .main-slider__subtitle Слуховые аппараты
                             h2.main-slider__title Расширенная гарантия на слуховые аппараты ReSound Enya
-
-                .swiper-slide   
-                    picture 
-                        source(srcset="img/main-slider/slide1-b.jpg" media="(min-width: 1024px)")
-                        source(srcset="img/main-slider/slide1-m.jpg" media="(min-width: 360px)")
-                        img.main-slider__pic(src="img/main-slider/slide1-b.jpg" alt="")
-                    ._container
-                        .main-slider__box
-                            div.main-slider__subtitle Слуховые аппараты
-                            h2.main-slider__title Расширенная гарантия на слуховые аппараты ReSound Enya
+                            a(href="catalog.html").btn.btn--red.btn--l.btn--icn.btn__main-slider 
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 11H5M19 11C19.5304 11 20.0391 11.2107 20.4142 11.5858C20.7893 11.9609 21 12.4696 21 13V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V13C3 12.4696 3.21071 11.9609 3.58579 11.5858C3.96086 11.2107 4.46957 11 5 11M19 11V9C19 8.46957 18.7893 7.96086 18.4142 7.58579C18.0391 7.21071 17.5304 7 17 7M5 11V9C5 8.46957 5.21071 7.96086 5.58579 7.58579C5.96086 7.21071 6.46957 7 7 7M17 7V5C17 4.46957 16.7893 3.96086 16.4142 3.58579C16.0391 3.21071 15.5304 3 15 3H9C8.46957 3 7.96086 3.21071 7.58579 3.58579C7.21071 3.96086 7 4.46957 7 5V7M17 7H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                | Посмотреть каталог
 
             ._container._container--abs
                 .swiper-nav 
@@ -53,9 +58,7 @@ block main
                         .swiper-button-next
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 5L20 12M20 12L13 19M20 12H4" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 .swiper-pagination
-                a(href="catalog.html").btn.btn--red.btn--l.btn--icn 
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 11H5M19 11C19.5304 11 20.0391 11.2107 20.4142 11.5858C20.7893 11.9609 21 12.4696 21 13V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V13C3 12.4696 3.21071 11.9609 3.58579 11.5858C3.96086 11.2107 4.46957 11 5 11M19 11V9C19 8.46957 18.7893 7.96086 18.4142 7.58579C18.0391 7.21071 17.5304 7 17 7M5 11V9C5 8.46957 5.21071 7.96086 5.58579 7.58579C5.96086 7.21071 6.46957 7 7 7M17 7V5C17 4.46957 16.7893 3.96086 16.4142 3.58579C16.0391 3.21071 15.5304 3 15 3H9C8.46957 3 7.96086 3.21071 7.58579 3.58579C7.21071 3.96086 7 4.46957 7 5V7M17 7H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    | Посмотреть каталог
+                
         section.info-blocks 
             ._container 
                 h2.section-title Подходящее решение для каждого
@@ -149,6 +152,41 @@ block main
                                 .card__footer 
                                     .card__price.card__price--actual 115 400 ₽
                                     .card__price.card__price--old 138 000 ₽
+                        .swiper-slide
+                            .card 
+                                a(href="").card__pic
+                                    img(src="img/cards/pic1.jpg" alt="")
+                                a(href="").card__category Слуховой аппарат
+                                a(href="").card__name Audeo M30-R
+                                .card__footer 
+                                    .card__price.card__price--actual 65 300 ₽
+                                    .card__price.card__price--old 81 250 ₽
+                        .swiper-slide
+                            .card 
+                                a(href="").card__pic
+                                    img(src="img/cards/pic2.jpg" alt="")
+                                a(href="").card__category Слуховой аппарат
+                                a(href="").card__name Motion 13 3Nx
+                                .card__footer 
+                                    .card__price.card__price--actual 1112 000 ₽
+                                    .card__price.card__price--old 123 200 ₽
+                        .swiper-slide
+                            .card 
+                                a(href="").card__pic
+                                    img(src="img/cards/pic3.jpg" alt="")
+                                a(href="").card__category Слуховой аппарат
+                                a(href="").card__name Naida V30 UP
+                                .card__footer 
+                                    .card__price.card__price--actual 49 900 ₽
+                        .swiper-slide
+                            .card 
+                                a(href="").card__pic
+                                    img(src="img/cards/pic4.jpg" alt="")
+                                a(href="").card__category Слуховой аппарат
+                                a(href="").card__name LiNX Quattro RE762-DRWT
+                                .card__footer 
+                                    .card__price.card__price--actual 115 400 ₽
+                                    .card__price.card__price--old 138 000 ₽
                     .swiper-pagination
                     .swiper-navigation
                         .swiper-button-prev
@@ -161,21 +199,21 @@ block main
 
         section.brends
             ._container 
-                h2.section-title.brends__title Надёжные устройства от ведущих мировых брендов 
+                h2.section-title.brends__title Надёжные устройства <br>от ведущих мировых брендов 
                 .brends__wrap 
                     .brends__item
-                        img(src="img/brends/MED-EL_Logo.svg" alt="")
+                        img(src="img/brends/medel.png" alt="")
                     .brends__item
-                        img(src="img/brends/Rexton_logo.svg" alt="")
+                        img(src="img/brends/rexton.png" alt="")
                     .brends__item
-                        img(src="img/brends/GN ReSound_logo.svg" alt="")
+                        img(src="img/brends/resound.png" alt="")
 
         section.slider-block
             ._container 
                 h2.section-title 
                     span Аксессуары
                     button.btn.btn--grey.btn--m Смотреть все
-                .slider-block__wrap.access-slider.swiper
+                .slider-block__wrap.swiper.actual-slider
                     .swiper-wrapper
                         .swiper-slide
                             .card 
@@ -235,6 +273,42 @@ block main
                                 button.btn.btn--red.btn--icn.btn--m 
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
                                     | В корзину     
+                        .swiper-slide
+                            .card 
+                                a(href="").card__pic
+                                    img(src="img/accessories/pic3.jpg" alt="")
+                                a(href="").card__category Зарядное устройство
+                                a(href="").card__name ReSound LiNX Quattro
+                                .card__footer 
+                                    .card__price.card__price--actual 15 000 ₽
+                                    .card__price.card__price--old 18 200 ₽
+                                button.btn.btn--red.btn--icn.btn--m 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                    | В корзину
+                        .swiper-slide
+                            .card 
+                                a(href="").card__pic
+                                    img(src="img/accessories/pic4.jpg" alt="")
+                                a(href="").card__category Беспроводные устройства
+                                a(href="").card__name Пульт Phonak PilotOne
+                                .card__footer 
+                                    .card__price.card__price--actual 13 800 ₽
+                                button.btn.btn--red.btn--icn.btn--m 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                    | В корзину
+                        .swiper-slide
+                            .card 
+                                a(href="").card__pic
+                                    img(src="img/accessories/pic1.jpg" alt="")
+                                a(href="").card__category Беспроводные устройства
+                                a(href="").card__name Пульт Phonak PilotOne
+                                .card__footer 
+                                    .card__price.card__price--actual 115 400 ₽
+                                    .card__price.card__price--old 138 000 ₽
+                                button.btn.btn--red.btn--icn.btn--m 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                    | В корзину     
+
                     .swiper-pagination 
                     .swiper-button-prev
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 5L4 12M4 12L11 19M4 12H20" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -246,13 +320,13 @@ block main
                     .find-centers__box 
                         .find-centers__item
                             span.find-centers__number 12
-                            span.find-centers__descr тысяч покупателей ежегодно
+                            span.find-centers__descr тысяч покупателей<br> ежегодно
                         .find-centers__item
                             span.find-centers__number 3
                             span.find-centers__descr центра слуха 
                         .find-centers__item
                             span.find-centers__number 200
-                            span.find-centers__descr моделей в ассортименте
+                            span.find-centers__descr моделей<br> в ассортименте
                         .find-centers__item
                             span.find-centers__number 15
                             span.find-centers__descr лет на рынке
@@ -270,8 +344,36 @@ block main
                 h2.section-title 
                     span Блог
                     button.btn.btn--grey.btn--m Всё о слухе
-                .slider-block__wrap.blog-slider.swiper
+                .slider-block__wrap.swiper.actual-slider.pb0
                     .swiper-wrapper
+                        .swiper-slide
+                            .article-preview 
+                                a(href="").article-preview__pic
+                                    img(src="img/pictures/pic1.jpg" alt="")
+                                .article-preview__date 25 фев 2023
+                                a(href="").article-preview__name 8 советов, чтобы лучше понять человека с потерей слуха
+                                p.article-preview__text Чек-лист, который поможет лучше понять человека с потерей слуха и выстроить с ним доверительное общение.
+                        .swiper-slide
+                            .article-preview 
+                                a(href="").article-preview__pic
+                                    img(src="img/pictures/pic2.jpg" alt="")
+                                .article-preview__date 14 янв 2023
+                                a(href="").article-preview__name Особенности слуховой системы у взрослых пациентов
+                                p.article-preview__text Когда речь идет о детях с нарушениями слуха, главной задачей слухопротезирования является создание условий для стимуляции речевого развития.
+                        .swiper-slide
+                            .article-preview 
+                                a(href="").article-preview__pic
+                                    img(src="img/pictures/pic3.jpg" alt="")
+                                .article-preview__date 27 дек 2023
+                                a(href="").article-preview__name Внутриушные слуховые аппараты. Важные нюансы выбора
+                                p.article-preview__text Современный рынок сурдотехники предлагает достаточно большой ассортимент моделей заушных слуховых аппаратов с выносным ресивером или использующих технологии открытого протезирования.
+                        .swiper-slide
+                            .article-preview 
+                                a(href="").article-preview__pic
+                                    img(src="img/pictures/pic4.jpg" alt="")
+                                .article-preview__date 18 дек 2022
+                                a(href="").article-preview__name В нашей жизни возможно все
+                                p.article-preview__text Алена Капустьян – скромная, застенчивая и невероятно обаятельная девушка. Модель, участница спектакля «Прикасаемые», студентка колледжа при РГСУ.                        
                         .swiper-slide
                             .article-preview 
                                 a(href="").article-preview__pic
