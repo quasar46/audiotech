@@ -3,11 +3,11 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
 
-    @media (max-width: 768px) {
+    @media(max-width: 940px) {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: 380px) {
+    @media(max-width: 700px) {
         grid-template-columns: 1fr;
     }
 }
@@ -30,14 +30,14 @@
         left: 30px;
     }
 
-    @media (max-width: 768px) {
+    @media(max-width: 940px) {
         padding: 30px;
         min-height: 270px;
         justify-content: flex-start;
         background-position: top;
     }
 
-    @media (max-width: 380px) {
+    @media(max-width: 700px) {
         min-height: 240px;
     }
 }

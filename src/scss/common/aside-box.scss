@@ -6,15 +6,15 @@
     .btn {
         width: 100%;
         justify-content: center;
-        @media (max-width: 768px) {
+        @media(max-width: 940px) {
             align-self: flex-start;
             width: auto;
         }
-        @media (max-width: 380px) {
+        @media(max-width: 700px) {
             width: 100%;
         }
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 1240px) {
         padding: 30px;
     }
 }
@@ -34,7 +34,7 @@
         margin-bottom: 30px;
         padding-bottom: 0;
         border-bottom: none;
-        @media (max-width: 380px) {
+        @media(max-width: 700px) {
             margin-bottom: 20px;
         }
     }

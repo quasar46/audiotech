@@ -11,11 +11,11 @@
         background-size: cover;
         background-position: center;
 
-        @media (max-width: 768px) {
+        @media(max-width: 940px) {
             background-position: 72%;
             height: 490px;
         }
-        @media (max-width: 380px) {
+        @media(max-width: 700px) {
             height: 230px;
         }
     }
@@ -27,11 +27,11 @@
         // bottom: 80px;
         // z-index: 1;
 
-        // @media (max-width: 768px) {
+        // @media(max-width: 940px) {
         //     bottom: 104px;
         // }
 
-        // @media (max-width: 380px) {
+        // @media(max-width: 700px) {
         //     width: calc(100% - 60px);
         //     left: 30px;
         //     align-items: center;
@@ -41,7 +41,7 @@
     }
 
     ._container {
-        @media(max-width: 768px) {
+        @media(max-width: 940px) {
             padding-left: 0;
             padding-right: 0;
         }
@@ -57,11 +57,11 @@
     display: flex;
     flex-direction: column;
 
-    @media(max-width: 1024px) {
+    @media(max-width: 1240px) {
         max-width: 465px;
     }
 
-    @media(max-width: 768px) {
+    @media(max-width: 940px) {
         background-color: #333;
         max-width: 100%;
         padding-left: 34px;
@@ -69,7 +69,7 @@
         padding-bottom: 104px;
     }
 
-    @media (max-width: 380px) {
+    @media(max-width: 700px) {
         padding-left: 30px;
         padding-right: 30px;
         padding-top: 30px;
@@ -97,15 +97,15 @@
     animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
     opacity: 0;
 
-    @media(max-width: 1024px) {
+    @media(max-width: 1240px) {
         padding-bottom: 100px;
     }
 
-    @media(max-width: 768px) {
+    @media(max-width: 940px) {
         padding-bottom: 114px;
     }
 
-    @media (max-width: 380px) {
+    @media(max-width: 700px) {
         font-size: 28px;
         line-height: 114%;
         padding-bottom: 30px;
@@ -123,11 +123,11 @@
     animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
     display: block;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1240px) {
         left: 68%;
     }
 
-    @media(max-width: 768px) {
+    @media(max-width: 940px) {
         position: static;
         height: 490px;
         width: 100%;
@@ -136,7 +136,7 @@
         justify-content: center;
     }
 
-    @media (max-width: 380px) {
+    @media(max-width: 700px) {
         height: 230px;
         img {
             height: 175px;
@@ -148,7 +148,7 @@
     animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
     position: relative;
     opacity: 0;
-    @media (max-width: 380px) {
+    @media(max-width: 700px) {
         width: 100%;
         justify-content: center;
     }
@@ -166,12 +166,12 @@
     }
 
     .main-slider__title {
-        animation: 0.25s initialFadeIn 0.375s forwards;
+        animation: 0.25s initialFadeIn 0.35s forwards;
 
     }
 
     .btn__main-slider {
-        animation: 0.25s initialFadeIn 0.375s forwards;
+        animation: 0.25s initialFadeIn 0.45s forwards;
     }
 
 }

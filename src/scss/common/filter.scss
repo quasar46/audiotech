@@ -1,8 +1,9 @@
 .filter {
-    @media(max-width : 768px) {
+    @media(max-width: 940px) {
         position: absolute;
         display: none;
     }
+
     &.active {
         display: block;
         position: fixed;
@@ -14,6 +15,7 @@
         padding: 16px 0;
         height: 100%;
         overflow: auto;
+
         .filter__title {
             padding-left: 34px;
             padding-right: 34px;
@@ -21,8 +23,9 @@
             padding-bottom: 16px;
         }
     }
+
     .btn {
-        @media(max-width: 768px) {
+        @media(max-width: 940px) {
             width: calc(100% - 68px);
             margin: auto;
             justify-content: center;
@@ -49,14 +52,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    @media(max-width: 768px) {
+
+    @media(max-width: 940px) {
         padding-left: 34px;
         padding-right: 34px;
         border-bottom: 1px solid #E8EBED;
         padding-bottom: 30px;
     }
+
     &:nth-last-child(-n + 2) {
-        @media(max-width: 768px) {
+        @media(max-width: 940px) {
             border-bottom: none;
             padding-bottom: 0;
             margin-bottom: 40px;
@@ -71,6 +76,7 @@
     padding: 0;
     padding-left: 34px;
     gap: 10px;
+
     input {
         position: absolute;
         z-index: -1;
@@ -78,7 +84,7 @@
         opacity: 0;
 
         &[type="checkbox"] {
-            & + label {
+            &+label {
                 &::before {
                     content: "";
                     position: absolute;
@@ -89,12 +95,14 @@
                     border-radius: 4px;
                 }
             }
-            &:checked + label::before {
+
+            &:checked+label::before {
                 background-image: url("../img/icns/md-check.svg");
             }
         }
+
         &[type="radio"] {
-            & + label {
+            &+label {
                 &::before {
                     content: "";
                     position: absolute;
@@ -105,11 +113,13 @@
                     border: 1px solid #ccc;
                 }
             }
-            &:checked + label::before {
+
+            &:checked+label::before {
                 background-image: url("../img/icns/rad-active.svg");
             }
         }
-        &:checked + label {
+
+        &:checked+label {
             &::before {
                 border-color: #DB1F26;
                 background-size: contain;
@@ -118,9 +128,10 @@
             }
         }
     }
+
     label {
         position: relative;
-        
+
         font-size: 15px;
         font-weight: 400;
         line-height: 160%;
@@ -136,7 +147,8 @@
     line-height: 153.846%;
     border-bottom: 1px dotted #737373;
     margin-top: 20px;
-    @media(max-width: 768px) {
+
+    @media(max-width: 940px) {
         display: none;
     }
 }

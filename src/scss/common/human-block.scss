@@ -7,11 +7,11 @@
     // background-position: left top;
 
 
-    @media(max-width: 1024px) {
+    @media(max-width: 1240px) {
         background-image: url("../img/human-block/ellipses.svg");
         background-position: left -159px top;
     }
-    @media(max-width: 768px) {
+    @media(max-width: 940px) {
         background-position: left -348px top;
     }
 
@@ -20,15 +20,15 @@
         background-size: contain, 710px 450px, 205px 290px;
         background-position: left top, left bottom, bottom right;
         background-repeat: no-repeat, no-repeat, no-repeat;
-        @media(max-width: 1024px) {
+        @media(max-width: 1240px) {
             background-position: left -176px top, left -141px top;
             background-size: contain, 710px 450px, 0;
         }
-        @media(max-width: 768px) {
+        @media(max-width: 940px) {
             background-position: left -371px top, left -364px top;
             background-size: cover, 710px 450px, 205px 290px;
         }
-        @media(max-width: 380px) {
+        @media(max-width: 700px) {
             background-image: url("../img/human-block/h-block-m.png");
             background-position: left top;  
             background-size: auto 260px;
@@ -43,10 +43,10 @@
     margin: auto;
     max-width: 1440px;
     width: 100%;
-    @media(max-width: 1024px) {
+    @media(max-width: 1240px) {
         min-height: 480px;
     }
-    @media(max-width: 380px) {
+    @media(max-width: 700px) {
         padding-top: 290px;
         padding-bottom: 40px;
     }
@@ -58,13 +58,13 @@
     top: 0;
     width: auto;
     height: 100%;
-    @media(max-width: 1024px) {
+    @media(max-width: 1240px) {
         left: -150px;
     }
-    @media(max-width: 768px) {
+    @media(max-width: 940px) {
         left: -350px;
     }
-    @media(max-width: 380px) {
+    @media(max-width: 700px) {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -83,20 +83,20 @@
     max-width: 400px;
     width: 100%;
     margin-right: 105px;
-    @media(max-width: 1024px) {
+    @media(max-width: 1240px) {
         max-width: 300px;
         margin-right: 80px;
     }
-    @media(max-width: 768px) {
+    @media(max-width: 940px) {
         margin-right: 40px;
     }
-    @media(max-width: 380px) {
+    @media(max-width: 700px) {
         margin-right: 0;
         margin-left: 0;
     }
     .btn {
         align-self: flex-start;
-        @media(max-width: 380px) {
+        @media(max-width: 700px) {
             width: 100%;
             justify-content: center;
         }

@@ -18,7 +18,7 @@
         bottom: 0;
         z-index: -1;
     }
-    @media (max-width: 380px) {
+    @media(max-width: 700px) {
         margin-bottom: 30px;
         min-width: 100%;
     }
@@ -56,7 +56,7 @@
     line-height: 24px;
     letter-spacing: 0;
     margin: 0 0 20px;
-    @media(max-width: 380px) {
+    @media(max-width: 700px) {
         margin-bottom: 15px;
     }
 }
@@ -73,12 +73,12 @@
 .tabs__pane-wrap {
     display: grid;
     grid-template-columns: 715px auto;
-    grid-gap: 125px;
-    @media(max-width: 1024px) {
+    grid-gap: 133px;
+    @media(max-width: 1240px) {
         grid-template-columns: 540px auto;
         grid-gap: 100px;
     }
-    @media(max-width: 768px) {
+    @media(max-width: 940px) {
         grid-template-columns: 100%;
         grid-gap: 40px;
     }
@@ -103,7 +103,7 @@
 }
 
 .tabs__pane-item__pic {
-    width: 40px;
+    flex: 0 0 40px;
     height: 40px;
     border-radius: 10px;
     background: rgba(219, 31, 38, 0.05);

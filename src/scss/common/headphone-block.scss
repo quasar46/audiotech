@@ -1,6 +1,6 @@
 .headphone-block {
     ._container {
-        @media (max-width: 380px) {
+        @media(max-width: 700px) {
             padding-left: 0;
             padding-right: 0;
         }
@@ -20,15 +20,15 @@
     background-size: contain;
     background-repeat: no-repeat;
     padding-left: 105px;
-    @media (max-width: 1024px) {
+    @media (max-width: 1240px) {
         min-height: 480px;
         padding-left: 80px;
         background-position: top right 80px;
     }
-    @media (max-width: 768px) {
+    @media(max-width: 940px) {
         background-position: top right -60px;
     }
-    @media (max-width: 380px) {
+    @media(max-width: 700px) {
         padding-top: 290px;
         padding-left: 0;
         background-position: top -30px center;
@@ -40,16 +40,16 @@
 .headphone-block__box {
     max-width: 410px;
     width: 100%;
-    @media (max-width: 1024px) {
+    @media (max-width: 1240px) {
         max-width: 300px;
     }
-    @media (max-width: 380px) {
+    @media(max-width: 700px) {
         max-width: 100%;
         padding-left: 30px;
         padding-right: 30px;
     }
     .btn {
-        @media( max-width: 380px) {
+        @media(max-width: 700px) {
             width: 100%;
             justify-content: center;
         }

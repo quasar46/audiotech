@@ -16,7 +16,7 @@
         font-weight: 400;
         line-height: 133.333%;
         letter-spacing: -0.18px;
-        @media (max-width: 380px) {
+        @media(max-width: 700px) {
             font-size: 15px;
             white-space: nowrap;
             margin-top: auto;
@@ -24,7 +24,7 @@
             margin-bottom: 10px;
         }
     }
-    @media (max-width: 380px) {
+    @media(max-width: 700px) {
         // flex-direction: column;
     }
 }
@@ -33,14 +33,14 @@
     display: grid;
     grid-template-columns: 295px 1fr;
     grid-gap: 20px;
-    @media(max-width: 1024px) {
+    @media(max-width: 1240px) {
         grid-template-columns: 220px 1fr;
     }
-    @media(max-width: 768px) {
+    @media(max-width: 940px) {
         grid-template-columns: 100%;
         grid-gap: 40px;
     }
-    @media (max-width: 380px) {
+    @media(max-width: 700px) {
         grid-gap: 30px;
     }
 }
@@ -65,7 +65,7 @@
     &--mob {
         display: none;
     }
-    @media(max-width: 380px) {
+    @media(max-width: 700px) {
         display: none;
         &--mob {
             display: block;
@@ -81,7 +81,7 @@
     padding-bottom: 40px;
     margin-bottom: 30px;
     border-bottom: 1px solid #E8EBED;
-    @media(max-width: 380px) {
+    @media(max-width: 700px) {
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -93,11 +93,11 @@
 .catalog__pagination {
     margin-bottom: 85px;
     .btn {
-        @media(max-width: 380px) {
+        @media(max-width: 700px) {
             display: none;
         }
     }
-    @media(max-width: 380px) {
+    @media(max-width: 700px) {
         margin-bottom: 55px;
     }
 }

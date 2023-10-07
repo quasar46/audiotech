@@ -82,7 +82,7 @@
     top: 18px;
     right: 34px;
     cursor: pointer;
-    @media(max-width: 380px) {
+    @media(max-width: 700px) {
         right: 20px;
         top: 20px;
     }
@@ -104,7 +104,7 @@
     top: 18px;
     right: 34px;
     cursor: pointer;
-    @media (max-width: 380px) {
+    @media(max-width: 700px) {
         top: 13px;
         right: 30px;
     }
@@ -128,14 +128,14 @@
 }
 
 .btn-icn__favorite {
-    @media (max-width: 380px) {
+    @media(max-width: 700px) {
         display: none;
     }
 }
 
 .btns-wrap {
     .btn-icn__favorite {
-        @media (max-width: 380px) {
+        @media(max-width: 700px) {
             display: flex;
         }
     }
