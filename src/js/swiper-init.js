@@ -28,9 +28,9 @@ const swiperProductsActual = new Swiper(".actual-slider", {
     slidesPerView: 4,
     spaceBetween: 20,
     loop: true,
-     speed: 750,
+    speed: 750,
     autoplay: {
-        delay: 7000,
+        delay: 7000
     },
     navigation: {
         nextEl: ".actual-slider .swiper-button-next",
@@ -68,3 +68,40 @@ const swiperProduct = new Swiper(".swiper-product", {
         swiper: swiperThumbs
     }
 });
+
+const thumbs = document.querySelectorAll('.swiper-thumbs .swiper-slide');
+
+thumbs.forEach((thumb, i) => {
+    thumb.addEventListener('mouseover', function () {
+        sliderMin.slideTo(i);
+        sliderMax.slideTo(i);
+    });
+});
+
+const sliderMin = new Swiper('.' + this.modalMinSliderSelector, {
+    direction: 'vertical',
+    spaceBetween: 10,
+    slideToClickedSlide: true,
+    slidesPerView: 8
+});
+
+const sliderMax = new Swiper('.' + this.modalMaxSliderSelector, {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    navigation: {
+        nextEl: '.picture-slidernext',
+        prevEl: '.picture-sliderprev'
+    },
+    preloadImages: false,
+    lazy: true,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    thumbs: {
+        swiper: sliderMin
+    }
+});
+
+// sliderMin.slideTo(iIndex);
+// sliderMax.slideTo(iIndex);

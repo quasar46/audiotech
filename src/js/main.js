@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const modals = document.querySelectorAll('.modal');
     modals.forEach(modal => {
         document.addEventListener('click', e => {
-            if (!e.target.closest('.modal') && !e.target.closest('.air-datepicker') && !e.target.consest('.air-datepicker-cell')) {
+            if (!e.target.closest('.modal') && !e.target.closest('.air-datepicker') && !e.target.classList.contains('air-datepicker-cell')) {
                 modal.classList.remove('active');
                 overlay.classList.remove('active');
                 scrollLock.enablePageScroll();
@@ -53,10 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 scrollLock.enablePageScroll();
             }
         });
-    })
-
-    document.addEventListener('click', e => {
-        console.log(e.target);
     })
 
     const burgerBtn = document.querySelector(".burger");
@@ -251,6 +247,4 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }   
     favoriteChoose();
-
-
 });
