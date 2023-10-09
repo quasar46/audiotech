@@ -59,49 +59,93 @@ const swiperThumbs = new Swiper(".swiper-thumbs", {
 });
 
 const swiperProduct = new Swiper(".swiper-product", {
-    spaceBetween: 10,
+    slidesPerView: 1,
     navigation: {
         nextEl: ".swiper-product .swiper-button-next",
         prevEl: ".swiper-product .swiper-button-prev"
     },
-    thumbs: {
-        swiper: swiperThumbs
-    }
-});
-
-const thumbs = document.querySelectorAll('.swiper-thumbs .swiper-slide');
-
-thumbs.forEach((thumb, i) => {
-    thumb.addEventListener('mouseover', function () {
-        sliderMin.slideTo(i);
-        sliderMax.slideTo(i);
-    });
-});
-
-const sliderMin = new Swiper('.' + this.modalMinSliderSelector, {
-    direction: 'vertical',
-    spaceBetween: 10,
-    slideToClickedSlide: true,
-    slidesPerView: 8
-});
-
-const sliderMax = new Swiper('.' + this.modalMaxSliderSelector, {
-    direction: 'horizontal',
-    slidesPerView: 1,
-    navigation: {
-        nextEl: '.picture-slidernext',
-        prevEl: '.picture-sliderprev'
-    },
-    preloadImages: false,
     lazy: true,
     effect: 'fade',
     fadeEffect: {
         crossFade: true
     },
     thumbs: {
-        swiper: sliderMin
+        swiper: swiperThumbs
+    },
+    pagination: {
+        el: '.swiper-product .swiper-pagination',
+        type: 'bullets',
+        clickable: true
     }
 });
 
-// sliderMin.slideTo(iIndex);
-// sliderMax.slideTo(iIndex);
+const previews = document.querySelectorAll('.product__preview');
+const fullPics = document.querySelectorAll('.product__full .slideFull');
+const thumbsPics = document.querySelectorAll('.swiper-thumbs .swiper-slide');
+const thumbsWrap = document.querySelector('.swiper-thumbs');
+const productPaginationWrap = document.querySelector('.swiper-product__wrap .swiper-pagination');
+const productPagination = document.querySelectorAll('.swiper-product__wrap .swiper-pagination-bullet');
+
+previews.forEach((preview, i) => {
+    preview.addEventListener('click', function (e) {
+        e.preventDefault();
+        btnCloseFull.classList.add('active');
+        swiperThumbs.slideTo(i);
+        swiperProduct.slideTo(i);
+        // swiperProduct.pagination.bullets[i];
+        fullPics[i].classList.add('show');
+        thumbsWrap.classList.add('active');
+        if (window.innerWidth <= 940) {
+            productPaginationWrap.style.position = 'fixed';
+        }
+    })
+    productPagination[i].addEventListener('click', function () {
+        if (btnCloseFull.classList.contains('active')) {
+            fullPics.forEach(item => {
+                item.classList.remove('show');
+            })
+            thumbsWrap.classList.add('active');
+            fullPics[i].classList.add('show');
+        }
+        swiperProduct.pagination.bullets[i];
+
+
+    })
+    thumbsPics[i].addEventListener('click', function (e) {
+        if (thumbsWrap.classList.contains('active')) {
+            e.preventDefault();
+            swiperThumbs.slideTo(i);
+            swiperProduct.slideTo(i);
+
+            fullPics.forEach(item => {
+                item.classList.remove('show');
+            })
+            fullPics[i].classList.add('show');
+        }
+    })
+})
+
+const btnCloseFull = document.querySelector('#closeFullWindow');
+btnCloseFull.addEventListener('click', function () {
+    this.classList.toggle('active');
+    fullPics.forEach(item => {
+        item.classList.remove('show');
+        thumbsWrap.classList.remove('active');
+    })
+    if (window.innerWidth <= 940) {
+        productPaginationWrap.style.position = '';
+    }
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.keyCode == 27 && btnCloseFull.classList.contains('active')) {
+        fullPics.forEach(item => {
+            item.classList.remove('show');
+            thumbsWrap.classList.remove('active');
+        })
+        btnCloseFull.classList.remove('active');
+        if (window.innerWidth <= 940) {
+            productPaginationWrap.style.position = '';
+        }
+    }
+})

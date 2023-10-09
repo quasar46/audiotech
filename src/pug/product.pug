@@ -28,36 +28,37 @@ block main
                             .swiper-thumbs 
                                 .swiper-wrapper 
                                     .swiper-slide 
-                                        img(src="img/thumbs/pic1.png" alt="")
+                                        img(src="img/products/pic1.jpg" alt="")
                                     .swiper-slide
-                                        img(src="img/thumbs/pic1.png" alt="")
+                                        img(src="img/products/pic2.png" alt="")
                                     .swiper-slide 
-                                        img(src="img/thumbs/pic1.png" alt="")
+                                        img(src="img/products/pic1.jpg" alt="")
                                     .swiper-slide.swiper-slide__video
-                                        img(src="img/thumbs/pic1.png" alt="")
+                                        img(src="img/products/pic2.png" alt="")
                             .swiper-product__wrap
                                 .swiper-product(thumbsSlider) 
                                     .swiper-wrapper
                                         .swiper-slide
-                                            a(href="img/products/pic1.jpg") 
+                                            a.product__preview(href="") 
                                                 img(src="img/products/pic1.jpg" alt="")
-                                                .product__zom 
-                                                    img(src="img/icns/md-zoom.svg" alt="")
+                                            .product__zom 
+                                                img(src="img/icns/md-zoom.svg" alt="")
                                         .swiper-slide
-                                            a(href="img/products/pic1.jpg") 
-                                                img(src="img/products/pic1.jpg" alt="")
-                                                .product__zom 
-                                                    img(src="img/icns/md-zoom.svg" alt="")
+                                            a.product__preview(href="") 
+                                                img(src="img/products/pic2.png" alt="")
+                                            .product__zom 
+                                                img(src="img/icns/md-zoom.svg" alt="")
                                         .swiper-slide
-                                            a(href="img/products/pic1.jpg") 
+                                            a.product__preview(href="") 
                                                 img(src="img/products/pic1.jpg" alt="")
-                                                .product__zom 
-                                                    img(src="img/icns/md-zoom.svg" alt="")
+                                            .product__zom 
+                                                img(src="img/icns/md-zoom.svg" alt="")
                                         .swiper-slide.swiper-slide__video
-                                            a(href="video-a.mp4") 
-                                                img(src="img/products/pic1.jpg" alt="")
-                                                .product__zom 
-                                                    img(src="img/icns/md-zoom.svg" alt="")
+                                            a.product__preview(href="video-a.mp4") 
+                                                img(src="img/products/pic2.png" alt="")
+                                            .product__zom 
+                                                img(src="img/icns/md-zoom.svg" alt="")
+                                    .swiper-pagination
                                 .product__footer
                                     .product__info-text 
                                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="10" fill="#DB1F26" fill-opacity="0.05"/><path d="M20 16V20V16ZM20 24H20.01H20ZM29 20C29 21.1819 28.7672 22.3522 28.3149 23.4442C27.8626 24.5361 27.1997 25.5282 26.364 26.364C25.5282 27.1997 24.5361 27.8626 23.4442 28.3149C22.3522 28.7672 21.1819 29 20 29C18.8181 29 17.6478 28.7672 16.5558 28.3149C15.4639 27.8626 14.4718 27.1997 13.636 26.364C12.8003 25.5282 12.1374 24.5361 11.6851 23.4442C11.2328 22.3522 11 21.1819 11 20C11 17.6131 11.9482 15.3239 13.636 13.636C15.3239 11.9482 17.6131 11 20 11C22.3869 11 24.6761 11.9482 26.364 13.636C28.0518 15.3239 29 17.6131 29 20Z" stroke="#DB1F26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -65,7 +66,17 @@ block main
                                     button.btn.btn--grey.btn--m.btn--icn.product__btn-favorite.product__btn-favorite--mob
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.39816 4.39574C6.06517 4.126 6.77925 3.98746 7.49984 3.98746C8.22044 3.98746 8.93452 4.126 9.60152 4.39574C10.2686 4.66549 10.8762 5.06149 11.3892 5.56229L11.9998 6.15851L12.6105 5.56229C13.6461 4.55126 15.0456 3.98747 16.4998 3.98747C17.9541 3.98747 19.3536 4.55126 20.3892 5.56229C21.4255 6.57412 22.0124 7.9517 22.0124 9.39337C22.0124 10.835 21.4255 12.2126 20.3892 13.2245L12.7072 20.7244C12.3138 21.1085 11.6859 21.1085 11.2925 20.7244L3.61054 13.2245C3.09754 12.7236 2.68927 12.1277 2.41027 11.4701C2.13125 10.8125 1.9873 10.1067 1.9873 9.39337C1.9873 8.68004 2.13125 7.97429 2.41027 7.31663C2.68927 6.65903 3.09753 6.06313 3.61054 5.56228C4.12348 5.06149 4.73112 4.66549 5.39816 4.39574ZM11.9998 18.5849L5.02515 11.7755C4.70242 11.4604 4.44773 11.0877 4.27443 10.6792C4.10116 10.2708 4.0123 9.83394 4.0123 9.39337C4.0123 8.9528 4.10116 8.51595 4.27443 8.10754C4.44773 7.69908 4.70241 7.32633 5.02515 7.01125C5.34793 6.69611 5.73246 6.44487 6.15735 6.27304C6.58228 6.1012 7.03853 6.01246 7.49984 6.01246C7.96116 6.01246 8.41741 6.1012 8.84234 6.27304C9.26723 6.44487 9.65174 6.6961 9.97453 7.01124L11.2925 8.29802C11.6859 8.68205 12.3138 8.68205 12.7072 8.29802L14.0252 7.01124C14.6774 6.37442 15.5672 6.01247 16.4998 6.01247C17.4325 6.01247 18.3223 6.37442 18.9745 7.01124C19.626 7.64726 19.9874 8.50464 19.9874 9.39337C19.9874 10.2821 19.626 11.1395 18.9745 11.7755L11.9998 18.5849Z" fill="#131313"/></svg>
                                         | Добавить в избранное
-
+                        .product__full 
+                            button.product__close#closeFullWindow
+                                img(src="img/icns/md-x.svg", alt="")
+                            .slideFull
+                                img(src="img/products/pic1.jpg" alt="")
+                            .slideFull
+                                img(src="img/products/pic2.png" alt="")
+                            .slideFull 
+                                img(src="img/products/pic1.jpg" alt="")
+                            .slideFull
+                                img(src="img/products/pic2.png" alt="")
                     .product__descr.product-descr 
                         .product-descr__price
                             .product-descr__new-price 242 000 ₽

@@ -1,11 +1,13 @@
 .swiper {
     position: relative;
     padding-bottom: 70px;
+
     .swiper-pagination {
         @media(max-width: 700px) {
             display: none;
         }
     }
+
     .swiper-button-next {
         right: 0;
         top: auto;
@@ -17,16 +19,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
         svg {
             width: 24px;
         }
+
         &:after {
             display: none;
         }
+
         @media(max-width: 700px) {
             display: none;
         }
     }
+
     .swiper-button-prev {
         left: 0;
         top: auto;
@@ -38,29 +44,37 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
         svg {
             width: 24px;
         }
+
         &:after {
             display: none;
         }
+
         @media(max-width: 700px) {
             display: none;
         }
 
     }
+
     .swiper-pagination-bullet {
         background-color: #E8EBED;
     }
+
     .swiper-pagination-bullet-active {
         background-color: #DB1F26;
     }
+
     .swiper-slide {
         height: auto;
+
         @media(max-width: 1240px) {
             width: 220px;
         }
     }
+
     @media(max-width: 940px) {
         padding-bottom: 0;
     }
@@ -70,6 +84,7 @@
     position: absolute;
     top: 60px;
     right: 42px;
+
     @media(max-width: 940px) {
         display: none;
     }
@@ -79,6 +94,7 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
+
     div {
         position: static;
         width: 54px;
@@ -87,9 +103,11 @@
         border-radius: 50%;
         overflow: hidden;
         margin: 0;
+
         &::after {
             display: none;
         }
+
         svg {
             width: 24px;
         }
@@ -122,12 +140,14 @@
         padding-right: 42px;
         width: 200px;
         margin-left: auto;
+
         @media(max-width: 940px) {
             bottom: 30px;
             justify-content: center;
             width: 100%;
             padding-right: 0;
         }
+
         @media(max-width: 700px) {
             bottom: 20px;
         }
@@ -139,6 +159,7 @@
     width: 100%;
     flex: 1 0 auto;
     height: 330px;
+
     .swiper-slide {
         img {
             display: block;
@@ -148,6 +169,7 @@
             position: relative;
             z-index: 10;
         }
+
         &::after {
             content: "";
             position: absolute;
@@ -163,39 +185,73 @@
     .swiper-slide-thumb-active {
         border: 1px solid rgba(219, 31, 38, 1);
     }
+
     .swiper-slide-thumb-active::after {
         background: rgba(245, 247, 250, 1);
     }
+
     @media(max-width: 1240px) {
         max-width: 70px;
         height: 250px;
     }
+
     @media(max-width: 940px) {
         display: none;
     }
 }
 
 .swiper-product {
+    position: relative;
     max-width: 610px;
     width: 100%;
     overflow: hidden;
     height: 485px;
     display: flex;
 
-    img {
+    .product__preview {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
     }
+
+    .swiper-slide {
+        position: relative;
+    }
+
+    .swiper-pagination {
+        width: 100%;
+        top: auto;
+        bottom: 20px;
+        z-index: 1000;
+        display: none;
+        @media (max-width: 940px) {
+            display: block;
+            // position: fixed;
+        }
+        @media (max-width: 700px) {
+            bottom: 10px;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #E8EBED;
+
+        &-active {
+            background-color: #DB1F26;
+        }
+    }
+
     @media(max-width: 1240px) {
         max-width: 460px;
         height: 365px;
     }
+
     @media(max-width: 940px) {
         height: 550px;
         max-width: 100%;
     }
+
     @media(max-width: 700px) {
         height: 240px;
     }
@@ -205,9 +261,11 @@
     display: flex;
     flex-direction: column;
     gap: 28px;
+
     @media(max-width: 1240px) {
         gap: 20px;
     }
+
     @media(max-width: 940px) {
         width: 100%;
     }
@@ -232,8 +290,10 @@
 .swiper-button-next,
 .swiper-button-prev {
     transition: all .3s ease;
+
     &:hover {
         background-color: #DB1F26;
+
         svg {
             path {
                 stroke: white;
