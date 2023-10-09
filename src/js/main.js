@@ -12,12 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     customSelect(".mySelect");
 
-    new AirDatepicker('#airpicker', [
-
-    ]);
-    new AirDatepicker('#airpicker2', [
-
-    ]);
+    new AirDatepicker('#airpicker', {
+       
+    });
 
     window.onscroll = function () {
         myFunction()
@@ -43,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const modals = document.querySelectorAll('.modal');
     modals.forEach(modal => {
         document.addEventListener('click', e => {
-            if (!e.target.closest('.modal') && !e.target.closest('.air-datepicker')) {
+            if (!e.target.closest('.modal') && !e.target.closest('.air-datepicker') && !e.target.consest('.air-datepicker-cell')) {
                 modal.classList.remove('active');
                 overlay.classList.remove('active');
                 scrollLock.enablePageScroll();
@@ -56,6 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 scrollLock.enablePageScroll();
             }
         });
+    })
+
+    document.addEventListener('click', e => {
+        console.log(e.target);
     })
 
     const burgerBtn = document.querySelector(".burger");
@@ -84,14 +85,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const overlay = document.querySelector("#overlay");
 
-    // btnSubmitReg = document.querySelector('.modal__reg .btn');
+    btnSubmitReg = document.querySelector('.modal__reg .btn');
 
-    // btnSubmitReg.addEventListener('click', function (e) {
-    //     e.preventDefault();
-    //     modalReg.classList.remove('active');
-    //     modalAccept.classList.add('active');
-    // })
-
+    btnSubmitReg.addEventListener('click', function (e) {
+        e.preventDefault();
+        modalReg.classList.remove('active');
+        modalAccept.classList.add('active');
+    })
 
 
     document.addEventListener('click', function (e) {
@@ -241,6 +241,16 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth < 1025) {
         mainNav.style.height = `calc(100vh - ${headerHeight}px)`;
     }
+
+    const favoriteChoose = function() {
+        favoriteIcns = document.querySelectorAll('.btn-icn__favorite');
+        favoriteIcns.forEach(item => {
+            item.addEventListener('click', function() {
+                item.classList.toggle('active');
+            })
+        })
+    }   
+    favoriteChoose();
 
 
 });

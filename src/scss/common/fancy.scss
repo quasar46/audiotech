@@ -58,3 +58,12 @@
 .fancybox__container .f-button[title="Close"]:hover:not([disabled]) {
     background-color: #fff;
 }
+
+.fancybox__nav {
+    display: none;
+}
+
+.fancybox__backdrop {
+    background-color: #F5F7FA !important;
+}
+

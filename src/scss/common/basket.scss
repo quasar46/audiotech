@@ -66,6 +66,14 @@
             margin-bottom: 0;
             margin-top: 0;
         }
+        &.active {
+            svg {
+                path {
+                    fill: #DB1F26;
+                    stroke: #DB1F26;
+                }
+            }
+        }
     }
     .btn-icn__close {
         @media(max-width: 700px) {

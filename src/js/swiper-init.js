@@ -28,6 +28,10 @@ const swiperProductsActual = new Swiper(".actual-slider", {
     slidesPerView: 4,
     spaceBetween: 20,
     loop: true,
+     speed: 750,
+    autoplay: {
+        delay: 7000,
+    },
     navigation: {
         nextEl: ".actual-slider .swiper-button-next",
         prevEl: ".actual-slider .swiper-button-prev"
@@ -37,10 +41,10 @@ const swiperProductsActual = new Swiper(".actual-slider", {
         clickable: true
     },
     breakpoints: {
-        1024: {
+        941: {
             slidesPerView: 4
         },
-        360: {
+        300: {
             slidesPerView: "auto"
         }
     }
