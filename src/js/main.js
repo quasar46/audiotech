@@ -273,4 +273,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     hideChecks();
 
+    // video control
+    const videoContainer = document.querySelector('.video-wrap');
+    const videoControls = document.querySelectorAll('.video-control');
+    const video = document.querySelector('#video');
+
+    videoControls.forEach(contol => {
+        
+        contol.addEventListener('click', function () {
+            console.log('123');
+            if (video.paused) {
+                video.play();
+                videoContainer.classList.add('video-is-playing');
+            } else {
+                video.pause();
+                videoContainer.classList.remove('video-is-playing');
+                video.load();
+            }
+        })
+    })
+
+
 });

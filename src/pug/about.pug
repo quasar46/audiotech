@@ -1,0 +1,78 @@
+extends templates/layout
+
+block main 
+    main 
+        .breadcrumbs 
+            ._container
+                .breadcrumbs__list
+                    li.breadcrumbs__item
+                        a(href="/") Главная
+                    li.breadcrumbs__item •
+                    li.breadcrumbs__item 
+                        a(href="/") О нас
+                    li.breadcrumbs__item •
+                    li.breadcrumbs__item Компания
+        section.about
+            ._container
+                h1.title-page О нас
+
+                .tabs 
+                    .tabs__nav 
+                        button.tabs__btn.active Компания
+                        button.tabs__btn Специалисты
+                        button.tabs__btn Новости
+                        button.tabs__btn Лицензии
+                    .tabs__content 
+                        .tabs__pane.show 
+                            .tabs__pane-wrap
+                                h2.section-title Центры слуха Audiotech
+                                p.tabs__par.tabs__par--container.strong Morbi et fermentum lorem.  Praesent iaculis sem eu mauris ultricies dictum. Pellentesque finibus, ante sed tincidunt feugiat, dui sem malesuada sem, nec elementum libero lectus sagittis nunc. Morbi et fermentum lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                            .about__text 
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet volutpat sapien. Sed eu ipsum a diam placerat vulputate. Maecenas laoreet ultrices nisi id sagittis. Sed metus leo, tempor non semper eu, posuere vitae quam. Sed vitae sem lorem. Aliquam vestibulum elementum purus et iaculis. Nunc at maximus magna. 
+                                p Praesent iaculis sem eu mauris ultricies dictum. Pellentesque finibus, ante sed tincidunt feugiat, dui sem malesuada sem, nec elementum libero lectus sagittis nunc. Morbi et fermentum lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque tempor feugiat velit nec elementum.
+                        .tabs__pane
+                            .tabs__pane-wrap
+                        .tabs__pane
+                            .tabs__pane-wrap
+                        .tabs__pane
+                            .tabs__pane-wrap    
+        section.about-cifrus 
+            ._container 
+                h2.section-title.section-title--w Мы в цифрах
+                .about-cifrus__wrap 
+                    ul.about-cifrus__list 
+                        li.about-cifrus__item
+                            span.about-cifrus__number 3
+                            span.about-cifrus__label центра слуха 
+                        li.about-cifrus__item
+                            span.about-cifrus__number 12
+                            span.about-cifrus__label тысяч покупателей ежегодно
+                        li.about-cifrus__item
+                            span.about-cifrus__number 200
+                            span.about-cifrus__label моделей в ассортименте
+                        li.about-cifrus__item
+                            span.about-cifrus__number 15
+                            span.about-cifrus__label лет на рынке
+                    .about-cifrus__video.video-wrap
+                        .video-control#video-play 
+                        .video-control#video-over
+                        video#video(height="" poster="img/video-back.jpg") 
+                            source(src="img/video.mp4")
+
+
+        section.map 
+            ._container 
+                h2.section-title 
+                    span Представительства компании
+                    .select-place
+                        select.mySelect
+                            option(value="Алма-Ата") Алма-Ата
+                            option(value="Алма-Ата") Алма-Ата
+                            option(value="Алма-Ата") Алма-Ата
+
+                #map
+
+
+        include include/offers.pug
+
+
