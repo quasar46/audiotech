@@ -238,13 +238,39 @@ document.addEventListener("DOMContentLoaded", function () {
         mainNav.style.height = `calc(100vh - ${headerHeight}px)`;
     }
 
-    const favoriteChoose = function() {
+    const favoriteChoose = function () {
         favoriteIcns = document.querySelectorAll('.btn-icn__favorite');
         favoriteIcns.forEach(item => {
-            item.addEventListener('click', function() {
+            item.addEventListener('click', function () {
                 item.classList.toggle('active');
             })
         })
-    }   
+    }
     favoriteChoose();
+
+    const hideChecks = function () {
+        const checksWrap = document.querySelectorAll('.filter-box__list');
+        checksWrap.forEach(wrap => {
+            for (var i = 0; i < wrap.querySelectorAll('.filter-box__item').length; i++) {
+                if (i > 4) {
+                    wrap.querySelectorAll('.filter-box__item')[i].classList.add('hidden');
+                    if (window.innerWidth < 941 && window.innerWidth >= 700) {
+                        wrap.classList.add('--columns');
+                    }
+                }
+            }
+            const btnShow = wrap.closest('.filter-box').querySelector('.filter__all');
+            if (btnShow) {
+                btnShow.addEventListener('click', function () {
+                    wrap.querySelectorAll('.filter-box__item').forEach(item => {
+                        item.classList.remove('hidden');
+                    });
+                    btnShow.remove();
+                });
+            }
+
+        })
+    }
+    hideChecks();
+
 });

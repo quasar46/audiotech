@@ -126,16 +126,19 @@ previews.forEach((preview, i) => {
 })
 
 const btnCloseFull = document.querySelector('#closeFullWindow');
-btnCloseFull.addEventListener('click', function () {
-    this.classList.toggle('active');
-    fullPics.forEach(item => {
-        item.classList.remove('show');
-        thumbsWrap.classList.remove('active');
-    })
-    if (window.innerWidth <= 940) {
-        productPaginationWrap.style.position = '';
-    }
-});
+if (btnCloseFull) {
+    btnCloseFull.addEventListener('click', function () {
+        this.classList.toggle('active');
+        fullPics.forEach(item => {
+            item.classList.remove('show');
+            thumbsWrap.classList.remove('active');
+        })
+        if (window.innerWidth <= 940) {
+            productPaginationWrap.style.position = '';
+        }
+    });
+}
+
 
 document.addEventListener('keydown', function(e) {
     if (e.keyCode == 27 && btnCloseFull.classList.contains('active')) {

@@ -14,4 +14,9 @@
     border-radius: 10px;
     border: 1px solid #E8EBED;
     cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: #DB1F26;
+        color: #fff;
+    }
 }
