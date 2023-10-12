@@ -98,7 +98,7 @@ gulp.task("img", function () {
 
 gulp.task("fonts", function () {
   return gulp
-    .src(["src/fonts/*.{woff,woff2,css}"], {
+    .src(["src/fonts/*"], {
       base: "src",
     })
     .pipe(gulp.dest("build/"));
