@@ -50,6 +50,11 @@ const swiperProductsActual = new Swiper(".actual-slider", {
     }
 });
 
+const swiperThree = new Swiper('.swiper-three', {
+    spaceBetween: 20,
+    slidesPerView: 3,
+});
+
 const swiperThumbs = new Swiper(".swiper-thumbs", {
     spaceBetween: 10,
     slidesPerView: 4,
@@ -140,7 +145,7 @@ if (btnCloseFull) {
 }
 
 
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     if (e.keyCode == 27 && btnCloseFull.classList.contains('active')) {
         fullPics.forEach(item => {
             item.classList.remove('show');

@@ -1,0 +1,22 @@
+
+
+.subscribe__input {
+    position: relative;
+
+    .btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        min-width: 125px;
+        height: 40px;
+        min-height: auto;
+    }
+}
+
+
+
+
+.subscribe__input {
+    // margin-bottom: 10px;
+}

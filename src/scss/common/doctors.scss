@@ -1,0 +1,61 @@
+.doctors {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px 20px;
+    padding-bottom: 40px;
+    @media (max-width: 940px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+}
+
+.doctors__item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.doctors__profile {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 153.846%;
+    letter-spacing: 0em;
+    color: #737373;
+}
+
+.doctors__pic {
+    margin-bottom: 5px;
+}
+
+.doctors__name {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 133.333%;
+    margin-bottom: 5px;
+}
+
+.doctors__education {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 153.846%;
+    margin-bottom: 5px;
+}
+
+.doctors__location {
+    color: #737373;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 153.846%;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.doctors__item-btn {
+    align-self: flex-start;
+}

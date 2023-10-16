@@ -279,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const video = document.querySelector('#video');
 
     videoControls.forEach(contol => {
-        
+
         contol.addEventListener('click', function () {
             console.log('123');
             if (video.paused) {
@@ -292,6 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     })
-
+    
+    new ItcAccordion(document.querySelector('.accordion'), {alwaysOpen: true});
 
 });

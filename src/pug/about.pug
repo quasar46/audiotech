@@ -30,49 +30,298 @@ block main
                             .about__text 
                                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet volutpat sapien. Sed eu ipsum a diam placerat vulputate. Maecenas laoreet ultrices nisi id sagittis. Sed metus leo, tempor non semper eu, posuere vitae quam. Sed vitae sem lorem. Aliquam vestibulum elementum purus et iaculis. Nunc at maximus magna. 
                                 p Praesent iaculis sem eu mauris ultricies dictum. Pellentesque finibus, ante sed tincidunt feugiat, dui sem malesuada sem, nec elementum libero lectus sagittis nunc. Morbi et fermentum lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque tempor feugiat velit nec elementum.
+                            .about-cifrus 
+                                h2.section-title.section-title--w Мы в цифрах
+                                .about-cifrus__wrap 
+                                    ul.about-cifrus__list 
+                                        li.about-cifrus__item
+                                            span.about-cifrus__number 3
+                                            span.about-cifrus__label центра слуха 
+                                        li.about-cifrus__item
+                                            span.about-cifrus__number 12
+                                            span.about-cifrus__label тысяч покупателей ежегодно
+                                        li.about-cifrus__item
+                                            span.about-cifrus__number 200
+                                            span.about-cifrus__label моделей в ассортименте
+                                        li.about-cifrus__item
+                                            span.about-cifrus__number 15
+                                            span.about-cifrus__label лет на рынке
+                                    .about-cifrus__video.video-wrap
+                                        .video-control#video-play 
+                                        .video-control#video-over
+                                        video#video(height="" poster="img/video-back.jpg") 
+                                            source(src="img/video.mp4")
+                            .map 
+                                h2.section-title.map__title 
+                                    span Представительства компании
+                                    .select-place
+                                        select.mySelect
+                                            option(value="Алма-Ата") Алма-Ата
+                                            option(value="Алма-Ата") Алма-Ата
+                                            option(value="Алма-Ата") Алма-Ата
+
+                                #map
+
+                                .offers.about__offers 
+                                    .offers__wrap 
+                                        .offers__item 
+                                            img(src="img/offers/icon-headphones.svg" alt="")
+                                            .offers__name Проверка слуха <br> онлайн
+                                            p.offers__text Узнайте как хорошо вы слышите с помощью быстрого и простого онлайн теста
+                                            button.btn.btn--red.btn--m Пройти тест на слух
+                                        .offers__item 
+                                            img(src="img/offers/icon-test.svg" alt="")
+                                            .offers__name Бесплатная<br> диагностика слуха
+                                            p.offers__text Посетите нашего специалиста в центре слуха и получите бесплатную консультацию
+                                            a(data-target="modal-reg").btn.btn--red.btn--m Записаться на приём
+                                        .offers__item 
+                                            img(src="img/offers/icon-phone.svg" alt="")
+                                            .offers__name Дистанционная<br> поддержка
+                                            p.offers__text Посетите нашего специалиста в центре слуха и получите бесплатную консультацию
+                                            a(data-target="modal-call").btn.btn--red.btn--m Заказать звонок
+                                        .offers__item 
+                                            img(src="img/offers/icon-accessories.svg" alt="")
+                                            .offers__name Купить<br> аксессуары
+                                            p.offers__text Закажите аксессуары к слуховым аппаратам онлайн в нашем интернет-магазине
+                                            a(href="catalog.html").btn.btn--red.btn--m Перейти в каталог
                         .tabs__pane
                             .tabs__pane-wrap
+                                .about__doctors.doctors 
+                                    .doctors__item 
+                                        img.doctors__pic(src="img/doc1.jpg" alt="")
+                                        span.doctors__profile Врач оториноларинголог-сурдолог
+                                        span.doctors__name Васильева Екатерина Вячеславовна
+                                        span.doctors__education Кандидат медицинских наук <br>Стаж 8 лет
+                                        .doctors__location
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.05051 4.04999C6.36333 2.73717 8.14389 1.99963 10.0005 1.99963C11.8571 1.99963 13.6377 2.73717 14.9505 4.04999C16.2633 5.36281 17.0009 7.14338 17.0009 8.99999C17.0009 10.8566 16.2633 12.6372 14.9505 13.95L10.0005 18.9L5.05051 13.95C4.40042 13.3 3.88474 12.5283 3.53291 11.6789C3.18108 10.8296 3 9.9193 3 8.99999C3 8.08068 3.18108 7.17037 3.53291 6.32104C3.88474 5.47172 4.40042 4.70001 5.05051 4.04999ZM10.0005 11C10.5309 11 11.0396 10.7893 11.4147 10.4142C11.7898 10.0391 12.0005 9.53042 12.0005 8.99999C12.0005 8.46956 11.7898 7.96085 11.4147 7.58578C11.0396 7.2107 10.5309 6.99999 10.0005 6.99999C9.47007 6.99999 8.96136 7.2107 8.58629 7.58578C8.21122 7.96085 8.0005 8.46956 8.0005 8.99999C8.0005 9.53042 8.21122 10.0391 8.58629 10.4142C8.96136 10.7893 9.47007 11 10.0005 11Z" fill="#CCCCCC"/></svg>
+                                            span Центр на Мирославской
+                                        button.btn.btn--red.btn--m.doctors__item-btn Записаться на приём
+                                    .doctors__item 
+                                        img.doctors__pic(src="img/doc1.jpg" alt="")
+                                        span.doctors__profile Врач оториноларинголог-сурдолог
+                                        span.doctors__name Васильева Екатерина Вячеславовна
+                                        span.doctors__education Кандидат медицинских наук <br>Стаж 8 лет
+                                        .doctors__location
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.05051 4.04999C6.36333 2.73717 8.14389 1.99963 10.0005 1.99963C11.8571 1.99963 13.6377 2.73717 14.9505 4.04999C16.2633 5.36281 17.0009 7.14338 17.0009 8.99999C17.0009 10.8566 16.2633 12.6372 14.9505 13.95L10.0005 18.9L5.05051 13.95C4.40042 13.3 3.88474 12.5283 3.53291 11.6789C3.18108 10.8296 3 9.9193 3 8.99999C3 8.08068 3.18108 7.17037 3.53291 6.32104C3.88474 5.47172 4.40042 4.70001 5.05051 4.04999ZM10.0005 11C10.5309 11 11.0396 10.7893 11.4147 10.4142C11.7898 10.0391 12.0005 9.53042 12.0005 8.99999C12.0005 8.46956 11.7898 7.96085 11.4147 7.58578C11.0396 7.2107 10.5309 6.99999 10.0005 6.99999C9.47007 6.99999 8.96136 7.2107 8.58629 7.58578C8.21122 7.96085 8.0005 8.46956 8.0005 8.99999C8.0005 9.53042 8.21122 10.0391 8.58629 10.4142C8.96136 10.7893 9.47007 11 10.0005 11Z" fill="#CCCCCC"/></svg>
+                                            span Центр на Мирославской
+                                        button.btn.btn--red.btn--m.doctors__item-btn Записаться на приём
+                                    .doctors__item 
+                                        img.doctors__pic(src="img/doc1.jpg" alt="")
+                                        span.doctors__profile Врач оториноларинголог-сурдолог
+                                        span.doctors__name Васильева Екатерина Вячеславовна
+                                        span.doctors__education Кандидат медицинских наук <br>Стаж 8 лет
+                                        .doctors__location
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.05051 4.04999C6.36333 2.73717 8.14389 1.99963 10.0005 1.99963C11.8571 1.99963 13.6377 2.73717 14.9505 4.04999C16.2633 5.36281 17.0009 7.14338 17.0009 8.99999C17.0009 10.8566 16.2633 12.6372 14.9505 13.95L10.0005 18.9L5.05051 13.95C4.40042 13.3 3.88474 12.5283 3.53291 11.6789C3.18108 10.8296 3 9.9193 3 8.99999C3 8.08068 3.18108 7.17037 3.53291 6.32104C3.88474 5.47172 4.40042 4.70001 5.05051 4.04999ZM10.0005 11C10.5309 11 11.0396 10.7893 11.4147 10.4142C11.7898 10.0391 12.0005 9.53042 12.0005 8.99999C12.0005 8.46956 11.7898 7.96085 11.4147 7.58578C11.0396 7.2107 10.5309 6.99999 10.0005 6.99999C9.47007 6.99999 8.96136 7.2107 8.58629 7.58578C8.21122 7.96085 8.0005 8.46956 8.0005 8.99999C8.0005 9.53042 8.21122 10.0391 8.58629 10.4142C8.96136 10.7893 9.47007 11 10.0005 11Z" fill="#CCCCCC"/></svg>
+                                            span Центр на Мирославской
+                                        button.btn.btn--red.btn--m.doctors__item-btn Записаться на приём
+                                    .doctors__item 
+                                        img.doctors__pic(src="img/doc1.jpg" alt="")
+                                        span.doctors__profile Врач оториноларинголог-сурдолог
+                                        span.doctors__name Васильева Екатерина Вячеславовна
+                                        span.doctors__education Кандидат медицинских наук <br>Стаж 8 лет
+                                        .doctors__location
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.05051 4.04999C6.36333 2.73717 8.14389 1.99963 10.0005 1.99963C11.8571 1.99963 13.6377 2.73717 14.9505 4.04999C16.2633 5.36281 17.0009 7.14338 17.0009 8.99999C17.0009 10.8566 16.2633 12.6372 14.9505 13.95L10.0005 18.9L5.05051 13.95C4.40042 13.3 3.88474 12.5283 3.53291 11.6789C3.18108 10.8296 3 9.9193 3 8.99999C3 8.08068 3.18108 7.17037 3.53291 6.32104C3.88474 5.47172 4.40042 4.70001 5.05051 4.04999ZM10.0005 11C10.5309 11 11.0396 10.7893 11.4147 10.4142C11.7898 10.0391 12.0005 9.53042 12.0005 8.99999C12.0005 8.46956 11.7898 7.96085 11.4147 7.58578C11.0396 7.2107 10.5309 6.99999 10.0005 6.99999C9.47007 6.99999 8.96136 7.2107 8.58629 7.58578C8.21122 7.96085 8.0005 8.46956 8.0005 8.99999C8.0005 9.53042 8.21122 10.0391 8.58629 10.4142C8.96136 10.7893 9.47007 11 10.0005 11Z" fill="#CCCCCC"/></svg>
+                                            span Центр на Мирославской
+                                        button.btn.btn--red.btn--m.doctors__item-btn Записаться на приём
+                                    .doctors__item 
+                                        img.doctors__pic(src="img/doc1.jpg" alt="")
+                                        span.doctors__profile Врач оториноларинголог-сурдолог
+                                        span.doctors__name Васильева Екатерина Вячеславовна
+                                        span.doctors__education Кандидат медицинских наук <br>Стаж 8 лет
+                                        .doctors__location
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.05051 4.04999C6.36333 2.73717 8.14389 1.99963 10.0005 1.99963C11.8571 1.99963 13.6377 2.73717 14.9505 4.04999C16.2633 5.36281 17.0009 7.14338 17.0009 8.99999C17.0009 10.8566 16.2633 12.6372 14.9505 13.95L10.0005 18.9L5.05051 13.95C4.40042 13.3 3.88474 12.5283 3.53291 11.6789C3.18108 10.8296 3 9.9193 3 8.99999C3 8.08068 3.18108 7.17037 3.53291 6.32104C3.88474 5.47172 4.40042 4.70001 5.05051 4.04999ZM10.0005 11C10.5309 11 11.0396 10.7893 11.4147 10.4142C11.7898 10.0391 12.0005 9.53042 12.0005 8.99999C12.0005 8.46956 11.7898 7.96085 11.4147 7.58578C11.0396 7.2107 10.5309 6.99999 10.0005 6.99999C9.47007 6.99999 8.96136 7.2107 8.58629 7.58578C8.21122 7.96085 8.0005 8.46956 8.0005 8.99999C8.0005 9.53042 8.21122 10.0391 8.58629 10.4142C8.96136 10.7893 9.47007 11 10.0005 11Z" fill="#CCCCCC"/></svg>
+                                            span Центр на Мирославской
+                                        button.btn.btn--red.btn--m.doctors__item-btn Записаться на приём
+                                    .doctors__item 
+                                        img.doctors__pic(src="img/doc1.jpg" alt="")
+                                        span.doctors__profile Врач оториноларинголог-сурдолог
+                                        span.doctors__name Васильева Екатерина Вячеславовна
+                                        span.doctors__education Кандидат медицинских наук <br>Стаж 8 лет
+                                        .doctors__location
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.05051 4.04999C6.36333 2.73717 8.14389 1.99963 10.0005 1.99963C11.8571 1.99963 13.6377 2.73717 14.9505 4.04999C16.2633 5.36281 17.0009 7.14338 17.0009 8.99999C17.0009 10.8566 16.2633 12.6372 14.9505 13.95L10.0005 18.9L5.05051 13.95C4.40042 13.3 3.88474 12.5283 3.53291 11.6789C3.18108 10.8296 3 9.9193 3 8.99999C3 8.08068 3.18108 7.17037 3.53291 6.32104C3.88474 5.47172 4.40042 4.70001 5.05051 4.04999ZM10.0005 11C10.5309 11 11.0396 10.7893 11.4147 10.4142C11.7898 10.0391 12.0005 9.53042 12.0005 8.99999C12.0005 8.46956 11.7898 7.96085 11.4147 7.58578C11.0396 7.2107 10.5309 6.99999 10.0005 6.99999C9.47007 6.99999 8.96136 7.2107 8.58629 7.58578C8.21122 7.96085 8.0005 8.46956 8.0005 8.99999C8.0005 9.53042 8.21122 10.0391 8.58629 10.4142C8.96136 10.7893 9.47007 11 10.0005 11Z" fill="#CCCCCC"/></svg>
+                                            span Центр на Мирославской
+                                        button.btn.btn--red.btn--m.doctors__item-btn Записаться на приём
+                                    .doctors__item 
+                                        img.doctors__pic(src="img/doc1.jpg" alt="")
+                                        span.doctors__profile Врач оториноларинголог-сурдолог
+                                        span.doctors__name Васильева Екатерина Вячеславовна
+                                        span.doctors__education Кандидат медицинских наук <br>Стаж 8 лет
+                                        .doctors__location
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.05051 4.04999C6.36333 2.73717 8.14389 1.99963 10.0005 1.99963C11.8571 1.99963 13.6377 2.73717 14.9505 4.04999C16.2633 5.36281 17.0009 7.14338 17.0009 8.99999C17.0009 10.8566 16.2633 12.6372 14.9505 13.95L10.0005 18.9L5.05051 13.95C4.40042 13.3 3.88474 12.5283 3.53291 11.6789C3.18108 10.8296 3 9.9193 3 8.99999C3 8.08068 3.18108 7.17037 3.53291 6.32104C3.88474 5.47172 4.40042 4.70001 5.05051 4.04999ZM10.0005 11C10.5309 11 11.0396 10.7893 11.4147 10.4142C11.7898 10.0391 12.0005 9.53042 12.0005 8.99999C12.0005 8.46956 11.7898 7.96085 11.4147 7.58578C11.0396 7.2107 10.5309 6.99999 10.0005 6.99999C9.47007 6.99999 8.96136 7.2107 8.58629 7.58578C8.21122 7.96085 8.0005 8.46956 8.0005 8.99999C8.0005 9.53042 8.21122 10.0391 8.58629 10.4142C8.96136 10.7893 9.47007 11 10.0005 11Z" fill="#CCCCCC"/></svg>
+                                            span Центр на Мирославской
+                                        button.btn.btn--red.btn--m.doctors__item-btn Записаться на приём
+                                    .doctors__item 
+                                        img.doctors__pic(src="img/doc1.jpg" alt="")
+                                        span.doctors__profile Врач оториноларинголог-сурдолог
+                                        span.doctors__name Васильева Екатерина Вячеславовна
+                                        span.doctors__education Кандидат медицинских наук <br>Стаж 8 лет
+                                        .doctors__location
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.05051 4.04999C6.36333 2.73717 8.14389 1.99963 10.0005 1.99963C11.8571 1.99963 13.6377 2.73717 14.9505 4.04999C16.2633 5.36281 17.0009 7.14338 17.0009 8.99999C17.0009 10.8566 16.2633 12.6372 14.9505 13.95L10.0005 18.9L5.05051 13.95C4.40042 13.3 3.88474 12.5283 3.53291 11.6789C3.18108 10.8296 3 9.9193 3 8.99999C3 8.08068 3.18108 7.17037 3.53291 6.32104C3.88474 5.47172 4.40042 4.70001 5.05051 4.04999ZM10.0005 11C10.5309 11 11.0396 10.7893 11.4147 10.4142C11.7898 10.0391 12.0005 9.53042 12.0005 8.99999C12.0005 8.46956 11.7898 7.96085 11.4147 7.58578C11.0396 7.2107 10.5309 6.99999 10.0005 6.99999C9.47007 6.99999 8.96136 7.2107 8.58629 7.58578C8.21122 7.96085 8.0005 8.46956 8.0005 8.99999C8.0005 9.53042 8.21122 10.0391 8.58629 10.4142C8.96136 10.7893 9.47007 11 10.0005 11Z" fill="#CCCCCC"/></svg>
+                                            span Центр на Мирославской
+                                        button.btn.btn--red.btn--m.doctors__item-btn Записаться на приём
+
+                                .pagination 
+                                    .pagination__list 
+                                        a(href="").pagination__prev 
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 5L4 12M4 12L11 19M4 12H20" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        a(href="").pagination__page.active 1
+                                        a(href="").pagination__page 2
+                                        a(href="").pagination__page ...
+                                        a(href="").pagination__page 19
+                                        a(href="").pagination__next
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 5L20 12M20 12L13 19M20 12H4" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    button.btn.btn--grey.btn--m Показать ещё &nbsp;
+                                        span#cur-page 15
+                                        | &nbsp;из&nbsp; 
+                                        span#total-pages 100
+
+
                         .tabs__pane
                             .tabs__pane-wrap
+                                .chips 
+                                    button.chips__item Все
+                                    button.chips__item Забота о слухе и диагностика
+                                    button.chips__item Акции и скидки
+                                .news 
+                                    .subscribe 
+                                        h2.subscribe__title Подписаться на рассылку
+                                        input.input-default.subscribe__input(type="email" placeholder="Электронная почта")
+                                        p.subscribe__agree Подписываясь, вы даете согласие на 
+                                            a(href="") обработку персональных данных
+                                        button.btn.btn--red.btn--l.btn--icn(type="submit") 
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                            span Подписаться
+
+                                    .article-preview 
+                                        a(href="").article-preview__pic
+                                            img(src="img/pictures/pic1.jpg" alt="")
+                                        .article-preview__date 25 фев 2023
+                                        a(href="").article-preview__name 8 советов, чтобы лучше понять человека с потерей слуха
+                                        p.article-preview__text Чек-лист, который поможет лучше понять человека с потерей слуха и выстроить с ним доверительное общение.
+                                    .article-preview 
+                                        a(href="").article-preview__pic
+                                            img(src="img/pictures/pic1.jpg" alt="")
+                                        .article-preview__date 25 фев 2023
+                                        a(href="").article-preview__name 8 советов, чтобы лучше понять человека с потерей слуха
+                                        p.article-preview__text Чек-лист, который поможет лучше понять человека с потерей слуха и выстроить с ним доверительное общение.
+                                    .article-preview 
+                                        a(href="").article-preview__pic
+                                            img(src="img/pictures/pic1.jpg" alt="")
+                                        .article-preview__date 25 фев 2023
+                                        a(href="").article-preview__name 8 советов, чтобы лучше понять человека с потерей слуха
+                                        p.article-preview__text Чек-лист, который поможет лучше понять человека с потерей слуха и выстроить с ним доверительное общение.
+                                    .article-preview 
+                                        a(href="").article-preview__pic
+                                            img(src="img/pictures/pic1.jpg" alt="")
+                                        .article-preview__date 25 фев 2023
+                                        a(href="").article-preview__name 8 советов, чтобы лучше понять человека с потерей слуха
+                                        p.article-preview__text Чек-лист, который поможет лучше понять человека с потерей слуха и выстроить с ним доверительное общение.
+                                    .article-preview 
+                                        a(href="").article-preview__pic
+                                            img(src="img/pictures/pic1.jpg" alt="")
+                                        .article-preview__date 25 фев 2023
+                                        a(href="").article-preview__name 8 советов, чтобы лучше понять человека с потерей слуха
+                                        p.article-preview__text Чек-лист, который поможет лучше понять человека с потерей слуха и выстроить с ним доверительное общение.
+                                    .article-preview 
+                                        a(href="").article-preview__pic
+                                            img(src="img/pictures/pic1.jpg" alt="")
+                                        .article-preview__date 25 фев 2023
+                                        a(href="").article-preview__name 8 советов, чтобы лучше понять человека с потерей слуха
+                                        p.article-preview__text Чек-лист, который поможет лучше понять человека с потерей слуха и выстроить с ним доверительное общение.
+                                    .article-preview 
+                                        a(href="").article-preview__pic
+                                            img(src="img/pictures/pic1.jpg" alt="")
+                                        .article-preview__date 25 фев 2023
+                                        a(href="").article-preview__name 8 советов, чтобы лучше понять человека с потерей слуха
+                                        p.article-preview__text Чек-лист, который поможет лучше понять человека с потерей слуха и выстроить с ним доверительное общение.
+                                    .article-preview 
+                                        a(href="").article-preview__pic
+                                            img(src="img/pictures/pic1.jpg" alt="")
+                                        .article-preview__date 25 фев 2023
+                                        a(href="").article-preview__name 8 советов, чтобы лучше понять человека с потерей слуха
+                                        p.article-preview__text Чек-лист, который поможет лучше понять человека с потерей слуха и выстроить с ним доверительное общение.
+                                    .article-preview 
+                                        a(href="").article-preview__pic
+                                            img(src="img/pictures/pic1.jpg" alt="")
+                                        .article-preview__date 25 фев 2023
+                                        a(href="").article-preview__name 8 советов, чтобы лучше понять человека с потерей слуха
+                                        p.article-preview__text Чек-лист, который поможет лучше понять человека с потерей слуха и выстроить с ним доверительное общение.
+                                    .article-preview 
+                                        a(href="").article-preview__pic
+                                            img(src="img/pictures/pic1.jpg" alt="")
+                                        .article-preview__date 25 фев 2023
+                                        a(href="").article-preview__name 8 советов, чтобы лучше понять человека с потерей слуха
+                                        p.article-preview__text Чек-лист, который поможет лучше понять человека с потерей слуха и выстроить с ним доверительное общение.
+                                    .article-preview 
+                                        a(href="").article-preview__pic
+                                            img(src="img/pictures/pic1.jpg" alt="")
+                                        .article-preview__date 25 фев 2023
+                                        a(href="").article-preview__name 8 советов, чтобы лучше понять человека с потерей слуха
+                                        p.article-preview__text Чек-лист, который поможет лучше понять человека с потерей слуха и выстроить с ним доверительное общение.
+                                    .article-preview 
+                                        a(href="").article-preview__pic
+                                            img(src="img/pictures/pic1.jpg" alt="")
+                                        .article-preview__date 25 фев 2023
+                                        a(href="").article-preview__name 8 советов, чтобы лучше понять человека с потерей слуха
+                                        p.article-preview__text Чек-лист, который поможет лучше понять человека с потерей слуха и выстроить с ним доверительное общение.
+                                .pagination 
+                                    .pagination__list 
+                                        a(href="").pagination__prev 
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 5L4 12M4 12L11 19M4 12H20" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        a(href="").pagination__page.active 1
+                                        a(href="").pagination__page 2
+                                        a(href="").pagination__page ...
+                                        a(href="").pagination__page 19
+                                        a(href="").pagination__next
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 5L20 12M20 12L13 19M20 12H4" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    button.btn.btn--grey.btn--m Показать ещё &nbsp;
+                                        span#cur-page 15
+                                        | &nbsp;из&nbsp; 
+                                        span#total-pages 100
+
                         .tabs__pane
-                            .tabs__pane-wrap    
-        section.about-cifrus 
-            ._container 
-                h2.section-title.section-title--w Мы в цифрах
-                .about-cifrus__wrap 
-                    ul.about-cifrus__list 
-                        li.about-cifrus__item
-                            span.about-cifrus__number 3
-                            span.about-cifrus__label центра слуха 
-                        li.about-cifrus__item
-                            span.about-cifrus__number 12
-                            span.about-cifrus__label тысяч покупателей ежегодно
-                        li.about-cifrus__item
-                            span.about-cifrus__number 200
-                            span.about-cifrus__label моделей в ассортименте
-                        li.about-cifrus__item
-                            span.about-cifrus__number 15
-                            span.about-cifrus__label лет на рынке
-                    .about-cifrus__video.video-wrap
-                        .video-control#video-play 
-                        .video-control#video-over
-                        video#video(height="" poster="img/video-back.jpg") 
-                            source(src="img/video.mp4")
+                            .tabs__pane-wrap
+                                .licenses 
+                                    .licenses__item
+                                        a.licenses__link(href="img/license1.jpg" data-fancybox)
+                                            img(src="img/license1.jpg", alt="")
+                                    .licenses__item
+                                        a.licenses__link(href="img/license1.jpg" data-fancybox)
+                                            img(src="img/license1.jpg", alt="")
+                                    .licenses__item
+                                        a.licenses__link(href="img/license1.jpg" data-fancybox)
+                                            img(src="img/license1.jpg", alt="")
+                                    .licenses__item
+                                        a.licenses__link(href="img/license1.jpg" data-fancybox)
+                                            img(src="img/license1.jpg", alt="")
+                                    .licenses__item
+                                        a.licenses__link(href="img/license1.jpg" data-fancybox)
+                                            img(src="img/license1.jpg", alt="")
+                                    .licenses__item
+                                        a.licenses__link(href="img/license1.jpg" data-fancybox)
+                                            img(src="img/license1.jpg", alt="")
+                                    .licenses__item
+                                        a.licenses__link(href="img/license1.jpg" data-fancybox)
+                                            img(src="img/license1.jpg", alt="")
+                                    .licenses__item
+                                        a.licenses__link(href="img/license1.jpg" data-fancybox)
+                                            img(src="img/license1.jpg", alt="")
+                                    .licenses__item
+                                        a.licenses__link(href="img/license1.jpg" data-fancybox)
+                                            img(src="img/license1.jpg", alt="")
+                                    .licenses__item
+                                        a.licenses__link(href="img/license1.jpg" data-fancybox)
+                                            img(src="img/license1.jpg", alt="")
+                                    .licenses__item
+                                        a.licenses__link(href="img/license1.jpg" data-fancybox)
+                                            img(src="img/license1.jpg", alt="")
+                                    .licenses__item
+                                        a.licenses__link(href="img/license1.jpg" data-fancybox)
+                                            img(src="img/license1.jpg", alt="")
 
 
-        section.map 
-            ._container 
-                h2.section-title 
-                    span Представительства компании
-                    .select-place
-                        select.mySelect
-                            option(value="Алма-Ата") Алма-Ата
-                            option(value="Алма-Ата") Алма-Ата
-                            option(value="Алма-Ата") Алма-Ата
-
-                #map
 
 
-        include include/offers.pug
+
 
 

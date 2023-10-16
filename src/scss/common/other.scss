@@ -1,0 +1,23 @@
+.input-default {
+    height: 54px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #E8EBED;
+    color: #737373;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 160%;
+    padding: 0 20px;
+    width: 100%;
+
+    &:focus-visible {
+        outline: none;
+    }
+}
+
+.label {
+    color: #737373;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 153.846% ;
+}

@@ -1,0 +1,29 @@
+.share {
+    background-color: #F5F7FA;
+    padding: 30px;
+    @media (max-width: 700px) {
+        padding: 20px;
+    }
+}
+
+.share__social {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    @media (max-width: 1240px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.share__item {
+    border-radius: 60px;
+    background: #FFF;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    gap: 10px;
+}

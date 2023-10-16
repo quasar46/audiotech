@@ -80,4 +80,7 @@
 
 .select-place {
     width: 295px;
+    @media (max-width: 700px) {
+        width: 100%;
+    }
 }

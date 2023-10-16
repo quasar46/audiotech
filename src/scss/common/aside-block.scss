@@ -1,0 +1,113 @@
+.aside-block {
+    padding: 30px;
+    background-color: #F5F7FA;
+    align-self: flex-start;
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+
+        @media (max-width: 940px) {
+            width: auto;
+            min-width: 125px;
+        }
+        @media (max-width: 700px) {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 1240px) {
+        padding: 30px 20px;
+    }
+
+
+    @media ((max-width: 940px) and (min-width: 700px)) {
+        display: none;
+    }
+
+    &--tablet {
+        display: none;
+        width: 100%;
+
+        @media ((max-width: 940px) and (min-width: 700px)) {
+            display: block;
+        }
+    }
+
+    // &--questions {
+    //     @media (max-width: 940px) {
+    //         display: grid;
+    //         grid-template-columns: repeat(2, 1fr);
+    //     }
+    // }
+}
+
+
+.aside-block__title {
+    color: #131313;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 133.333%;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+
+.aside-block__agree {
+    margin: 0;
+    color: #737373;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 153.846%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 100%;
+
+    a {
+        border-bottom: 1px dotted #737373;
+    }
+}
+
+.aside-block__forms {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    textarea {
+        resize: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        min-height: 88px;
+    }
+
+    &--mode {
+        @media (max-width: 940px) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .input-default {
+            @media (max-width: 940px) {
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    width: calc(50% - 5px);
+                }
+            }
+
+            @media (max-width: 700px) {
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .aside-block__agree {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+    }
+}

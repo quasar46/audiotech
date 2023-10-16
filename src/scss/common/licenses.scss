@@ -1,0 +1,52 @@
+.licenses {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    @media (max-width: 940px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.licenses__item {
+    a {
+        position: relative;
+    }
+
+    button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 100;
+    }
+}
+
+.licenses__link {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #fff;
+        background-image: url('../img/icns/md-zoom.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+}

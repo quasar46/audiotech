@@ -1,0 +1,66 @@
+.error404__wrap {
+    max-width: 1027px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-image: url("../img/404.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    min-height: 505px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+    @media (max-width: 1240px) {
+        background-size: 380px auto;
+        max-width: 777px;
+    }
+    @media (max-width: 940px) {
+        max-width: 380px;
+        padding-top: 440px;
+        background-size: 100% auto;
+        background-position: top;
+    }
+    @media (max-width: 700px) {
+        padding-top: 260px;
+        margin-top: 40px;
+        background-size: 220px auto;
+        margin-bottom: 65px;
+    }
+}
+
+.error404_title {
+    margin-bottom: 20px;
+}
+
+.error404__text {
+    margin: 0;
+    margin-bottom: 30px;
+    color: #131313;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.error404__content {
+    max-width: 400px;
+    width: 100%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media (max-width: 1240px) {
+        max-width: 300px;
+    }
+    @media (max-width: 940px) {
+        margin-left: 0;
+        max-width: 100%;
+    }
+    .btn {
+        @media (max-width: 940px) {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
