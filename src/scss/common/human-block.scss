@@ -1,18 +1,10 @@
 .human-block {
     position: relative;
-    background-color: #F5F7FA;
-
-    // background-size: auto 100%;
-    // background-repeat: no-repeat;
-    // background-position: left top;
-
-
-    @media(max-width: 1240px) {
-        background-image: url("../img/human-block/ellipses.svg");
-        background-position: left -159px top;
-    }
-    @media(max-width: 940px) {
-        background-position: left -348px top;
+    
+    &>._container {
+        @media (max-width: 700px) {
+            padding: 0;
+        }
     }
 
     &--doc1 {
@@ -21,8 +13,8 @@
         background-position: left top, left bottom, bottom right;
         background-repeat: no-repeat, no-repeat, no-repeat;
         @media(max-width: 1240px) {
-            background-position: left -176px top, left -141px top;
-            background-size: contain, 710px 450px, 0;
+            background-position: left -176px top, left -141px top, right bottom;
+            background-size: contain, 710px 450px, 205px auto;
         }
         @media(max-width: 940px) {
             background-position: left -371px top, left -364px top;
@@ -33,6 +25,35 @@
             background-position: left top;  
             background-size: auto 260px;
         }
+    }
+    &--doc2 {
+        background-image: url("../img/human-block/pic2.png"), url("../img/human-block/ellipses.svg"), url("../img/human-block/ellipse.svg");
+        background-size: contain, 710px 450px, 205px 290px;
+        background-position: left top, left bottom, bottom right;
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-color: #F5F7FA;
+        @media(max-width: 1240px) {
+            background-position: left -176px top, left -141px top, right bottom;
+            background-size: contain, 710px 450px, 205px auto;
+        }
+        @media(max-width: 940px) {
+            background-position: left -309px top, left -364px top;
+            background-size: cover, 710px 450px, 205px 290px;
+        }
+        @media(max-width: 700px) {
+            background-image: url("../img/human-block/h-block-m2.png");
+            background-position: left top;  
+            background-size: auto 260px;
+        }
+        .human-block__wrap {
+            @media (max-width: 700px) {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+    &--mode {
+        background-color: #F5F7FA;
     }
 }
 
@@ -93,6 +114,7 @@
     @media(max-width: 700px) {
         margin-right: 0;
         margin-left: 0;
+        max-width: 100%;
     }
     .btn {
         align-self: flex-start;
@@ -105,6 +127,19 @@
 
 .human-block__title {
     margin-bottom: 20px;
+    br {
+        @media (min-width: 941px) {
+            display: none;
+        }
+        @media (max-width: 700px) {
+            display: none;
+        }
+    }
+    &--mode {
+        @media (max-width: 1240px) {
+            max-width: 220px;
+        }
+    }
 }
 
 .human-block__descr {

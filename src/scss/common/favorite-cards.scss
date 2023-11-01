@@ -1,0 +1,13 @@
+.favorite-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px 20px;
+    @media (max-width: 940px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;  
+    }
+}

@@ -25,21 +25,19 @@
         display: none;
     }
 
-    &--tablet {
+    &--mobile {
         display: none;
-        width: 100%;
-
+        @media (max-width: 700px) {
+            display: block;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+    }
+    &--questions {
         @media ((max-width: 940px) and (min-width: 700px)) {
             display: block;
         }
     }
-
-    // &--questions {
-    //     @media (max-width: 940px) {
-    //         display: grid;
-    //         grid-template-columns: repeat(2, 1fr);
-    //     }
-    // }
 }
 
 
@@ -65,6 +63,11 @@
 
     a {
         border-bottom: 1px dotted #737373;
+        &:hover {
+            color: #DB1F26;
+            border-color: transparent;
+            transition: all 0.3s ease;
+        }
     }
 }
 

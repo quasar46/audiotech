@@ -13,6 +13,15 @@
 
 .article-preview__pic {
     margin-bottom: 10px;
+    &:hover {
+        & ~ .article-preview__name {
+            color: #DB1F26;
+            transition: all 0.3s ease;
+        }
+    }
+    img {
+        width: 100%;
+    }
 }
 
 .article-preview__name {
@@ -21,8 +30,21 @@
     line-height: 133.333%;
     margin-bottom: 10px;
     transition: all 0.3s ease;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 3;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+
     &:hover {
         color: #DB1F26;
+        transition: all 0.3s ease;
     }
 }
 

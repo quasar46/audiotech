@@ -1,0 +1,10 @@
+.questions {
+    .aside-block {
+        @media (max-width: 1240px) {
+            padding: 30px;
+        }
+        @media (max-width: 700px) {
+            padding: 20px;
+        }
+    }
+}

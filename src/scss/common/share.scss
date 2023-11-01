@@ -26,4 +26,21 @@
     align-items: center;
     justify-content: center ;
     gap: 10px;
+    transition: all 0.3s ease;
+    svg {
+        path {
+            transition: all 0.3s ease;
+        }
+    }
+    &:hover {
+        background-color: #DB1F26;
+        transition: all 0.3s ease;
+        color: #fff;
+        svg {
+            path {
+                fill: #fff;
+                transition: all 0.3s ease;
+            }
+        }
+    }
 }

@@ -12,6 +12,15 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
+        @media (max-width: 1240px) {
+            max-width: 220px;
+        }
+        @media (max-width: 700px) {
+            max-width: 100%;
+        }
+    }
+    @media (max-width: 700px) {
+        flex-direction: column;
     }
 }
 
@@ -73,6 +82,16 @@
     img {
         flex: 0 0 40px;
     }
+    &:hover {
+        .materials__item-name {
+            color: #DB1F26;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+.materials__item-name {
+    transition: all 0.3s ease;
 }
 
 .materials__col {

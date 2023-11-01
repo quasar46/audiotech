@@ -2,16 +2,14 @@ extends templates/layout
 
 block main 
     main 
-        .breadcrumbs 
-            ._container
-                .breadcrumbs__list
-                    li.breadcrumbs__item
-                        a(href="/") Главная
-                    li.breadcrumbs__item •
-                    li.breadcrumbs__item 
-                        a(href="/") Покупателям
-                    li.breadcrumbs__item •
-                    li.breadcrumbs__item Материалы по продукции
+        ._container.breadcrumb-wrap
+            .breadcrumb 
+                    li
+                        a(href="index.html") Главная
+                    li 
+                        a(href="buyers.html") Покупателям
+                    li 
+                        a Материалы по продукции
         section.materials
             ._container
                 h1.title-page Материалы по продукции
@@ -35,22 +33,22 @@ block main
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Сертификат соотвтетсвия ISO
+                                    span.materials__item-name Сертификат соотвтетсвия ISO
                                     span (PDF, 87 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Руководство по эксплуатации
+                                    span.materials__item-name Руководство по эксплуатации
                                     span (PDF, 913 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Сертификат соответствия
+                                    span.materials__item-name Сертификат соответствия
                                     span (PDF, 913 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Брошюра по уходу за слуховым аппаратом
+                                    span.materials__item-name Брошюра по уходу за слуховым аппаратом
                                     span (PDF, 87 kb)
                     .materials__row
                         .materials__head 
@@ -60,22 +58,22 @@ block main
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Сертификат соотвтетсвия ISO
+                                    span.materials__item-name Сертификат соотвтетсвия ISO
                                     span (PDF, 87 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Руководство по эксплуатации
+                                    span.materials__item-name Руководство по эксплуатации
                                     span (PDF, 913 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Сертификат соответствия
+                                    span.materials__item-name Сертификат соответствия
                                     span (PDF, 913 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Брошюра по уходу за слуховым аппаратом
+                                    span.materials__item-name Брошюра по уходу за слуховым аппаратом
                                     span (PDF, 87 kb)                                    
                     .materials__row
                         .materials__head 
@@ -85,22 +83,22 @@ block main
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Сертификат соотвтетсвия ISO
+                                    span.materials__item-name Сертификат соотвтетсвия ISO
                                     span (PDF, 87 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Руководство по эксплуатации
+                                    span.materials__item-name Руководство по эксплуатации
                                     span (PDF, 913 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Сертификат соответствия
+                                    span.materials__item-name Сертификат соответствия
                                     span (PDF, 913 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Брошюра по уходу за слуховым аппаратом
+                                    span.materials__item-name Брошюра по уходу за слуховым аппаратом
                                     span (PDF, 87 kb)                                    
 
 
@@ -112,22 +110,22 @@ block main
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Сертификат соотвтетсвия ISO
+                                    span.materials__item-name Сертификат соотвтетсвия ISO
                                     span (PDF, 87 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Руководство по эксплуатации
+                                    span.materials__item-name Руководство по эксплуатации
                                     span (PDF, 913 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Сертификат соответствия
+                                    span.materials__item-name Сертификат соответствия
                                     span (PDF, 913 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Брошюра по уходу за слуховым аппаратом
+                                    span.materials__item-name Брошюра по уходу за слуховым аппаратом
                                     span (PDF, 87 kb)                                    
 
 
@@ -139,22 +137,22 @@ block main
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Сертификат соотвтетсвия ISO
+                                    span.materials__item-name Сертификат соотвтетсвия ISO
                                     span (PDF, 87 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Руководство по эксплуатации
+                                    span.materials__item-name Руководство по эксплуатации
                                     span (PDF, 913 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Сертификат соответствия
+                                    span.materials__item-name Сертификат соответствия
                                     span (PDF, 913 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Брошюра по уходу за слуховым аппаратом
+                                    span.materials__item-name Брошюра по уходу за слуховым аппаратом
                                     span (PDF, 87 kb)                                    
 
 
@@ -166,22 +164,22 @@ block main
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Сертификат соотвтетсвия ISO
+                                    span.materials__item-name Сертификат соотвтетсвия ISO
                                     span (PDF, 87 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Руководство по эксплуатации
+                                    span.materials__item-name Руководство по эксплуатации
                                     span (PDF, 913 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Сертификат соответствия
+                                    span.materials__item-name Сертификат соответствия
                                     span (PDF, 913 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Брошюра по уходу за слуховым аппаратом
+                                    span.materials__item-name Брошюра по уходу за слуховым аппаратом
                                     span (PDF, 87 kb)                                    
 
 
@@ -193,22 +191,22 @@ block main
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Сертификат соотвтетсвия ISO
+                                    span.materials__item-name Сертификат соотвтетсвия ISO
                                     span (PDF, 87 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Руководство по эксплуатации
+                                    span.materials__item-name Руководство по эксплуатации
                                     span (PDF, 913 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Сертификат соответствия
+                                    span.materials__item-name Сертификат соответствия
                                     span (PDF, 913 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Брошюра по уходу за слуховым аппаратом
+                                    span.materials__item-name Брошюра по уходу за слуховым аппаратом
                                     span (PDF, 87 kb)                                    
 
 
@@ -220,22 +218,22 @@ block main
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Сертификат соотвтетсвия ISO
+                                    span.materials__item-name Сертификат соотвтетсвия ISO
                                     span (PDF, 87 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Руководство по эксплуатации
+                                    span.materials__item-name Руководство по эксплуатации
                                     span (PDF, 913 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Сертификат соответствия
+                                    span.materials__item-name Сертификат соответствия
                                     span (PDF, 913 kb)
                             a.materials__item(href="")
                                 img(src="img/icns/pdf.svg" alt="")
                                 span.materials__col
-                                    span Брошюра по уходу за слуховым аппаратом
+                                    span.materials__item-name Брошюра по уходу за слуховым аппаратом
                                     span (PDF, 87 kb)                                    
 
                 .pagination 

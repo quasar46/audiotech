@@ -1,0 +1,20 @@
+.price-service__table {
+  width: 100%;
+
+  td {
+    border-top: 1px solid #E8EBED;
+    padding: 20px 0;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 160%;
+
+    &:nth-child(2) {
+      text-align: right;
+    }
+    @media (max-width: 700px) {
+      padding: 15px 0;
+      width: 50%;
+      vertical-align: top;
+    }
+  }
+}

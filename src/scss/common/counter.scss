@@ -15,19 +15,53 @@
 .counter__btn {
     flex: 0 0 24px;
     height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .counter__input {
+    position: relative;
     input {
-        width: 100%;
+        width: 25px;
         background-color: #fff;
         color: var(--primary-black, #131313);
         text-align: center;
         font-size: 15px;
         font-weight: 500;
-        line-height: 160%;
+        line-height: 24px;
         letter-spacing: -0.15px;
+        &::placeholder {
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 24px;
+        }
     }
+    &--product {
+        &::after {
+            content:"шт";
+            position: absolute;
+            right: -20px;   
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 24px;
+            // @media (max-width: 1240px) {
+            //     right: 36px;
+            // }
+            // @media (max-width: 1024px) {
+            //     right: 46px;
+            // }
+            // @media (max-width: 940px) {
+            //     right: 80px;
+            // }
+            // @media (max-width: 700px) {
+            //     right: calc((100% - 57px) / 2);
+            // }
+        }
+    }
+   
 }
 
 .counter__btn {

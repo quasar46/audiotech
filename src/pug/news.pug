@@ -2,16 +2,14 @@ extends templates/layout
 
 block main 
     main 
-        .breadcrumbs 
-            ._container
-                .breadcrumbs__list
-                    li.breadcrumbs__item    
-                        a(href="/") Главная
-                    li.breadcrumbs__item •
-                    li.breadcrumbs__item    
-                        a(href="/") Новости
-                    li.breadcrumbs__item •
-                    li.breadcrumbs__item 8 советов, чтобы лучше понять человека с потерей слуха
+        ._container
+            .breadcrumb 
+                li    
+                    a(href="index.html") Главная
+                li    
+                    a(href="news.html") Новости
+                li 
+                    a 8 советов, чтобы лучше понять человека с потерей слуха
         section.news-page 
             ._container
                 .news-page__head
@@ -27,11 +25,11 @@ block main
                             .__container-s
                                 h3 Praesent a imperdiet ante. Nulla vel odio ut dui tincidunt egestas. Duis sodales diam ligula, in commodo odio auctor non.
                                 p Cras non quam lacus. Ut id venenatis justo. Phasellus ullamcorper, lorem eget imperdiet cursus, ex quam fringilla urna, non mollis augue nunc vitae sem. Donec venenatis et velit sit amet placerat. Aliquam mollis nunc a vestibulum finibus. Integer id nulla sed turpis pellentesque dapibus. Ut libero tortor, viverra non massa at, posuere sagittis magna. Ut tortor tellus, porttitor ac libero vitae, lacinia molestie purus. Praesent a imperdiet ante. Nulla vel odio ut dui tincidunt egestas. Duis sodales diam ligula, in commodo odio auctor non.
-                        section.news-page__block
+                        section.news-page__block.news-page__block--slider
                             h2.section-title 
                                 span Аналоговые слуховые аппараты
                                 a.btn.btn--grey.btn--m Смотреть все
-                            .swiper.swiper-three
+                            .swiper.swiper-three-news.pr30_m
                                 .swiper-wrapper 
                                     .swiper-slide 
                                         .card 
@@ -60,6 +58,10 @@ block main
                                             .card__footer 
                                                 .card__price.card__price--actual 65 300 ₽
                                                 .card__price.card__price--old 81 250 ₽
+                                                                               
+
+
+
                         .__container-s
                             .news-page__block
                                 p Vestibulum augue enim, scelerisque ac gravida ut, sodales non lectus. Nunc non pretium eros. Duis ligula nisi, venenatis in dignissim et, pellentesque in enim. Mauris facilisis, eros a condimentum vehicula, ex eros tincidunt massa, at mattis turpis nibh in erat. Donec vehicula eros quis imperdiet pharetra. Suspendisse vehicula eros ac lacus molestie, id molestie lacus tincidunt. Fusce non arcu tempus odio convallis posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc non enim sed lacus tincidunt euismod. Quisque consequat massa urna, sed tincidunt urna faucibus sit amet.
@@ -74,12 +76,13 @@ block main
                                             span.quote__subname Medical Assistant
 
                                 p Vestibulum augue enim, scelerisque ac gravida ut, sodales non lectus. Nunc non pretium eros. Duis ligula nisi, venenatis in dignissim et, pellentesque in enim. Mauris facilisis, eros a condimentum vehicula, ex eros tincidunt massa, at mattis turpis nibh in erat. Donec vehicula eros quis imperdiet pharetra. Suspendisse vehicula eros ac lacus molestie, id molestie lacus tincidunt. Fusce non arcu tempus odio convallis posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc non enim sed lacus tincidunt euismod. Quisque consequat massa urna, sed tincidunt urna faucibus sit amet.
-                            .news-page__block
-                                .video-wrap.video-wrap--mode
-                                    .video-control#video-play 
-                                    .video-control#video-over
-                                    video#video(height="" poster="img/video-back.jpg") 
-                                        source(src="img/video.mp4")
+                            .news__video 
+                                .play-video 
+                                    img(src="img/video-back2.jpg" alt="")
+                                    button.btn-play
+                            .video-wrap 
+                                <iframe id="video" width="820" height="440" src="https://www.youtube.com/embed/LvQossUx7ss?si=pH9KasmmTG0Q50Ew&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                button.video-wrap__close.stop-video
                             .news-page__block
                                 h3 Nulla vel odio ut dui tincidunt egestas. Duis sodales diam ligula, in commodo odio auctor non.
                                 ul 
@@ -97,10 +100,13 @@ block main
                                 h3 Quisque consequat massa urna, sed tincidunt urna faucibus sit amet.
                                 ol
                                     li 
+                                        span 01
                                         span Ut libero tortor, viverra non massa at, posuere sagittis magna.
                                     li 
+                                        span 02
                                         span Phasellus ullamcorper, lorem eget imperdiet cursus, ex quam fringilla urna, non mollis augue nunc vitae sem. Donec venenatis et velit sit amet placerat.
                                     li 
+                                        span 03
                                         span Ut tortor tellus, porttitor ac libero vitae, lacinia molestie purus. Praesent a imperdiet ante. Nulla vel odio ut dui tincidunt egestas. Duis sodales diam ligula, in commodo odio auctor non.
 
                                 p Eget nunc lobortis mattis aliquam faucibus purus in. Etiam sit amet nisl purus in mollis nunc sed. Porta nibh venenatis cras sed. Sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Adipiscing elit ut aliquam purus sit amet. Fermentum dui faucibus in ornare quam. Arcu dui vivamus arcu felis. Tincidunt tortor aliquam nulla facilisi cras. Nunc id cursus metus aliquam eleifend mi in nulla. Semper auctor neque vitae tempus quam pellentesque nec nam. Etiam sit amet nisl purus in mollis nunc. Consectetur libero id faucibus nisl tincidunt eget nullam non nisi. Ullamcorper eget nulla facilisi etiam dignissim diam quis. Enim diam vulputate ut pharetra sit amet aliquam. Volutpat sed cras ornare arcu dui vivamus arcu felis. Nisl nunc mi ipsum faucibus vitae aliquet. Suspendisse ultrices gravida dictum fusce ut.
@@ -126,10 +132,11 @@ block main
 
 
 
-                    .news-page__col 
+                    .news-page__col
                         .aside-block 
                             h2.aside-block__title Подписаться на рассылку
-                            input.input-default(type="email" placeholder="Электронная почта")
+                            .input__overlay
+                                input.input-default(type="email" placeholder="Электронная почта")
                             p.aside-block__agree Подписываясь, вы даете согласие на 
                                 a(href="") обработку персональных данных
                             button.btn.btn--red.btn--l.btn--icn(type="submit") 
@@ -141,7 +148,7 @@ block main
 
                 section.slider-block
                     h2.section-title Похожие статьи
-                    .slider-block__wrap.swiper.actual-slider.pb0
+                    .slider-block__wrap.swiper.articles-slider.pb0
                         .swiper-wrapper
                             .swiper-slide
                                 .article-preview 
@@ -198,9 +205,8 @@ block main
                                         img(src="img/pictures/pic4.jpg" alt="")
                                     .article-preview__date 18 дек 2022
                                     a(href="").article-preview__name В нашей жизни возможно все
-                                    p.article-preview__text Алена Капустьян – скромная, застенчивая и невероятно обаятельная девушка. Модель, участница спектакля «Прикасаемые», студентка колледжа при РГСУ.
-
-                .aside-block.aside-block--tablet
+                                    p.article-preview__text Алена Капустьян – скромная, застенчивая и невероятно обаятельная девушка. Модель, участница спектакля «Прикасаемые», студентка колледжа при РГСУ.                
+                .subscribe
                     h2.subscribe__title Подписаться на рассылку
                     .subscribe__input
                         input.input-default.subscribe__input(type="email" placeholder="Электронная почта")
@@ -212,7 +218,15 @@ block main
 
 
 
-
+        .aside-block.aside-block--mobile 
+            h2.aside-block__title Подписаться на рассылку
+            .input__overlay
+                input.input-default(type="email" placeholder="Электронная почта")
+            p.aside-block__agree Подписываясь, вы даете согласие на 
+                a(href="") обработку персональных данных
+            button.btn.btn--red.btn--l.btn--icn(type="submit") 
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                span Подписаться
         include include/offers
 
 

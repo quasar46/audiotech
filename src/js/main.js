@@ -1,43 +1,90 @@
 document.addEventListener("DOMContentLoaded", function () {
     const minViewPort = (min = 300) => {
-        if (window.innerWidth<= min) {
-        const viewport = document.querySelector('[name="viewport"]');
-        if (viewport)
-          viewport.setAttribute("content", `width=${min}, user-scalable=no`);
-    }
+        if (window.innerWidth <= min) {
+            const viewport = document.querySelector('[name="viewport"]');
+            if (viewport)
+                viewport.setAttribute("content", `width=${min}, user-scalable=no`);
+        }
     };
 
     minViewPort();
 
+    // custom select
+    customSelect('.mySelect');
+    const cstSel = document.querySelector('.mySelect').customSelect
 
-    customSelect(".mySelect");
+    const mySelectPriem = document.querySelector('.mySelectPriem');
+    const arrAirPicker = document.querySelectorAll('.airPicker');
+
+    mySelectPriem.addEventListener('change', function () {
+        if (mySelectPriem.value !== 'default') {
+            arrAirPicker.forEach(picker => {
+                picker.removeAttribute('disabled');
+            })
+        } else {
+            arrAirPicker.forEach(picker => {
+                picker.setAttribute('disabled', 'disabled');
+            })
+        }
+    });
+    // custom select
 
     new AirDatepicker('#airpicker', {
-       
+        onSelect: function (dateText, inst) {
+            showTimes();
+        }
     });
 
+    new AirDatepicker('#airpicker2', {
+        onSelect: function (dateText, inst) {
+            showTimes();
+        }
+    });
+
+    new AirDatepicker('#airpicker3', {
+        onSelect: function (dateText, inst) {
+            showTimes();
+        }
+    });
+
+    const showTimes = function () {
+        document.querySelector('.modal__times-wrap').classList.remove('hidden');
+    }
+
+    // header stiky
     window.onscroll = function () {
         myFunction()
     };
     const header = document.querySelector("header");
-    const sticky = header.offsetTop;
-    const headerHeight = header.clientHeight;
+    const headerBottom = document.querySelector('.header-bottom');
+    const sticky = headerBottom.offsetTop;
+    const headerHeight = headerBottom.clientHeight;
+    const menuFullScreen = document.querySelector('.main-nav__submenu-wrap--full-screen')
+
+    menuFullScreen.style.top = header.clientHeight - 2 + 'px';
+
     function myFunction() {
-        if (window.scrollY> sticky) {
-            header.classList.add("sticky");
-            document.querySelector('.sticky + main').style.paddingTop = headerHeight + 'px';
-        } else {
-            header.classList.remove("sticky");
+        if (window.scrollY > sticky && window.innerWidth > 940) {
+            headerBottom.classList.add("sticky");
+            document.querySelector('main').style.paddingTop = headerHeight + 'px';
+        } if (window.innerWidth > 1024) {
+            menuFullScreen.style.top = headerHeight - 1 + 'px';
+        } if (window.scrollY < sticky && window.innerWidth > 940) {
+            headerBottom.classList.remove("sticky");
+            menuFullScreen.style.top = header.clientHeight - 2 + 'px';
             document.querySelector('main').style.paddingTop = '0px';
         }
     }
 
-    const menuFullScreen = document.querySelector('.main-nav__submenu-wrap--full-screen')
-    if (window.innerWidth > 1024) {
-        menuFullScreen.style.top = headerHeight - 1 + 'px';
-    }
 
-    const modals = document.querySelectorAll('.modal');
+    if (window.innerWidth <= 940) {
+        headerBottom.classList.add("sticky");
+        document.querySelector('main').style.paddingTop = headerHeight + 'px';
+    }
+    // header stiky
+
+
+    const modals = document.querySelectorAll('.modal-wrap');
     modals.forEach(modal => {
         document.addEventListener('click', e => {
             if (!e.target.closest('.modal') && !e.target.closest('.air-datepicker') && !e.target.classList.contains('air-datepicker-cell')) {
@@ -79,60 +126,88 @@ document.addEventListener("DOMContentLoaded", function () {
 
     showFilter();
 
+    // modal
     const overlay = document.querySelector("#overlay");
+    const btnSubmitReg = document.querySelector('.modal__reg .btn');
 
-    btnSubmitReg = document.querySelector('.modal__reg .btn');
-
-    btnSubmitReg.addEventListener('click', function (e) {
-        e.preventDefault();
-        modalReg.classList.remove('active');
-        modalAccept.classList.add('active');
-    })
-
-
-    document.addEventListener('click', function (e) {
-        if (e.target.dataset.target === 'modal-reg' || e.target.closest('a[data-target="modal-reg"]')) {
-            e.preventDefault();
-            scrollLock.disablePageScroll();
-            document.querySelector('#modalReg').classList.add('active');
-            overlay.classList.add('active');
-        } else if (e.target.dataset.target === 'modal-call') {
-            e.preventDefault();
-            scrollLock.enablePageScroll();
-            document.querySelector('#modalCall').classList.add('active');
-            overlay.classList.add('active');
-        } else if (e.target.dataset.close === 'modal') {
-            e.preventDefault();
-            scrollLock.enablePageScroll();
-            e.target.closest('.modal').classList.remove('active');
-            overlay.classList.remove('active');
-        }
-    });
-
-
-    Fancybox.bind("[data-fancybox]", {
-        Thumbs: {
-            type: "classic"
-        },
-        Toolbar: {
-            display: {
-                left: [],
-                right: ["close"]
-            }
-        }
-    });
-
-    if (document.querySelectorAll('.tabs').length > 0) {
-        new ItcTabs('.tabs');
+    const hiddenModalAccept = function () {
+        setTimeout(() => modalAccept.classList.remove('active'), 3000)
+        setTimeout(() => overlay.classList.remove('active'), 3000)
     }
 
-    // add in favorite
-    if (document.querySelectorAll('.btn-favorite').length > 0) {
-        document.querySelector('.btn-favorite').addEventListener('click', function (e) {
-            e.target.classList.toggle('active');
+    const submitReg = function (func) {
+        btnSubmitReg.addEventListener('click', function (e) {
+            e.preventDefault();
+            modalReg.classList.remove('active');
+            modalAccept.classList.add('active');
+            func();
         })
     }
 
+    submitReg(hiddenModalAccept);
+
+
+    const modalsopen = function () {
+
+        document.addEventListener('click', function (e) {
+            if (e.target.dataset.target === 'modal-reg' || e.target.closest('a[data-target="modal-reg"]')) {
+                e.preventDefault();
+                scrollLock.disablePageScroll();
+                document.querySelector('#modalReg').classList.add('active');
+                overlay.classList.add('active');
+                if (e.target.closest('.doctors__item')) {
+                    let name = e.target.closest('.doctors__item').querySelector('.doctors__name').textContent;
+                    console.log(name);
+                    document.querySelector('#nameDoctor').value = name;
+                } else {
+                    document.querySelector('#inputDoc').remove();
+                }
+
+
+            } else if (e.target.dataset.target === 'modal-call') {
+                e.preventDefault();
+                scrollLock.enablePageScroll();
+                document.querySelector('#modalCall').classList.add('active');
+                overlay.classList.add('active');
+            } else if (e.target.dataset.close === 'modal') {
+                e.preventDefault();
+                scrollLock.enablePageScroll();
+                e.target.closest('.modal-wrap').classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        });
+
+    }
+    modalsopen();
+
+    // modal
+
+
+
+
+    // tabs
+    if (document.querySelectorAll('.tabs').length > 0) {
+        new ItcTabs('.tabs');
+    }
+    // tabs
+
+    // favorite
+    if (document.querySelectorAll('.btn-favorite').length > 0) {
+        const btnsFavorite = document.querySelectorAll('.btn-favorite');
+        btnsFavorite.forEach(btn => {
+            btn.addEventListener('click', function () {
+                if (btn.classList.contains('active')) {
+                    btn.querySelector('span').innerHTML = "Добавить в избранное";
+                } else {
+                    btn.querySelector('span').innerHTML = "Добавлено в избранное";
+                }
+                btn.classList.toggle('active');
+            })
+        })
+    }
+    // favorite
+
+    // counter
     const counters = document.querySelectorAll('[data-counter]');
     if (counters) {
         counters.forEach(counter => {
@@ -143,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (target.closest('.counter__btn--plus')) {
                         value++;
                     } else {
-                        -- value;
+                        --value;
                     }
                     if (value <= 0) {
                         value = 0;
@@ -155,7 +230,9 @@ document.addEventListener("DOMContentLoaded", function () {
             })
         })
     }
+    // counter
 
+    // add basket
     document.addEventListener('click', e => {
         target = e.target;
         if (target.classList.contains('addInBasket')) {
@@ -163,41 +240,6 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector('.counter').classList.add('show');
         }
     })
-
-
-    // tooltip
-    let tip = document.createElement('div');
-    tip.className = 'tooltip';
-    tip.hidden = true;
-    document.body.append(tip);
-
-    document.addEventListener("mouseover", showTip);
-    document.addEventListener("mouseout", hideTip);
-
-    function showTip(event) {
-        let tar = event.target;
-        if (! tar.closest('.product-descr__inf')) 
-            return;
-        
-
-
-        tip.innerHTML = tar.closest('.product-descr__inf').dataset.tooltip;
-        tip.hidden = false;
-
-        let tarRect = tar.getBoundingClientRect(); // координаты HTML-элемента
-        let x,
-            y; // координаты подсказки
-
-        x = tarRect.x; // подсказка над
-        y = tarRect.y - tip.offsetHeight - 5; // HTML-элементом
-
-        tip.style.left = x + "px"; // перемещаем подсказку
-        tip.style.top = y + "px"; // в нужное место
-    }
-
-    function hideTip() {
-        tip.hidden = true;
-    }
 
     if (document.querySelectorAll('.basket__items').length > 0) {
         document.querySelector('.basket__items').addEventListener('click', e => {
@@ -207,6 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     }
+    // add basket
 
     if (document.querySelectorAll('.filter').length > 0) {
         document.querySelector('.filter').addEventListener('click', e => {
@@ -249,50 +292,265 @@ document.addEventListener("DOMContentLoaded", function () {
     favoriteChoose();
 
     const hideChecks = function () {
-        const checksWrap = document.querySelectorAll('.filter-box__list');
-        checksWrap.forEach(wrap => {
-            for (var i = 0; i < wrap.querySelectorAll('.filter-box__item').length; i++) {
-                if (i > 4) {
-                    wrap.querySelectorAll('.filter-box__item')[i].classList.add('hidden');
-                    if (window.innerWidth < 941 && window.innerWidth >= 700) {
-                        wrap.classList.add('--columns');
-                    }
-                }
-            }
-            const btnShow = wrap.closest('.filter-box').querySelector('.filter__all');
-            if (btnShow) {
-                btnShow.addEventListener('click', function () {
-                    wrap.querySelectorAll('.filter-box__item').forEach(item => {
-                        item.classList.remove('hidden');
-                    });
-                    btnShow.remove();
-                });
-            }
+        const btns = document.querySelectorAll('.filter__all');
+        btns.forEach(btn => {
+            const wrap = btn.closest('.filter-box');
+            const items = wrap.querySelectorAll('.filter-box__item');
 
+            items.forEach((item, i) => {
+                if (i > 4) {
+                    item.classList.add('hidden');
+                }
+            })
+
+            btn.addEventListener('click', function () {
+                items.forEach((item, i) => {
+                    if (i > 4) {
+                        if (item.classList.contains('hidden')) {
+                            item.classList.remove('hidden');
+                            btn.innerHTML = 'Свернуть';
+                        } else {
+                            item.classList.add('hidden');
+                            btn.innerHTML = 'Показать все';
+                        }
+                    }
+                })
+            })
         })
     }
     hideChecks();
 
-    // video control
-    const videoContainer = document.querySelector('.video-wrap');
-    const videoControls = document.querySelectorAll('.video-control');
-    const video = document.querySelector('#video');
 
-    videoControls.forEach(contol => {
+    const fShowPicProduct = function () {
+        document.querySelectorAll('.product__slider .product__preview').forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (!(e.target.closest('.play-video'))) {
+                    scrollLock.disablePageScroll();
+                    document.querySelector('.product__slider2').classList.add('active');
+                }
+            })
+        })
+    }
+    fShowPicProduct();
 
-        contol.addEventListener('click', function () {
-            console.log('123');
-            if (video.paused) {
-                video.play();
-                videoContainer.classList.add('video-is-playing');
-            } else {
-                video.pause();
-                videoContainer.classList.remove('video-is-playing');
-                video.load();
+    const btnPlay = document.querySelectorAll('.btn-play');
+    const fPlayVideo = function () {
+        const videoWrap = document.querySelector('.video-wrap');
+        const btnStop = document.querySelector('.stop-video');
+        const video = document.querySelector('#video');
+        const src = video.getAttribute('src');
+        btnPlay.forEach(play => {
+            play.addEventListener('click', function (e) {
+                e.preventDefault();
+                videoWrap.classList.add('active');
+                video.setAttribute('src', src + '&autoplay=1');
+                scrollLock.enablePageScroll();
+                document.querySelector('.product__slider2').classList.remove('active');
+            });
+        })
+        btnStop.addEventListener('click', function () {
+            videoWrap.classList.remove('active');
+            video.setAttribute('src', src + '&autoplay=0');
+        });
+    }
+
+    if (btnPlay.length > 0) {
+        fPlayVideo();
+    }
+
+
+
+
+    // play video
+    // const fVideo = function () {
+    //     const arrVideoWrap = document.querySelectorAll('.video-wrap');
+    //     arrVideoWrap.forEach(videoWrap => {
+    //         videoWrap.addEventListener('click', function (e) {
+    //             const target = e.target;
+    //             const video = target.closest('.video-wrap').querySelector('.video');
+    //             if (video.paused) {
+    //                 video.play();
+    //                 video.closest('.video-wrap').classList.add('video-is-playing');
+    //             } else {
+    //                 video.pause();
+    //                 video.closest('.video-wrap').classList.remove('video-is-playing');
+    //                 video.load();
+    //             }
+    //         })
+    //     })
+    // }
+
+    // fVideo();
+
+    // const fVideoStopProduct2 = function () {
+    //     const arThumbsProduct = document.querySelectorAll('.swiper-thumbs .swiper-slide');
+    //     arThumbsProduct.forEach(slide => {
+    //         slide.addEventListener('click', function () {
+    //             const arrVideo = slide.closest('.product__main').querySelectorAll('.video');
+    //             arrVideo.forEach(video => {
+    //                 video.pause();
+    //                 video.closest('.video-wrap').classList.remove('video-is-playing');
+    //                 video.load();
+    //             })
+    //         })
+    //     })
+    // }
+
+    // fVideoStopProduct2();
+
+    // const stopVideo = function () {
+    //     const arrVideo = document.querySelectorAll('.video');
+    //     arrVideo.forEach(video => {
+    //         video.pause();
+    //         video.closest('.video-wrap').classList.remove('video-is-playing');
+    //         video.load();
+    //     })
+    // }
+    // play video
+
+    const fHiddenPicProduct = function () {
+        document.querySelector('#close-product-pic').addEventListener('click', function (e) {
+            e.stopPropagation();
+            scrollLock.enablePageScroll();
+            document.querySelector('.product__slider2').classList.remove('active');
+        });
+    }
+    if (document.querySelectorAll('#close-product-pic').length > 0) {
+        fHiddenPicProduct();
+    }
+
+    // if (document.querySelectorAll('#close-product-pic').length > 0) {
+    //     fHiddenPicProduct(stopVideo);
+    // }
+
+    // accordion
+    // if (document.querySelectorAll('.accordion').length > 0) {
+    //     new ItcAccordion(document.querySelector('.accordion'), { alwaysOpen: true });
+    // }
+    // accordion
+
+    //chips
+    const chipsBtns = document.querySelectorAll('.chips__item');
+    chipsBtns.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            chipsBtns.forEach(item => {
+                item.classList.remove('active');
+            })
+            if (e.target.classList.contains('chips__item')) {
+                e.target.classList.toggle('active');
             }
+
         })
     })
-    
-    new ItcAccordion(document.querySelector('.accordion'), {alwaysOpen: true});
+
+    // tooltip
+    tippy('#tip', {
+        content: '<div class="tooltip__title">В стоимость входит:</div><ul class="tooltip__list"><li>Корпус</li><li>Крышка</li><li>Держатель элемента питания</li><li>Переход</li><li>Регуляторы настройки</li><li>Стандартный ушной вкладыш</li></ul>',
+        allowHTML: true,
+        placement: 'bottom',
+    });
+
+    // showHiddenText
+    const showHiddenText = function () {
+        const btnsShow = document.querySelectorAll('.show-text');
+        btnsShow.forEach(btn => {
+            btn.addEventListener('click', function () {
+                if (btn.closest('.tabs__par').querySelector('p').classList.contains('hidden-text')) {
+                    btn.closest('.tabs__par').querySelector('p').classList.remove('hidden-text'), btn.innerHTML = 'свернуть';
+                } else {
+                    btn.closest('.tabs__par').querySelector('p').classList.add('hidden-text'), btn.innerHTML = 'Показать все';
+                }
+
+            });
+        })
+    }
+    if (document.querySelectorAll('.show-text').length > 0) {
+        showHiddenText();
+    }
+
+    // breadcrumbs adaptive
+    if (window.innerWidth < 700 && document.querySelectorAll('.breadcrumb li').length > 2) {
+        const breadcrumbs = document.querySelectorAll('.breadcrumb li');
+        breadcrumbs.forEach((item, i) => {
+            if (i == breadcrumbs.length - 1 || i < breadcrumbs.length - 3) {
+                item.remove();
+            }
+        })
+    }
+
+    document.addEventListener('keydown', function (e) {
+        if (e.keyCode == 27) {
+            document.querySelector('.product__slider2').classList.remove('active');
+            scrollLock.enablePageScroll();
+        }
+    });
+
+    // Fancybox.bind("[data-fancybox]", {
+    //     Toolbar: {
+    //         display: {
+    //             left: ["infobar"],
+    //             middle: [
+
+    //             ],
+    //             right: ["slideshow", "thumbs", "close"],
+    //         },
+    //     },
+    // });
+
+    const moveEl = function () {
+        const newElement = document.querySelector('.about .subscribe');
+        const parentElement = document.querySelector('.about .news');
+        let referenceElement;
+        if (window.innerWidth > 940) {
+            referenceElement = document.querySelector('.article-preview:nth-child(5)');
+        } else if (window.innerWidth <= 940 && window.innerWidth > 700) {
+            referenceElement = document.querySelector('.article-preview:nth-child(4)');
+        }
+        parentElement.insertBefore(newElement, referenceElement);
+    }
+    if (document.querySelectorAll('.about .subscribe').length > 0) {
+        moveEl();
+    }
+
+    const posModalReg = function () {
+        const headerTopHeight = document.querySelector('.header-top').clientHeight;
+        const modalReg = document.querySelector('.modal__reg');
+        if (window.innerWidth > 940) {
+            modalReg.style.top = headerTopHeight + 'px';
+        } else {
+            modalReg.style.top = headerHeight + 'px';
+        }
+    }
+    posModalReg();
+
+
+    const myFancy = function () {
+        const licenseOverlay = document.querySelector('.license-overlay');
+        const items = document.querySelectorAll('.licenses__link');
+        const itemFull = document.querySelector('#license-full');
+        const close = document.querySelector('#close-license');
+        items.forEach(item => {
+            let href = item.getAttribute('href');
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                licenseOverlay.classList.add('active');
+                itemFull.setAttribute('src', href);
+            });
+        })
+        close.addEventListener('click', function () {
+            licenseOverlay.classList.remove('active')
+        });
+        licenseOverlay.addEventListener('click', function (e) {
+            if (!(e.target.closest('.license-overlay__wrap'))) {
+                licenseOverlay.classList.remove('active')
+            }
+        });
+    }
+    if (document.querySelectorAll('.license-overlay').length > 0) {
+        myFancy();
+    }
+
 
 });
+

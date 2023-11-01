@@ -1,0 +1,162 @@
+extends templates/layout
+
+block main 
+    main 
+        ._container.breadcrumb-wrap
+            .breadcrumbs 
+                .breadcrumb
+                    li
+                        a(href="index.html") Главная
+                    li 
+                        a(href="")  Личный кабинет 
+                    li  
+                        a Мои заказы
+        section.orders 
+            ._container 
+                h1.title-page Заказ №18
+
+                .orders__wrap 
+                    .orders__content 
+                        .orders__block
+                            h3.title-block.orders__title Статус заказа
+                            .orders__status.orders-status 
+                                .orders-status__states  
+                                    .orders-status__tracking.orders-status__tracking--completed
+                                        .orders-status__state 1
+                                        .orders-status__block
+                                            span Создан
+                                            span 23.02.2022, 12:00
+                                    .orders-status__tracking.orders-status__tracking--completed
+                                        .orders-status__state 2
+                                        .orders-status__block
+                                            span Собран
+                                            span 24.02.2022, 18:05
+                                    .orders-status__tracking.orders-status__tracking--completed
+                                        .orders-status__state 3
+                                        .orders-status__block
+                                            span Передан в доставку
+                                            span 24.02.2022, 20:00
+                                            a(href="") Отследить
+                                    .orders-status__tracking
+                                        .orders-status__state 4
+                                        .orders-status__block
+                                            span Готов к получению
+                        .orders__block
+                            h3.title-block.orders__title Состав заказа
+                            .table.table--orders 
+                                table.table__wrapper.table__wrapper--resp
+                                    thead
+                                        tr 
+                                            th Товар
+                                            th Цена
+                                            th Кол-во
+                                            th Сумма        
+                                    tbody
+                                        tr
+                                            td 
+                                                span.table__title-mobile Товар
+                                                span Гарнитура StreamLine Mic 
+                                            td 
+                                                span.table__title-mobile Цена
+                                                span 36 000 ₽
+                                            td 
+                                                span.table__title-mobile Кол-во
+                                                span 1
+                                            td 
+                                                span.table__title-mobile Сумма
+                                                span 36 000 ₽
+
+                                        tr
+                                            td  
+                                                span.table__title-mobile Товар
+                                                span Батарейки для слухового аппарата. <br>Тип 10
+                                            td 
+                                                span.table__title-mobile Цена
+                                                span 60 ₽
+                                            td 
+                                                span.table__title-mobile Кол-во
+                                                span 8
+                                            td 
+                                                span.table__title-mobile Сумма
+                                                span 480 ₽
+
+                                        tr
+                                            td 
+                                                span.table__title-mobile Товар
+                                                span ReSound LiNX Quattro
+                                            td 
+                                                span.table__title-mobile Цена
+                                                span 15 000 ₽ 
+                                            td 
+                                                span.table__title-mobile Кол-во
+                                                span 1
+                                            td 
+                                                span.table__title-mobile Сумма
+                                                span 15 000 ₽
+
+                                        tr
+                                            td 
+                                                span.table__title-mobile Товар
+                                                span Пульт Phonak PilotOne
+                                            td 
+                                                span.table__title-mobile Цена
+                                                span 13 800 ₽
+                                            td 
+                                                span.table__title-mobile Кол-во
+                                                span 1
+                                            td 
+                                                span.table__title-mobile Сумма
+                                                span 13 800 ₽
+
+                        .orders__block.delivery-block
+                            h3.title-block.orders__title Доставка и оплата
+                            .delivery-block__wrap
+                                .orders-block__col 
+                                    h4.orders-block__title Доставка курьером
+                                    .delivery-block__status 
+                                        span Статус
+                                        span Передан в доставку
+                                        a(href="") Проверить
+                                .orders-block__col 
+                                    h4.orders-block__title Оплата Онлайн
+                                    .delivery-block__status
+                                        span Статус
+                                        span Оплачен
+                            .delivery-block__footer 
+                                span Адрес
+                                span г. Екатеринбург, ул. Федотченко, д. 289, кв/офис 22
+
+                        .orders__block
+                            h3.title-block.orders__title Получатель
+                            h4.orders-block__title Константинов Николай Валерьевич
+                            ul.orders-block__list 
+                                li
+                                    label.label(for="") Телефон
+                                    span +7 (999) 355-18-28
+                                li
+                                    label.label(for="") Электронная почта
+                                    span nik65@yandex.ru 
+
+                        .orders__block
+                            h3.title-block.orders__title Комментарий к заказу
+                            textarea.delivery-block__text
+                        a(href="").btn.btn--red.btn--icn.btn--l 
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 18H20M4 6H20H4ZM4 10H20H4ZM4 14H20H4Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            | Назад к списку
+
+
+                    .aside-box 
+                        h2.section-title Ваш заказ
+                        ul.aside-box__list 
+                            li.aside-box__item 
+                                span.aside-box__text Сумма товаров
+                                span.aside-box__text 65 280 ₽
+                            li.aside-box__item 
+                                span.aside-box__text Самовывоз
+                                span.aside-box__text Бесплатно
+                            li.aside-box__item 
+                                span.aside-box__text.strong Итого
+                                span.aside-box__text.strong 65 280 ₽
+                        button.btn.btn--red.btn--icn.btn--l
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.919 15H15.5H19.919Z" fill="white"/><path d="M4.5 3.99999V8.99999H5.082M5.082 8.99999C5.74585 7.35812 6.93568 5.9829 8.46503 5.08985C9.99438 4.1968 11.7768 3.8364 13.533 4.06513C15.2891 4.29386 16.9198 5.09878 18.1694 6.35377C19.419 7.60875 20.2168 9.24285 20.438 11M5.082 8.99999H9.5M20.5 20V15H19.919M19.919 15C19.2542 16.6409 18.064 18.015 16.5348 18.9073C15.0056 19.7995 13.2237 20.1595 11.4681 19.9309C9.71246 19.7022 8.0822 18.8979 6.83253 17.6437C5.58287 16.3896 4.78435 14.7564 4.562 13M19.919 15H15.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            | Пофторить заказ

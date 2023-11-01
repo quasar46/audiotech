@@ -6,37 +6,59 @@
     white-space: nowrap;
     cursor: pointer;
     transition: all 0.3s ease;
+
     svg {
         pointer-events: none;
         transition: all 0.3s ease;
     }
+
     &--red {
         background-color: #DB1F26;
         color: #fff;
+
         &:not(.active):hover {
             background-color: #C60C30;
         }
     }
+
     &--grey {
         background-color: #F5F7FA;
+
         &:not(.active):hover {
             background-color: #DB1F26;
             color: #fff;
+
             svg {
                 path {
                     // fill: #F5F7FA;
-                    fill: white;
+                    fill: #DB1F26;
+                    transition: all 0.3s ease;
+                    stroke: white;
+                }
+            }
+        }
+    }
+
+    &--search {
+        &:not(.active):hover {
+            svg {
+                path {
+                    fill : #fff;
+                    stroke: transparent;
                     transition: all 0.3s ease;
                 }
             }
         }
     }
+
     &--icn {
         gap: 10px;
+
         svg {
             flex: 1 0 auto;
             max-width: 24px;
         }
+
         &:hover {
             // svg {
             //     path {
@@ -45,14 +67,17 @@
             // }
         }
     }
+
     &--white {
         background-color: #fff;
         color: #131313;
+
         &:not(.active):hover {
             background-color: #DB1F26;
             color: #fff;
         }
     }
+
     &--m {
         height: 40px;
         padding-left: 20px;
@@ -60,6 +85,7 @@
         font-size: 13px;
         line-height: 20px;
     }
+
     &--l {
         min-height: 54px;
         padding-left: 30px;
@@ -67,7 +93,22 @@
         font-size: 15px;
         line-height: 24px;
     }
-    &.active, &:active {
+    &--close {
+        &:not(:active) {
+            &:hover {
+                svg {
+                    path {
+                        fill: #fff;
+                        stroke: transparent;
+                    }
+                }
+            }
+        }
+      
+    }
+
+    &.active,
+    &:active {
         svg {
             path {
                 fill: #DB1F26;
@@ -82,10 +123,16 @@
     top: 18px;
     right: 34px;
     cursor: pointer;
+
+    svg {
+        pointer-events: none;
+    }
+
     @media(max-width: 700px) {
         right: 20px;
         top: 20px;
     }
+
     &--modal {
         display: flex;
         align-items: center;
@@ -96,6 +143,72 @@
         background-color: #F5F7FA;
         top: 20px;
         right: 20px;
+
+        @media (max-width: 700px) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &:hover {
+        background-color: #DB1F26;
+        transition: all 0.3s ease;
+
+        svg {
+            path {
+                fill: #fff;
+                transition: all 0.3s ease;
+            }
+
+        }
+    }
+}
+
+.close-white {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+    svg {
+        path {
+            transition: all 0.3s ease;
+        }
+    }
+
+    &--l {
+        width: 54px;
+        height: 54px;
+        right: 20px;
+        top: 20px;
+
+        @media (max-width: 700px) {
+            width: 40px;
+            height: 40px;
+            right: 10px;
+            top: 10px;
+        }
+    }
+
+    &:hover {
+        background-color: #DB1F26;
+        transition: all 0.3s ease;
+
+        svg {
+            path {
+                fill: #fff;
+                transition: all 0.3s ease;
+            }
+
+        }
     }
 }
 
@@ -104,6 +217,12 @@
     top: 18px;
     right: 34px;
     cursor: pointer;
+    z-index: 100;
+
+    @media (min-width: 941px) {
+        display: none;
+    }
+
     @media(max-width: 700px) {
         top: 13px;
         right: 30px;
@@ -114,11 +233,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height: 54px;
+    margin-top: auto;
+    .btn-icn__favorite {
+        @media(max-width: 700px) {
+            display: flex;
+        }
+    }
 }
 
 .btn-icn {
     cursor: pointer;
+
     &--mob {
         @media (min-width: 380px) {
             display: none;
@@ -130,14 +256,6 @@
 .btn-icn__favorite {
     @media(max-width: 700px) {
         display: none;
-    }
-}
-
-.btns-wrap {
-    .btn-icn__favorite {
-        @media(max-width: 700px) {
-            display: flex;
-        }
     }
 }
 

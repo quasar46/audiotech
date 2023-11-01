@@ -14,6 +14,9 @@
             justify-content: center;
         }
     }
+    &--not-border {
+        border-top: none;
+    }
 }
 
 .pagination__list {
@@ -21,7 +24,7 @@
     align-items: center;
     gap: 10px;
     & > * {
-        width: 40px;
+        min-width: 40px;
         height: 40px;
         background-color: #F5F7FA;
         display: flex;
@@ -46,6 +49,9 @@
     @media (max-width: 700px) {
         justify-content: space-between;
     }
+    // @media (max-width: 700px) {
+    //     justify-content: space-between;
+    // }
 }
 
 .pagination__page {

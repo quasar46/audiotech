@@ -3,6 +3,8 @@
     background-color: #F5F7FA;
     display: flex;
     flex-direction: column;
+    position: sticky;
+    top: 81px;
     .btn {
         width: 100%;
         justify-content: center;
@@ -17,6 +19,12 @@
     @media (max-width: 1240px) {
         padding: 30px;
     }
+    @media (max-width: 940px) {
+        padding: 40px;
+    }
+    @media (max-width: 700px) {
+        padding: 30px;
+    }
 }
 
 .aside-box__list {
@@ -27,13 +35,14 @@
 .aside-box__item {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 14px;
-    margin-bottom: 14px;
-    border-bottom: 1px solid #E8EBED;
+    margin-bottom: 10px;
+    
     &:last-child {
         margin-bottom: 30px;
         padding-bottom: 0;
-        border-bottom: none;
+        border-top: 1px solid #E8EBED;
+        padding-top: 15px;
+        margin-top: 14px;
         @media(max-width: 700px) {
             margin-bottom: 20px;
         }

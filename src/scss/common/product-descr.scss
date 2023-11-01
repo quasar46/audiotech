@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    position: sticky;
     @media(max-width : 1024px) {
         padding: 30px;
     }
@@ -39,6 +40,14 @@
     right: -34px;
     top: 0;
     cursor: pointer;
+    &:hover {
+        svg {
+            path {
+                transition: all 0.3s ease;
+                fill: #737373;
+            }
+        }
+    }
 }
 
 .product-descr__old-price {
@@ -74,6 +83,7 @@
 .product-descr__list {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .product-descr__item {

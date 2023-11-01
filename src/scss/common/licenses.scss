@@ -2,6 +2,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
+    padding-bottom: 40px;
+    padding-right: 0 !important;
 
     @media (max-width: 940px) {
         grid-template-columns: repeat(3, 1fr);
@@ -9,10 +11,12 @@
 
     @media (max-width: 700px) {
         grid-template-columns: 1fr;
+        padding-bottom: 30px;
     }
 }
 
 .licenses__item {
+    
     a {
         position: relative;
     }
@@ -27,6 +31,20 @@
 
 .licenses__link {
     position: relative;
+    display: block;
+    border: 1px solid #E8EBED;
+    width: 100%;
+
+    &::before {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.20);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
 
     &::after {
         content: "";
@@ -44,9 +62,52 @@
         opacity: 0;
         transition: all .3s ease;
     }
+
     &:hover {
+        &::before {
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+
         &::after {
             opacity: 1;
         }
+    }
+}
+
+.license-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 !important;
+    background-color: rgba(19, 19, 19, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    &.active {
+        display: flex;
+    }
+}
+
+.license-overlay__wrap {
+    position: relative;
+    max-width: 580px;
+    width: 100%;
+    height: 821px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @media (max-width: 1240px) {
+        height: 728px;
+        max-width: 515px;
+    }
+    @media (max-width: 700px) {
+        width: 330px;
+        height: 462px;
     }
 }

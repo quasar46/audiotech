@@ -2,24 +2,23 @@
     position: relative;
     flex-direction: column;
     width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     margin: auto;
-    top: 30px;
     padding: 40px 60px;
     background-color: #fff;
     z-index: 20;
-    opacity: 0;
-    pointer-events: none;
-
-    &.active {
-        opacity: 1;
-        overflow-y: auto;
-        pointer-events: auto;
-    }
+    // pointer-events: none;
+    // max-height: calc(100% - 40px);
 
     .btn {
         width: 100%;
         justify-content: center;
+    }
+
+    .section-title {
+        align-self: flex-start;
     }
 
     @media(max-width: 1240px) {
@@ -27,17 +26,22 @@
     }
 
     @media(max-width: 700px) {
-
         padding: 20px;
-    }
-
-    input:invalid {
-        // border: 1px solid #F00;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 330px;
     }
 }
 
+#modalReg.active,
+#modalCall.active,
+#modalAccept.active {
+    display: block;
+}
+
 .modal-wrap {
-    pointer-events: none;
+    display: none;
+    // pointer-events: none;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -47,6 +51,16 @@
     background-color: transparent;
     z-index: 100;
     overflow: auto;
+}
+
+.modal-wrap {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.modal-wrap::-webkit-scrollbar {
+    display: none;
+    width: 0;
 }
 
 .modal__text {
@@ -64,14 +78,18 @@
 
 .modal__reg {
     max-width: 650px;
+    transform: translate(0);
 
     @media(max-width: 1240px) {
         max-width: 610px;
     }
 
     @media(max-width: 700px) {
-        max-width: calc(100% - 30px);
+        // max-width: calc(100% - 30px);
         margin: auto;
+        top: 50px;
+        transform: translateY(0);
+        max-width: 330px;
     }
 
 }
@@ -82,6 +100,10 @@
 
     @media(max-width: 1240px) {
         max-width: 505px;
+    }
+
+    @media (max-width: 700px) {
+        max-width: 330px;
     }
 }
 
@@ -137,104 +159,62 @@
     }
 }
 
-.modal__input {
-    height: 54px;
-    border-radius: 4px;
-    border: 1px solid #E8EBED;
-    padding: 0 20px;
-    font-size: 15px;
-    font-weight: 400;
-    font-family: SuisseIntl;
-    width: 100%;
-
-    &:focus-visible {
-        outline: none;
-    }
-}
-
-.modal__label {
-    color: #737373;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 153.846%;
-
-    &.error {
-
-        &::after {
-            content: "Введите корректный адрес";
-            position: absolute;
-            top: 100%;
-            left: 0;
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 153.846%;
-            color: #FF0000;
-        }
-    }
-}
-
-.modal__textarea {
-    height: 108px;
-    border: 1px solid #E8EBED;
-    border-radius: 4px;
-    outline: none;
-    padding: 15px 20px;
-    max-width: 100%;
-}
 
 .modal__check {
     display: flex;
-    align-items: flex-start;
+    gap: 4px;
     margin-bottom: 30px;
 
     label {
-        position: relative;
-        padding-left: 34px;
-        color: var(--secondary-dark-gray-2, #737373);
+        color: #737373;
         font-size: 15px;
         font-weight: 400;
         line-height: 160%;
 
-        &::before {
-            content: "";
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-
-            @media(max-width: 700px) {
-                top: 0;
-                transform: translateY(0);
-            }
+        @media (max-width: 700px) {
+            flex-wrap: wrap;
+            gap: 0 10px !important;
         }
-
     }
 
-    input {
-        position: absolute;
-        opacity: 0;
-        z-index: -1;
-        visibility: hidden;
+    a {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+        transition: all 0.3s ease;
+        color: #737373;
+        border-bottom: 1px dotted #737373;
+        align-self: flex-start;
 
-        &:checked+label {
-            &::before {
-                border-color: #DB1F26;
-                background-color: #DB1F26;
-                background-image: url("../img/icns/md-check.svg");
-                background-repeat: no-repeat;
-            }
+        &:hover {
+            color: #DB1F26;
+            border-color: transparent;
         }
+
+        @media (max-width: 700px) {
+            margin-left: 34px;
+        }
+    }
+
+    @media (max-width: 700px) {
+        flex-direction: column;
     }
 }
 
 .modal__times {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+
+    @media (max-width: 700px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.modal__times-wrap {
+    &.hidden {
+        display: none;
+    }
 }
 
 .modal__time {
@@ -249,9 +229,14 @@
         line-height: 160%;
         height: 40px;
         display: flex;
+        justify-content: center;
         align-items: center;
         padding: 0 20px;
         cursor: pointer;
+
+        &::before {
+            display: none !important;
+        }
     }
 
     input {
@@ -263,6 +248,12 @@
         &:checked+label {
             background-color: #DB1F26;
             color: #fff;
+            border-color: transparent;
         }
     }
+}
+
+#nameDoctor {
+    font-size: 15px;
+    font-weight: 400;
 }

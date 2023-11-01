@@ -20,7 +20,7 @@ ymaps.ready(function () {
             '+7 (900) 232-23-23</li>',
             '<li><label>Электронная почта</label><br>',
             'kazahstan@audiotech.ru</li>',
-            '</address>'
+            '</address>',
         ].join('')
     },  {
            // Опции.
@@ -50,7 +50,7 @@ ymaps.ready(function () {
             '+7 (900) 232-23-23</li>',
             '<li><label>Электронная почта</label><br>',
             'kazahstan@audiotech.ru</li>',
-            '</address>'
+            '</address>',
         ].join('')
     },{
         // Опции.

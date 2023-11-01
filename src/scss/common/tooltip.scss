@@ -1,42 +1,43 @@
-.tooltip {
-    position: fixed;
-    padding: 15px;
-    border-radius: 4px;
-    background-color: #737373;
-    color: #fff;
-    z-index: 100;
-    max-width: 190px;
-    width: 100%;
+// .tooltip {
+//     position: fixed;
+//     padding: 15px;
+//     border-radius: 4px;
+//     background-color: #737373;
+//     color: #fff;
+//     z-index: 100;
+//     max-width: 190px;
+//     width: 100%;
 
-}
+// }
 
 .tooltip__title {
     font-size: 13px;
     font-weight: 500;
-    line-height: 153.846%;
+    line-height: 20px;
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    color: #fff;
 }
 
 .tooltip__list {
     font-size: 13px;
     font-weight: 400;
-    line-height: 153.846%;
+    line-height: 20px;
     margin: 0;
     padding: 0;
+    list-style: none;
     li {
         position: relative;
-        padding-left: 20px;
+        padding-left: 14px;
         &::before {
             content:"";
             position: absolute;
             width: 3px;
             height: 3px;
             left: 0;
-            top: 50%;
+            top: 8px;
             border-radius: 50%;
             background-color: #fff;
-            transform: translateY(-50%);
         }
     }
 }

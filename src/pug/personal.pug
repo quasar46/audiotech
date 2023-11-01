@@ -1,0 +1,277 @@
+extends templates/layout
+
+block main 
+    main 
+        ._container.breadcrumb-wrap
+            ul.breadcrumb 
+                li
+                    a(href="index.html") Главная
+                li
+                    a(href="about.html") Личный кабинет
+                li 
+                    a Мои заказы
+        section.personal
+            ._container
+                h1.title-page Личный кабинет
+            ._container._container--mode
+                .tabs 
+                    .tabs__personal
+                        .tabs__nav 
+                            button.tabs__btn.active Мои заказы
+                            button.tabs__btn Избранное
+                            button.tabs__btn Профиль
+                            a.personal__exit(href="") Выйти 
+                    .tabs__content 
+                        .tabs__pane.show
+                            .personal__cal 
+                                .personal__cal-block
+                                    label.label(for="") Дата заказа с
+                                    .input--dp
+                                        input.input#airpicker2(placeholder="дд.мм.гг" autocomplete="off") 
+                                .personal__cal-block
+                                    label.label(for="") Дата заказа по
+                                    .input--dp
+                                        input.input#airpicker3(placeholder="дд.мм.гг" autocomplete="off")
+                            .table-wrap
+                                .table.table--personal 
+                                    table.table__wrapper
+                                        thead
+                                            tr 
+                                                th №
+                                                th Дата
+                                                th Товары
+                                                th Сумма        
+                                                th Доставка
+                                                th Общая стоимость
+                                                th Статус
+                                        tbody
+                                            tr
+                                                td 34 
+                                                td 23.02.2022, 12:00
+                                                td 4 шт
+                                                td 36 000 ₽
+                                                td 
+                                                    span Курьер
+                                                    span 699 ₽
+                                                td 36 699 ₽
+                                                td Доставлен
+                                            tr
+                                                td 33
+                                                td 23.02.2022, 12:00
+                                                td 18 шт
+                                                td 18 000 ₽
+                                                td 
+                                                    span Курьер
+                                                    span 799 ₽
+                                                td 18 699 ₽
+                                                td 
+                                                    span Передан в доставку
+                                                    a(href="")  Отследить
+                                            tr
+                                                td 34 
+                                                td 23.02.2022, 12:00
+                                                td 4 шт
+                                                td 36 000 ₽
+                                                td 
+                                                    span Курьер
+                                                    span 699 ₽
+                                                td 36 699 ₽
+                                                td Доставлен
+                                            tr
+                                                td 33
+                                                td 23.02.2022, 12:00
+                                                td 18 шт
+                                                td 18 000 ₽
+                                                td 
+                                                    span Курьер
+                                                    span 799 ₽
+                                                td 18 699 ₽
+                                                td 
+                                                    span Передан в доставку
+                                                    a(href="")  Отследить
+                                            tr
+                                                td 34 
+                                                td 23.02.2022, 12:00
+                                                td 4 шт
+                                                td 36 000 ₽
+                                                td 
+                                                    span Курьер
+                                                    span 699 ₽
+                                                td 36 699 ₽
+                                                td Доставлен
+                                            tr
+                                                td 33
+                                                td 23.02.2022, 12:00
+                                                td 18 шт
+                                                td 18 000 ₽
+                                                td 
+                                                    span Курьер
+                                                    span 799 ₽
+                                                td 18 699 ₽
+                                                td 
+                                                    span Передан в доставку
+                                                    a(href="")  Отследить
+
+                            .pagination.pagination--not-border
+                                .pagination__list 
+                                    a(href="").pagination__prev 
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 5L4 12M4 12L11 19M4 12H20" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    a(href="").pagination__page.active 1
+                                    a(href="").pagination__page 2
+                                    a(href="").pagination__page ...
+                                    a(href="").pagination__page 19
+                                    a(href="").pagination__next
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 5L20 12M20 12L13 19M20 12H4" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+                        .tabs__pane
+                            .tabs__pane-wrap
+                                .favorite-cards
+                                    .card 
+                                        .close-white.close-white--l   
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#131313"/></svg>
+
+                                        a(href="").card__pic
+                                            img(src="img/accessories/pic1.jpg" alt="")
+                                        a(href="").card__category Беспроводные устройства
+                                        a(href="").card__name Гарнитура StreamLine Mic
+                                        .card__footer 
+                                            .card__price.card__price--actual 36 000 ₽
+                                            .card__price.card__price--old 43 500 ₽
+                                        button.btn.btn--red.btn--icn.btn--m 
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                            | В корзину
+                                    .card 
+                                        .close-white.close-white--l   
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#131313"/></svg>
+                                        a(href="").card__pic
+                                            img(src="img/accessories/pic1.jpg" alt="")
+                                        a(href="").card__category Беспроводные устройства
+                                        a(href="").card__name Гарнитура StreamLine Mic
+                                        .card__footer 
+                                            .card__price.card__price--actual 36 000 ₽
+                                            .card__price.card__price--old 43 500 ₽
+                                        button.btn.btn--red.btn--icn.btn--m 
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                            | В корзину
+                                    .card 
+                                        .close-white.close-white--l   
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#131313"/></svg>
+                                        a(href="").card__pic
+                                            img(src="img/accessories/pic1.jpg" alt="")
+                                        a(href="").card__category Беспроводные устройства
+                                        a(href="").card__name Гарнитура StreamLine Mic
+                                        .card__footer 
+                                            .card__price.card__price--actual 36 000 ₽
+                                            .card__price.card__price--old 43 500 ₽
+                                        button.btn.btn--red.btn--icn.btn--m 
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                            | В корзину
+                                    .card 
+                                        .close-white.close-white--l   
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#131313"/></svg>
+                                        a(href="").card__pic
+                                            img(src="img/accessories/pic1.jpg" alt="")
+                                        a(href="").card__category Беспроводные устройства
+                                        a(href="").card__name Гарнитура StreamLine Mic
+                                        .card__footer 
+                                            .card__price.card__price--actual 36 000 ₽
+                                            .card__price.card__price--old 43 500 ₽
+                                        button.btn.btn--red.btn--icn.btn--m 
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                            | В корзину
+                                    .card 
+                                        .close-white.close-white--l   
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#131313"/></svg>
+                                        a(href="").card__pic
+                                            img(src="img/accessories/pic1.jpg" alt="")
+                                        a(href="").card__category Беспроводные устройства
+                                        a(href="").card__name Гарнитура StreamLine Mic
+                                        .card__footer 
+                                            .card__price.card__price--actual 36 000 ₽
+                                            .card__price.card__price--old 43 500 ₽
+                                        button.btn.btn--red.btn--icn.btn--m 
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                            | В корзину
+                                    .card 
+                                        .close-white.close-white--l   
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#131313"/></svg>
+                                        a(href="").card__pic
+                                            img(src="img/accessories/pic1.jpg" alt="")
+                                        a(href="").card__category Беспроводные устройства
+                                        a(href="").card__name Гарнитура StreamLine Mic
+                                        .card__footer 
+                                            .card__price.card__price--actual 36 000 ₽
+                                            .card__price.card__price--old 43 500 ₽
+                                        button.btn.btn--red.btn--icn.btn--m 
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                            | В корзину
+                                    .card 
+                                        .close-white.close-white--l   
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#131313"/></svg>
+                                        a(href="").card__pic
+                                            img(src="img/accessories/pic1.jpg" alt="")
+                                        a(href="").card__category Беспроводные устройства
+                                        a(href="").card__name Гарнитура StreamLine Mic
+                                        .card__footer 
+                                            .card__price.card__price--actual 36 000 ₽
+                                            .card__price.card__price--old 43 500 ₽
+                                        button.btn.btn--red.btn--icn.btn--m 
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                            | В корзину
+                                    .card 
+                                        .close-white.close-white--l   
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#131313"/></svg>
+                                        a(href="").card__pic
+                                            img(src="img/accessories/pic1.jpg" alt="")
+                                        a(href="").card__category Беспроводные устройства
+                                        a(href="").card__name Гарнитура StreamLine Mic
+                                        .card__footer 
+                                            .card__price.card__price--actual 36 000 ₽
+                                            .card__price.card__price--old 43 500 ₽
+                                        button.btn.btn--red.btn--icn.btn--m 
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V8C17 5.2385 14.7615 3 12 3C9.2385 3 7 5.2385 7 8V9H4C3.44772 9 3 9.44772 3 10V18C3 19.6575 4.3425 21 6 21H18C19.6575 21 21 19.6575 21 18V10C21 9.44772 20.5523 9 20 9H17ZM9 8C9 6.34325 10.3433 5 12 5C13.6567 5 15 6.34325 15 8V9H9V8ZM19 18C19 18.5525 18.5525 19 18 19H6C5.4475 19 5 18.5525 5 18V11H19V18Z" fill="white"/></svg>
+                                            | В корзину
+
+                        .tabs__pane
+                            .tabs__pane-wrap
+                                form.profile
+                                    .profile__block
+                                        h2.title-block.profile__title Личные данные
+                                        ul.profile__list 
+                                            li.profile__item
+                                                label.label(for="") Фамилия
+                                                input.input(type="text" placeholder="Фамилия")
+                                            li.profile__item
+                                                label.label(for="") Имя
+                                                input.input(type="text" placeholder="Имя")
+                                            li.profile__item
+                                                label.label(for="") Отчество (если есть)
+                                                input.input(type="text" placeholder="Отчество (если есть)")
+                                            li.profile__item.profile__item--empty
+                                            li.profile__item
+                                                label.label(for="") Телефон
+                                                input.input.tel(type="tel" placeholder="+7 (___) ___-__-__")
+                                            li.profile__item
+                                                label.label(for="") Электронная почта
+                                                input.input(type="email " placeholder="Электронная почта")
+                                    .profile__block
+                                        h2.title-block.profile__title Изменить пароль
+                                        .profile__list 
+                                            li.profile__item
+                                                label.label(for="") Старый пароль
+                                                input.input(type="password" placeholder="••••••••")
+                                            li.profile__item.profile__item--empty
+                                            li.profile__item
+                                                label.label(for="") Новый пароль
+                                                input.input(type="password" placeholder="••••••••")
+                                            li.profile__item
+                                                label.label(for="") Новый пароль (еще раз)
+                                                input.input(type="password" placeholder="••••••••")
+                                    .profile__block
+                                        h2.title-block.profile__title Рассылка
+                                        .check
+                                            input.input-action(type="checkbox" id="check-info1")
+                                            label.label(for="check-info1") Получать информационные материалы 1-2 раза в неделю
+                                        button.btn.btn--red.btn--l.btn--icn 
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 21H7M17 21H17.803C18.921 21 19.48 21 19.907 20.782C20.284 20.59 20.59 20.284 20.782 19.908C21 19.481 21 18.921 21 17.803V9.22C21 8.77 21 8.545 20.952 8.331C20.9094 8.14007 20.839 7.95643 20.743 7.786C20.637 7.596 20.487 7.431 20.193 7.104L17.438 4.042C17.097 3.664 16.924 3.472 16.717 3.334C16.5303 3.21012 16.3241 3.11851 16.107 3.063C15.863 3 15.6 3 15.075 3H6.2C5.08 3 4.52 3 4.092 3.218C3.71565 3.40969 3.40969 3.71565 3.218 4.092C3 4.52 3 5.08 3 6.2V17.8C3 18.92 3 19.48 3.218 19.907C3.41 20.284 3.715 20.59 4.092 20.782C4.519 21 5.079 21 6.197 21H7M17 21V17.197C17 16.079 17 15.519 16.782 15.092C16.5899 14.7156 16.2836 14.4096 15.907 14.218C15.48 14 14.92 14 13.8 14H10.2C9.08 14 8.52 14 8.092 14.218C7.71565 14.4097 7.40969 14.7157 7.218 15.092C7 15.52 7 16.08 7 17.2V21M15 7H9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                            span Сохранить изменения

@@ -531,8 +531,7 @@ html.with-fancybox body.hide-scrollbar {
     bottom: 0;
     right: 0;
     z-index: -1;
-    background: var(--fancybox-bg);
-    opacity: var(--fancybox-opacity, 1);
+    background: rgba(19, 19, 19, 0.5);
     will-change: opacity
 }
 

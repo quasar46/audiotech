@@ -1,0 +1,212 @@
+.table {
+    width: 100%;
+    overflow: auto;
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #131313;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 6px;
+    }
+
+}
+
+.table--orders {
+    overflow: visible;
+
+    .table__wrapper {
+
+        th:first-child,
+        td:first-child {
+            width: 48%;
+            @media (max-width: 1240px) {
+                width: 47%;
+            }
+            @media (max-width: 700px) {
+                width: 100%;
+            }
+        }
+
+        tbody {
+            td {
+                width: auto;
+            }
+        }
+
+        thead {
+            th {
+                width: auto;
+            }
+        }
+    }
+    tbody {
+        tr {
+            &:last-child {
+                @media (max-width: 700px) {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.table--personal {
+    position: relative;
+    td {
+        span {
+            &:nth-child(2) {
+                font-size: 13px;
+                color: #737373;
+            }
+        }
+
+        &:last-child {
+            width: auto;
+            color: #0BBC61;
+
+            a {
+                color: #737373;
+                font-size: 13px;
+                border-bottom: 1px dotted #737373;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: #DB1F26;
+                    border-bottom-color: transparent;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+    @media (max-width: 940px) {
+        padding-right: 0;
+    }
+    @media (max-width: 700px) {
+        // padding-right: 30px;
+        padding-right: 0;
+    }
+}
+
+
+
+.table__wrapper {
+    width: 100%;
+    border-collapse: collapse;
+    span {
+        display: block;
+
+        &.table__title-mobile {
+            display: none;
+
+            @media (max-width: 767px) {
+                display: block;
+            }
+        }
+    }
+
+    thead {
+        color: #737373;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 153.846%;
+
+        th {
+            white-space: nowrap;
+            text-align: left;
+            border-bottom: 1px solid #E8EBED;
+            padding: 0 20px;
+            padding-bottom: 15px;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 153.846%;
+
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+
+    tbody {
+        color: #131313;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+
+        td {
+            white-space: nowrap;
+            padding: 20px;
+            border-bottom: 1px solid #E8EBED;
+            vertical-align: baseline;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+
+
+            @media (max-width: 700px) {
+                padding: 15px 20px;
+            }
+        }
+    }
+
+    @media (max-width: 940px) {
+        width: 100%;
+        // overflow: scroll;
+    }
+
+    &--resp {
+        @media (max-width: 700px) {
+            thead {
+                display: none;
+            }
+
+            tbody {
+                tr {
+                    display: flex;
+                    flex-wrap: wrap;
+                    border-top: 1px solid #E8EBED;
+                    gap: 15px 20px;
+                    padding-top: 10px;
+                    padding-bottom: 20px;
+
+                    @media (max-width: 700px) {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                    }
+                }
+
+                td {
+                    width: calc(50% - 10px);
+                    padding: 0;
+                    white-space: normal;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    border-bottom: none;
+
+                    span {
+                        &:first-child {
+                            color: #737373;
+                            font-size: 13px;
+                            line-height: 153.846%;
+                        }
+                    }
+
+                    &:last-child {
+                        span {
+                            &:first-child {
+                                color: #737373;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

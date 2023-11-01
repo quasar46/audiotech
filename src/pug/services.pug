@@ -1,35 +1,33 @@
 extends templates/layout
 
 block main 
-    main 
-        .breadcrumbs 
+    main
+        ._container.breadcrumb-wrap
+            .breadcrumb
+                li
+                    a(href="index.html") Главная
+                li
+                    a(href="buyers.html") Покупателям
+                li 
+                    a Услуги
+
+        section.info-blocks
             ._container
-                .breadcrumbs__list
-                    li.breadcrumbs__item
-                        a(href="/") Главная
-                    li.breadcrumbs__item •
-                    li.breadcrumbs__item 
-                        a(href="/") Покупателям
-                    li.breadcrumbs__item •
-                    li.breadcrumbs__item Услуги
-         
-        section.info-blocks 
-            ._container 
                 h1.title-page Услуги
-                .info-blocks__wrap 
-                    .info-block__item(style="background-image: url(img/info-blocks/pic5.jpg)") 
+                .info-blocks__wrap
+                    .info-block__item(style="background-image: url(img/info-blocks/pic5.jpg)")
                         .info-block__name Консультации
                         .info-block__descr Профессиональные врачи дадут советы по методам реабилитации, выбору и обслуживанию слухового аппарата
                         a.btn.btn--white.btn--m.info-block__link(href="") Перейти
-                    .info-block__item(style="background-image: url(img/info-blocks/pic6.jpg)")  
+                    .info-block__item(style="background-image: url(img/info-blocks/pic6.jpg)")
                         .info-block__name Производство
                         .info-block__descr Производим вкладыши и беруши для слуховых аппаратов по индивидуальным размерам
                         a.btn.btn--white.btn--m.info-block__link(href="") Перейти
-                    .info-block__item(style="background-image: url(img/info-blocks/pic7.jpg)")  
+                    .info-block__item(style="background-image: url(img/info-blocks/pic7.jpg)")
                         .info-block__name Экспресс-обслуживание
                         .info-block__descr Замена комплектующих и сушка слуховых аппаратов
                         a.btn.btn--white.btn--m.info-block__link(href="") Перейти
-                    .info-block__item(style="background-image: url(img/info-blocks/pic8.jpg)")  
+                    .info-block__item(style="background-image: url(img/info-blocks/pic8.jpg)")
                         .info-block__name Ремонт
                         .info-block__descr Гарантийный и постгарантийный ремонт и чистка слуховых аппаратов
                         a.btn.btn--white.btn--m.info-block__link(href="") Перейти

@@ -1,4 +1,5 @@
 .card {
+    position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -17,12 +18,15 @@
     }
 }
 
+
+
 .card__pic {
     height: 235px;
     margin-bottom: 10px;
     img {
         object-fit: cover;
         display: block;
+        width: 100%;
     }
     @media(max-width: 1240px) {
         min-height: 175px;
@@ -31,7 +35,8 @@
 }
 
 .card__pic:hover ~ .card__name {
-    color: red;
+    color: #DB1F26;
+    transition: all 0.3s ease;
 }
 
 
@@ -48,6 +53,7 @@
     font-weight: 500;
     line-height: 133.333%;
     margin-bottom: 10px;
+    transition: all 0.3s ease;
 }
 
 .card__price--actual {

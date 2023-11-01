@@ -1,0 +1,20 @@
+extends templates/layout
+
+block main 
+    main 
+        ._container.breadcrumb-wrap
+            .breadcrumb 
+                li
+                    a(href="index.html") Главная
+                li 
+                    a Центр слуха
+        section.map
+            ._container
+                h1.section-title.map__title
+                    | Центры слуха
+                    .map__change
+                        select.mySelect
+                            option(value="") Алма-Ата 
+                            option(value="") Алма-Ата
+                            option(value="") Алма-Ата
+                .map-content#map

@@ -1,21 +1,60 @@
-
+.subscribe {
+    background-color: #F5F7FA;
+    padding: 30px;
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    @media (max-width: 1240px) {
+        padding: 30px;
+    }
+    @media (max-width: 700px) {
+        padding: 20px;
+    }
+}
 
 .subscribe__input {
     position: relative;
+    // margin-bottom: 10px;
 
     .btn {
         position: absolute;
         right: 10px;
         top: 50%;
         transform: translateY(-50%);
-        min-width: 125px;
+        max-width: 125px;
         height: 40px;
         min-height: auto;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 20px;
     }
 }
 
+.subscribe__title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
 
-
+.subscribe__agree {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    margin-bottom: 20px;
+    color: #737373;
+    a {
+        border-bottom: 1px dotted #737373;
+        &:hover {
+            color: #DB1F26;
+            transition: all 0.3s ease;
+            border-bottom-color: #DB1F26;
+        }
+    }
+}
 
 .subscribe__input {
     // margin-bottom: 10px;
