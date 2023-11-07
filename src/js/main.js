@@ -105,11 +105,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const burgerBtn = document.querySelector(".burger");
     const mainNav = document.querySelector(".main-nav");
-    burgerBtn.addEventListener("click", function () {
-        document.body.classList.toggle('hidden');
-        burgerBtn.classList.toggle("active");
+    burgerBtn.addEventListener("click", (e) => {
+        e.currentTarget.classList.toggle('active');
         mainNav.classList.toggle("active");
+        mainNav.classList.contains('active')
+        ? document.querySelector('body').classList.add('hidden') : document.querySelector('body').classList.remove('hidden');
     });
+
 
     const showFilter = function () {
         const btnShowFilter = document.querySelector("#showFilter");
@@ -287,11 +289,8 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     if (window.innerWidth < 1025) {
-        if (navigator.platform == 'iPad' || navigator.platform == 'iPhone' || navigator.platform == 'iPod') {
-            mainNav.style.paddingBottom = `${headerHeight + 40}px`;
-        } else {
-            mainNav.style.height = `calc(100vh - ${headerHeight}px)`;
-        };
+        // mainNav.style.height = `calc(${document.body.clientHeight}px - ${headerHeight}px)`;
+        mainNav.style.height = `calc(100% - ${headerHeight}px)`;
     }
 
     const favoriteChoose = function () {
