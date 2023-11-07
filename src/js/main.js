@@ -372,56 +372,6 @@ document.addEventListener("DOMContentLoaded", function () {
         fPlayVideo();
     }
 
-
-
-
-    // play video
-    // const fVideo = function () {
-    //     const arrVideoWrap = document.querySelectorAll('.video-wrap');
-    //     arrVideoWrap.forEach(videoWrap => {
-    //         videoWrap.addEventListener('click', function (e) {
-    //             const target = e.target;
-    //             const video = target.closest('.video-wrap').querySelector('.video');
-    //             if (video.paused) {
-    //                 video.play();
-    //                 video.closest('.video-wrap').classList.add('video-is-playing');
-    //             } else {
-    //                 video.pause();
-    //                 video.closest('.video-wrap').classList.remove('video-is-playing');
-    //                 video.load();
-    //             }
-    //         })
-    //     })
-    // }
-
-    // fVideo();
-
-    // const fVideoStopProduct2 = function () {
-    //     const arThumbsProduct = document.querySelectorAll('.swiper-thumbs .swiper-slide');
-    //     arThumbsProduct.forEach(slide => {
-    //         slide.addEventListener('click', function () {
-    //             const arrVideo = slide.closest('.product__main').querySelectorAll('.video');
-    //             arrVideo.forEach(video => {
-    //                 video.pause();
-    //                 video.closest('.video-wrap').classList.remove('video-is-playing');
-    //                 video.load();
-    //             })
-    //         })
-    //     })
-    // }
-
-    // fVideoStopProduct2();
-
-    // const stopVideo = function () {
-    //     const arrVideo = document.querySelectorAll('.video');
-    //     arrVideo.forEach(video => {
-    //         video.pause();
-    //         video.closest('.video-wrap').classList.remove('video-is-playing');
-    //         video.load();
-    //     })
-    // }
-    // play video
-
     const fHiddenPicProduct = function () {
         document.querySelector('#close-product-pic').addEventListener('click', function (e) {
             e.stopPropagation();
@@ -432,16 +382,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document.querySelectorAll('#close-product-pic').length > 0) {
         fHiddenPicProduct();
     }
-
-    // if (document.querySelectorAll('#close-product-pic').length > 0) {
-    //     fHiddenPicProduct(stopVideo);
-    // }
-
-    // accordion
-    // if (document.querySelectorAll('.accordion').length > 0) {
-    //     new ItcAccordion(document.querySelector('.accordion'), { alwaysOpen: true });
-    // }
-    // accordion
 
     //chips
     const chipsBtns = document.querySelectorAll('.chips__item');
@@ -501,18 +441,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-
-    // Fancybox.bind("[data-fancybox]", {
-    //     Toolbar: {
-    //         display: {
-    //             left: ["infobar"],
-    //             middle: [
-
-    //             ],
-    //             right: ["slideshow", "thumbs", "close"],
-    //         },
-    //     },
-    // });
 
     const moveEl = function () {
         const newElement = document.querySelector('.about .subscribe');
