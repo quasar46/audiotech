@@ -187,3 +187,9 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.header-top__items-btns {
+    @media (max-width: 940px) {
+        margin-top: auto;
+    }
+}

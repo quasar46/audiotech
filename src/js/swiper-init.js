@@ -28,7 +28,7 @@ const swiperProductsActual = new Swiper(".actual-slider", {
     slidesPerView: 4,
     slidesPerGroup: 4,
     spaceBetween: 20,
-    // loop: true,
+    loop: true,
     speed: 750,
     navigation: {
         nextEl: ".actual-slider .swiper-button-next",
@@ -108,7 +108,6 @@ if (window.innerWidth <= 940) {
         breakpoints: {
             0: {
                 slidesPerView: "auto",
-                spaceBetween: 20,
                 loop: true,
             }
         },

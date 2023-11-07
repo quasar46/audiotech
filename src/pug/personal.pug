@@ -15,11 +15,12 @@ block main
                 h1.title-page Личный кабинет
             ._container._container--mode
                 .tabs 
-                    .tabs__personal
-                        .tabs__nav 
-                            button.tabs__btn.active Мои заказы
-                            button.tabs__btn Избранное
-                            button.tabs__btn Профиль
+                    //- .tabs__personal
+                    .tabs-wrap
+                        .tabs__nav.tabs__nav--personal
+                            .tabs__btn.active Мои заказы
+                            .tabs__btn Избранное
+                            .tabs__btn Профиль
                             a.personal__exit(href="") Выйти 
                     .tabs__content 
                         .tabs__pane.show
@@ -32,85 +33,85 @@ block main
                                     label.label(for="") Дата заказа по
                                     .input--dp
                                         input.input#airpicker3(placeholder="дд.мм.гг" autocomplete="off")
-                            .table-wrap
-                                .table.table--personal 
-                                    table.table__wrapper
-                                        thead
-                                            tr 
-                                                th №
-                                                th Дата
-                                                th Товары
-                                                th Сумма        
-                                                th Доставка
-                                                th Общая стоимость
-                                                th Статус
-                                        tbody
-                                            tr
-                                                td 34 
-                                                td 23.02.2022, 12:00
-                                                td 4 шт
-                                                td 36 000 ₽
-                                                td 
-                                                    span Курьер
-                                                    span 699 ₽
-                                                td 36 699 ₽
-                                                td Доставлен
-                                            tr
-                                                td 33
-                                                td 23.02.2022, 12:00
-                                                td 18 шт
-                                                td 18 000 ₽
-                                                td 
-                                                    span Курьер
-                                                    span 799 ₽
-                                                td 18 699 ₽
-                                                td 
-                                                    span Передан в доставку
-                                                    a(href="")  Отследить
-                                            tr
-                                                td 34 
-                                                td 23.02.2022, 12:00
-                                                td 4 шт
-                                                td 36 000 ₽
-                                                td 
-                                                    span Курьер
-                                                    span 699 ₽
-                                                td 36 699 ₽
-                                                td Доставлен
-                                            tr
-                                                td 33
-                                                td 23.02.2022, 12:00
-                                                td 18 шт
-                                                td 18 000 ₽
-                                                td 
-                                                    span Курьер
-                                                    span 799 ₽
-                                                td 18 699 ₽
-                                                td 
-                                                    span Передан в доставку
-                                                    a(href="")  Отследить
-                                            tr
-                                                td 34 
-                                                td 23.02.2022, 12:00
-                                                td 4 шт
-                                                td 36 000 ₽
-                                                td 
-                                                    span Курьер
-                                                    span 699 ₽
-                                                td 36 699 ₽
-                                                td Доставлен
-                                            tr
-                                                td 33
-                                                td 23.02.2022, 12:00
-                                                td 18 шт
-                                                td 18 000 ₽
-                                                td 
-                                                    span Курьер
-                                                    span 799 ₽
-                                                td 18 699 ₽
-                                                td 
-                                                    span Передан в доставку
-                                                    a(href="")  Отследить
+                            //- .table-wrap
+                            .table.table--personal 
+                                table.table__wrapper
+                                    thead
+                                        tr 
+                                            th №
+                                            th Дата
+                                            th Товары
+                                            th Сумма        
+                                            th Доставка
+                                            th Общая стоимость
+                                            th Статус
+                                    tbody
+                                        tr
+                                            td 34 
+                                            td 23.02.2022, 12:00
+                                            td 4 шт
+                                            td 36 000 ₽
+                                            td 
+                                                span Курьер
+                                                span 699 ₽
+                                            td 36 699 ₽
+                                            td Доставлен
+                                        tr
+                                            td 33
+                                            td 23.02.2022, 12:00
+                                            td 18 шт
+                                            td 18 000 ₽
+                                            td 
+                                                span Курьер
+                                                span 799 ₽
+                                            td 18 699 ₽
+                                            td 
+                                                span Передан в доставку
+                                                a(href="")  Отследить
+                                        tr
+                                            td 34 
+                                            td 23.02.2022, 12:00
+                                            td 4 шт
+                                            td 36 000 ₽
+                                            td 
+                                                span Курьер
+                                                span 699 ₽
+                                            td 36 699 ₽
+                                            td Доставлен
+                                        tr
+                                            td 33
+                                            td 23.02.2022, 12:00
+                                            td 18 шт
+                                            td 18 000 ₽
+                                            td 
+                                                span Курьер
+                                                span 799 ₽
+                                            td 18 699 ₽
+                                            td 
+                                                span Передан в доставку
+                                                a(href="")  Отследить
+                                        tr
+                                            td 34 
+                                            td 23.02.2022, 12:00
+                                            td 4 шт
+                                            td 36 000 ₽
+                                            td 
+                                                span Курьер
+                                                span 699 ₽
+                                            td 36 699 ₽
+                                            td Доставлен
+                                        tr
+                                            td 33
+                                            td 23.02.2022, 12:00
+                                            td 18 шт
+                                            td 18 000 ₽
+                                            td 
+                                                span Курьер
+                                                span 799 ₽
+                                            td 18 699 ₽
+                                            td 
+                                                span Передан в доставку
+                                                a(href="")  Отследить
 
                             .pagination.pagination--not-border
                                 .pagination__list 

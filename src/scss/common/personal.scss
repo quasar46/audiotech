@@ -1,14 +1,16 @@
-// .personal {
-//     .tabs__pane:first-child {
-//         @media (max-width: 940px) {
-//             padding-right: 34px;
-//         }
-//         @media (max-width: 700px) {
-//             padding-right: 30px;
-//         }
+.personal {
+    .tabs__pane:first-child {
+        @media (max-width: 940px) {
+            padding-right: 34px;
+        }
 
-//     }
-// }
+        @media (max-width: 700px) {
+            // padding-right: 30px;
+            padding-right: 0;
+        }
+
+    }
+}
 
 .personal__cal {
     display: flex;

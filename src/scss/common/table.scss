@@ -4,12 +4,14 @@
 
     &::-webkit-scrollbar-thumb {
         background-color: #131313;
-        border-radius: 4px;
+        border-radius: 0;
+        border-right: 30px solid white;
     }
 
     &::-webkit-scrollbar {
         width: 0;
         height: 6px;
+        border-right: 30px solid white;
     }
 
 }
@@ -55,6 +57,8 @@
 
 .table--personal {
     position: relative;
+    width: auto;
+
     td {
         span {
             &:nth-child(2) {
@@ -85,8 +89,9 @@
         padding-right: 0;
     }
     @media (max-width: 700px) {
-        // padding-right: 30px;
-        padding-right: 0;
+        padding-right: 30px;
+        overflow: auto;
+        width: 100%;
     }
 }
 

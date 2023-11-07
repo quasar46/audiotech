@@ -34,16 +34,23 @@
             padding-right: 0;
         }
     }
-
-    .tabs__pane-wrap {
-        &>*:not(.chips) {
-            padding-right: 30px;
+    @media (max-width: 767px) {
+        .tabs__pane-wrap {
+            &>*:not(.chips) {
+                padding-right: 30px;
+            }
+        }
+        .pagination {
+            margin-right: 30px;
+            padding-right: 0 !important;
+        }
+        .tabs__pane:last-child {
+            .pagination {
+                margin-right: 0;
+            }
         }
     }
-    .pagination {
-        margin-right: 30px;
-        padding-right: 0 !important;
-    }
+    
 }
 
 section.about {

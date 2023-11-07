@@ -91,13 +91,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 modal.classList.remove('active');
                 overlay.classList.remove('active');
                 scrollLock.enablePageScroll();
+                document.querySelector("body").style.overflow = "";
             }
         })
         document.addEventListener('keydown', function (e) {
             if (e.keyCode == 27) {
                 modal.classList.remove('active');
                 overlay.classList.remove('active');
-                scrollLock.enablePageScroll();
+                document.querySelector('body').style.overflow = "";
             }
         });
     })
@@ -105,11 +106,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const burgerBtn = document.querySelector(".burger");
     const mainNav = document.querySelector(".main-nav");
     burgerBtn.addEventListener("click", function () {
-        if (burgerBtn.classList.contains('active')) {
-            document.body.style = "overflow: ";
-        } else {
-            document.body.style = "overflow: hidden";
-        } burgerBtn.classList.toggle("active");
+        document.body.classList.toggle('hidden');
+        burgerBtn.classList.toggle("active");
         mainNav.classList.toggle("active");
     });
 
@@ -152,14 +150,15 @@ document.addEventListener("DOMContentLoaded", function () {
         document.addEventListener('click', function (e) {
             if (e.target.dataset.target === 'modal-reg' || e.target.closest('a[data-target="modal-reg"]')) {
                 e.preventDefault();
-                scrollLock.disablePageScroll();
+                document.querySelector('body').style.overflow = "hidden";
+
                 document.querySelector('#modalReg').classList.add('active');
+
                 overlay.classList.add('active');
                 if (e.target.closest('.doctors__item')) {
                     let name = e.target.closest('.doctors__item').querySelector('.doctors__name').textContent;
-                    console.log(name);
                     document.querySelector('#nameDoctor').value = name;
-                } else {
+                } else if (document.querySelector('#inputDoc')) {
                     document.querySelector('#inputDoc').remove();
                 }
 
@@ -169,9 +168,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 scrollLock.enablePageScroll();
                 document.querySelector('#modalCall').classList.add('active');
                 overlay.classList.add('active');
+                document.body.style.overflow = "hidden";
             } else if (e.target.dataset.close === 'modal') {
                 e.preventDefault();
-                scrollLock.enablePageScroll();
+                document.querySelector('body').style.overflow = "";
                 e.target.closest('.modal-wrap').classList.remove('active');
                 overlay.classList.remove('active');
             }
@@ -180,10 +180,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     modalsopen();
 
+    const modals4 = document.querySelectorAll('.modal');
+    modals4.forEach(modal => {
+        const close = modal.querySelector('.close-window');
+        if (close) {
+            close.addEventListener('click', function () {
+                if (window.innerWidth < 701) {
+                    close.closest('.modal-wrap').scrollTo(100, 0);
+                }
+            })
+        }
+    })
+
     // modal
-
-
-
 
     // tabs
     if (document.querySelectorAll('.tabs').length > 0) {
@@ -278,7 +287,11 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     if (window.innerWidth < 1025) {
-        mainNav.style.height = `calc(100vh - ${headerHeight}px)`;
+        if (navigator.platform == 'iPad' || navigator.platform == 'iPhone' || navigator.platform == 'iPod') {
+            mainNav.style.paddingBottom = `${headerHeight + 40}px`;
+        } else {
+            mainNav.style.height = `calc(100vh - ${headerHeight}px)`;
+        };
     }
 
     const favoriteChoose = function () {
@@ -479,12 +492,15 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
-    document.addEventListener('keydown', function (e) {
-        if (e.keyCode == 27) {
-            document.querySelector('.product__slider2').classList.remove('active');
-            scrollLock.enablePageScroll();
-        }
-    });
+    if (document.querySelectorAll('.product__slider2').length > 0) {
+        document.addEventListener('keydown', function (e) {
+            if (e.keyCode == 27) {
+                document.querySelector('.product__slider2').classList.remove('active');
+                scrollLock.enablePageScroll();
+            }
+        });
+    }
+
 
     // Fancybox.bind("[data-fancybox]", {
     //     Toolbar: {
@@ -550,6 +566,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document.querySelectorAll('.license-overlay').length > 0) {
         myFancy();
     }
+
+
 
 
 });

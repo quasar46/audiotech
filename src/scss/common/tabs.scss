@@ -3,14 +3,80 @@
     gap: 20px;
     position: relative;
     margin-bottom: 40px;
-    display: flex;
-    overflow: auto;
+
     flex: 1 0 auto;
-    // -ms-overflow-style: none;
+    -ms-overflow-style: none;
     scrollbar-width: none;
 
     &::-webkit-scrollbar {
+
         width: 0;
+        height: 0;
+        background-color: white;
+        display: none;
+    }
+
+    scrollbar-width: 0;
+    -ms-overflow-style: none;-ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+
+        width: 0;
+        height: 0;
+        background-color: white;
+        display: none;
+    }
+
+    scrollbar-width: 0;
+    -ms-overflow-style: none;
+    scrollbar-color: white;
+
+    &::-webkit-scrollbar,
+    &::-moz-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+        display: none;
+        background-color: white;
+    }
+
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-track-piece,
+    &::-webkit-resizer {
+        background-color: white;
+        width: 0;
+        height: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: white;
+        width: 0;
+        height: 0;
+    }
+    scrollbar-color: white;
+
+    &::-webkit-scrollbar,
+    &::-moz-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+        display: none;
+        background-color: white;
+    }
+
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-track-piece,
+    &::-webkit-resizer {
+        background-color: white;
+        width: 0;
+        height: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: white;
+        width: 0;
+        height: 0;
     }
 
     &>* {
@@ -35,10 +101,23 @@
 
     @media(max-width: 700px) {
         margin-bottom: 20px;
+        margin-bottom: 30px;
         min-width: 100%;
         padding-left: 30px;
         padding-right: 30px;
         gap: 0;
+        overflow-x: scroll;
+    }
+
+    &--personal {
+        .tabs__btn {
+            &:last-of-type {
+                @media (max-width: 700px) {
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+            }
+        }
     }
 }
 
@@ -55,6 +134,7 @@
     &.active {
         color: #DB1F26;
         z-index: 1;
+
         @media (min-width: 701px) {
             border-bottom: 2px solid #DB1F26;
         }
@@ -87,6 +167,7 @@
     &:last-of-type {
         @media (max-width: 700px) {
             margin-right: 0;
+
             &::after {
                 content: "";
                 position: absolute;
@@ -125,29 +206,29 @@
             }
         }
     }
-
 }
 
-.tabs__personal {
+// .tabs__personal {
+//     width: 100%;
+//     overflow-x: auto;
+//     scrollbar-width: none;
+
+//     &::-webkit-scrollbar {
+//         width: 0;
+//     }
+
+// }
+
+.personal__exit {
+    padding: 15px 0;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    overflow: auto;
-    scrollbar-width: none;
-    margin-bottom: -15px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #737373;
 
-    &::-webkit-scrollbar {
-        width: 0;
+    @media (max-width: 700px) {
+        margin-left: 10px;
     }
-
-    a {
-        padding: 15px 0;
-        display: flex;
-        font-size: 18px;
-        font-weight: 400;
-        color: #737373;
-    }
-
 }
 
 .tabs__pane {
